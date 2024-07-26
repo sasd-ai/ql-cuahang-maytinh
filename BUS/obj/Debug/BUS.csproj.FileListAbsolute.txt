@@ -1,0 +1,12 @@
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\BUS.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\BUS.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\DAO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\DTO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\DAO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\DTO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\obj\Debug\BUS.csproj.Up2Date
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\obj\Debug\BUS.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\obj\Debug\BUS.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\BUS\bin\Debug\DTO.dll.config

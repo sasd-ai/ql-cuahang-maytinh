@@ -1,0 +1,10 @@
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\bin\Debug\DAO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\bin\Debug\DAO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\bin\Debug\DTO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\bin\Debug\DTO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.csproj.Up2Date
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\bin\Debug\DTO.dll.config
