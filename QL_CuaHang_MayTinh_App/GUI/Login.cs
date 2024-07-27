@@ -25,7 +25,6 @@ namespace QL_CuaHang_MayTinh_App.GUI
         {
             string email = txt_Username.Text;
             string password = txt_Password.Text;
-
             bool checkLogin = bus_NhanVien.Login(email, password);
             if (!checkLogin)
             {
@@ -37,19 +36,38 @@ namespace QL_CuaHang_MayTinh_App.GUI
                 // Khởi tạo form chính và hiển thị
                 Program.frmMain = new Frm_Main(); // Thay 'FrmMain' bằng tên thực tế của form chính
                                                   // Hiển thị form chính và ẩn form đăng nhập
-                Program.frmMain.email = email;
+                Program.frmMain.email = txt_Username.Text;
             }
             List<ManHinh> listManHinh = bus_NhanVien.GetManHinhForUser(email);
+
             foreach (ManHinh item in listManHinh)
             {
-                Console.WriteLine(item.ToString());
+
+                Console.WriteLine("Ma man hinh: " + item.MaManHinh);
             }
-            if (listManHinh != null)
+            if (listManHinh == null)
             {
-                foreach (Control control in Program.frmMain.panelLeft.Controls)
+                foreach (Control control in Program.frmMain.panel_Menu.Controls)
                 {
                     // Kiểm tra nếu control là button và không nằm trong một panel con
-                    if (control is Button button && control.Parent == Program.frmMain.panelLeft)
+                    if (control is Button button
+                        && control.Parent == Program.frmMain.panel_Menu
+                        && button.Name != "btn_Setting"
+                        && button.Name != "btn_DangXuat")
+                    {
+                        button.Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Control control in Program.frmMain.panel_Menu.Controls)
+                {
+                    // Kiểm tra nếu control là button và không nằm trong một panel con
+                    if (control is Button button
+                        && control.Parent == Program.frmMain.panel_Menu
+                        && button.Name != "btn_Setting"
+                        && button.Name != "btn_DangXuat")
                     {
                         bool found = listManHinh.Any(item => item.MaManHinh == button.Name);
                         button.Visible = found;
@@ -57,13 +75,17 @@ namespace QL_CuaHang_MayTinh_App.GUI
                 }
             }
 
+            this.txt_Username.Text = "";
+            this.txt_Password.Text = "";
             Program.frmMain.Show();
-            this.Hide(); // Thay 'this.Visible = false;' bằng 'this.Hide();'
+            this.Visible=false;
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
     }
 }

@@ -8,3 +8,54 @@ E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Deb
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.dll
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\obj\Debug\DAO.pdb
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_Application\DAO\bin\Debug\DTO.dll.config
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\DAO.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\DAO.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\DTO.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\DTO.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\DTO.dll.config
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\CloudinaryDotNet.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\Newtonsoft.Json.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\CloudinaryDotNet.xml
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\Newtonsoft.Json.xml
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\DAO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\DAO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\CloudinaryDotNet.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\DTO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\Newtonsoft.Json.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\CloudinaryDotNet.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\DTO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\DTO.dll.config
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\Newtonsoft.Json.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.Up2Date
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\DAO\obj\Debug\DAO.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\DAO.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\DAO.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\CloudinaryDotNet.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\DTO.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\Newtonsoft.Json.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\CloudinaryDotNet.xml
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\DTO.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\DTO.dll.config
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\Newtonsoft.Json.xml
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\bin\Debug\System.Drawing.Common.xml
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\obj\Debug\DAO.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\DAO\obj\Debug\DAO.pdb

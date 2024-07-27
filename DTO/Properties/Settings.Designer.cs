@@ -27,7 +27,7 @@ namespace DTO.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
-            "e;User ID=sa;Password=123;TrustServerCertificate=True")]
+            "e;User ID=sa;Password=123;TrustServerCertificate=True;Encrypt=False")]
         public string ql_cuahang_maytinhConnectionString {
             get {
                 return ((string)(this["ql_cuahang_maytinhConnectionString"]));

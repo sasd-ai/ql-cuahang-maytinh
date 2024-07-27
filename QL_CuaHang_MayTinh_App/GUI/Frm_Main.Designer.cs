@@ -30,45 +30,48 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main));
             this.pannel_Main = new System.Windows.Forms.Panel();
-            this.btn_NhaCungCap = new Custom_Controls.Button_NoBoder();
-            this.btn_KhachHang = new Custom_Controls.Button_NoBoder();
-            this.panel_DoiTac = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.lblNameUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblNameStore = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.btn_DoiTac = new Custom_Controls.Button_ControlBox();
+            this.panel_Menu = new System.Windows.Forms.Panel();
+            this.panel_Setting = new System.Windows.Forms.Panel();
+            this.btn_ThongTinCaNhan = new Custom_Controls.Button_NoBoder();
+            this.btn_Setting = new Custom_Controls.Button_ControlBox();
             this.panel_QuanTri = new System.Windows.Forms.Panel();
-            this.btn_QTriPhanQuyen = new Custom_Controls.Button_NoBoder();
+            this.btn_QtriPhanQuyen = new Custom_Controls.Button_NoBoder();
+            this.btn_QTriChucVu = new Custom_Controls.Button_NoBoder();
             this.btn_QTriNhanVien = new Custom_Controls.Button_NoBoder();
-            this.btn_QuanTri = new Custom_Controls.Button_ControlBox();
+            this.btn_QuanTriMenu = new Custom_Controls.Button_ControlBox();
             this.btn_BaoCao = new Custom_Controls.Button_ControlBox();
             this.btn_QLKho = new Custom_Controls.Button_ControlBox();
             this.panel_SanPham = new System.Windows.Forms.Panel();
-            this.btn_SP = new Custom_Controls.Button_NoBoder();
+            this.btn_SanPham = new Custom_Controls.Button_NoBoder();
             this.btn_LoaiSP = new Custom_Controls.Button_NoBoder();
-            this.btn_SanPham = new Custom_Controls.Button_ControlBox();
-            this.panelBanHang = new System.Windows.Forms.Panel();
-            this.btn_GiamGia = new Custom_Controls.Button_NoBoder();
+            this.btn_SanPhamMenu = new Custom_Controls.Button_ControlBox();
+            this.panel_BanHang = new System.Windows.Forms.Panel();
+            this.btn_DSBanOff = new Custom_Controls.Button_NoBoder();
             this.btn_DonHangOnline = new Custom_Controls.Button_NoBoder();
-            this.btn_Ban = new Custom_Controls.Button_NoBoder();
-            this.btn_BanHang = new Custom_Controls.Button_ControlBox();
+            this.btn_BanHang = new Custom_Controls.Button_NoBoder();
+            this.btn_BanHangMenu = new Custom_Controls.Button_ControlBox();
             this.btn_TrangChu = new Custom_Controls.Button_ControlBox();
-            this.panel_DoiTac.SuspendLayout();
+            this.btn_DoiMatKhau = new Custom_Controls.Button_NoBoder();
+            this.btn_DangXuat = new Custom_Controls.Button_ControlBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelLeft.SuspendLayout();
+            this.panel_Menu.SuspendLayout();
+            this.panel_Setting.SuspendLayout();
             this.panel_QuanTri.SuspendLayout();
             this.panel_SanPham.SuspendLayout();
-            this.panelBanHang.SuspendLayout();
+            this.panel_BanHang.SuspendLayout();
             this.SuspendLayout();
             // 
             // pannel_Main
@@ -78,50 +81,6 @@
             this.pannel_Main.Name = "pannel_Main";
             this.pannel_Main.Size = new System.Drawing.Size(948, 915);
             this.pannel_Main.TabIndex = 6;
-            // 
-            // btn_NhaCungCap
-            // 
-            this.btn_NhaCungCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_NhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_NhaCungCap.FlatAppearance.BorderSize = 0;
-            this.btn_NhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NhaCungCap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhaCungCap.ForeColor = System.Drawing.Color.White;
-            this.btn_NhaCungCap.Location = new System.Drawing.Point(0, 60);
-            this.btn_NhaCungCap.Name = "btn_NhaCungCap";
-            this.btn_NhaCungCap.Size = new System.Drawing.Size(213, 60);
-            this.btn_NhaCungCap.TabIndex = 1;
-            this.btn_NhaCungCap.Text = "Nhà sản xuất";
-            this.btn_NhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_NhaCungCap.UseVisualStyleBackColor = false;
-            // 
-            // btn_KhachHang
-            // 
-            this.btn_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_KhachHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_KhachHang.FlatAppearance.BorderSize = 0;
-            this.btn_KhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_KhachHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KhachHang.ForeColor = System.Drawing.Color.White;
-            this.btn_KhachHang.Location = new System.Drawing.Point(0, 0);
-            this.btn_KhachHang.Name = "btn_KhachHang";
-            this.btn_KhachHang.Size = new System.Drawing.Size(213, 60);
-            this.btn_KhachHang.TabIndex = 0;
-            this.btn_KhachHang.Text = "Khách hàng";
-            this.btn_KhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_KhachHang.UseVisualStyleBackColor = false;
-            // 
-            // panel_DoiTac
-            // 
-            this.panel_DoiTac.Controls.Add(this.btn_NhaCungCap);
-            this.panel_DoiTac.Controls.Add(this.btn_KhachHang);
-            this.panel_DoiTac.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_DoiTac.Location = new System.Drawing.Point(0, 985);
-            this.panel_DoiTac.Name = "panel_DoiTac";
-            this.panel_DoiTac.Size = new System.Drawing.Size(213, 120);
-            this.panel_DoiTac.TabIndex = 17;
             // 
             // labelTime
             // 
@@ -183,7 +142,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(234, 0);
@@ -191,26 +149,16 @@
             this.panel4.Size = new System.Drawing.Size(948, 48);
             this.panel4.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(760, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cài đặc ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // lblNameStore
             // 
             this.lblNameStore.AutoSize = true;
-            this.lblNameStore.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameStore.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameStore.ForeColor = System.Drawing.Color.White;
             this.lblNameStore.Location = new System.Drawing.Point(39, 48);
             this.lblNameStore.Name = "lblNameStore";
-            this.lblNameStore.Size = new System.Drawing.Size(151, 23);
+            this.lblNameStore.Size = new System.Drawing.Size(124, 24);
             this.lblNameStore.TabIndex = 0;
-            this.lblNameStore.Text = "Của hàng TQĐ";
+            this.lblNameStore.Text = "Cửa hàng TQĐ";
             this.lblNameStore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
@@ -244,17 +192,7 @@
             // 
             this.panelLeft.AutoScroll = true;
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.panelLeft.Controls.Add(this.panel_DoiTac);
-            this.panelLeft.Controls.Add(this.btn_DoiTac);
-            this.panelLeft.Controls.Add(this.panel_QuanTri);
-            this.panelLeft.Controls.Add(this.btn_QuanTri);
-            this.panelLeft.Controls.Add(this.btn_BaoCao);
-            this.panelLeft.Controls.Add(this.btn_QLKho);
-            this.panelLeft.Controls.Add(this.panel_SanPham);
-            this.panelLeft.Controls.Add(this.btn_SanPham);
-            this.panelLeft.Controls.Add(this.panelBanHang);
-            this.panelLeft.Controls.Add(this.btn_BanHang);
-            this.panelLeft.Controls.Add(this.btn_TrangChu);
+            this.panelLeft.Controls.Add(this.panel_Menu);
             this.panelLeft.Controls.Add(this.panel3);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
@@ -262,49 +200,114 @@
             this.panelLeft.Size = new System.Drawing.Size(234, 1055);
             this.panelLeft.TabIndex = 4;
             // 
-            // btn_DoiTac
+            // panel_Menu
             // 
-            this.btn_DoiTac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_DoiTac.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_DoiTac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DoiTac.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DoiTac.ForeColor = System.Drawing.Color.White;
-            this.btn_DoiTac.Location = new System.Drawing.Point(0, 925);
-            this.btn_DoiTac.Name = "btn_DoiTac";
-            this.btn_DoiTac.Size = new System.Drawing.Size(213, 60);
-            this.btn_DoiTac.TabIndex = 15;
-            this.btn_DoiTac.Text = "Đối tác";
-            this.btn_DoiTac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DoiTac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_DoiTac.UseVisualStyleBackColor = false;
-            this.btn_DoiTac.Click += new System.EventHandler(this.btn_DoiTac_Click);
+            this.panel_Menu.Controls.Add(this.btn_DangXuat);
+            this.panel_Menu.Controls.Add(this.panel_Setting);
+            this.panel_Menu.Controls.Add(this.btn_Setting);
+            this.panel_Menu.Controls.Add(this.panel_QuanTri);
+            this.panel_Menu.Controls.Add(this.btn_QuanTriMenu);
+            this.panel_Menu.Controls.Add(this.btn_BaoCao);
+            this.panel_Menu.Controls.Add(this.btn_QLKho);
+            this.panel_Menu.Controls.Add(this.panel_SanPham);
+            this.panel_Menu.Controls.Add(this.btn_SanPhamMenu);
+            this.panel_Menu.Controls.Add(this.panel_BanHang);
+            this.panel_Menu.Controls.Add(this.btn_BanHangMenu);
+            this.panel_Menu.Controls.Add(this.btn_TrangChu);
+            this.panel_Menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Menu.Location = new System.Drawing.Point(0, 140);
+            this.panel_Menu.Name = "panel_Menu";
+            this.panel_Menu.Size = new System.Drawing.Size(213, 1200);
+            this.panel_Menu.TabIndex = 1;
+            // 
+            // panel_Setting
+            // 
+            this.panel_Setting.Controls.Add(this.btn_DoiMatKhau);
+            this.panel_Setting.Controls.Add(this.btn_ThongTinCaNhan);
+            this.panel_Setting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Setting.Location = new System.Drawing.Point(0, 900);
+            this.panel_Setting.Name = "panel_Setting";
+            this.panel_Setting.Size = new System.Drawing.Size(213, 120);
+            this.panel_Setting.TabIndex = 0;
+            // 
+            // btn_ThongTinCaNhan
+            // 
+            this.btn_ThongTinCaNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_ThongTinCaNhan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ThongTinCaNhan.FlatAppearance.BorderSize = 0;
+            this.btn_ThongTinCaNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThongTinCaNhan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongTinCaNhan.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongTinCaNhan.Location = new System.Drawing.Point(0, 0);
+            this.btn_ThongTinCaNhan.Name = "btn_ThongTinCaNhan";
+            this.btn_ThongTinCaNhan.Size = new System.Drawing.Size(213, 60);
+            this.btn_ThongTinCaNhan.TabIndex = 0;
+            this.btn_ThongTinCaNhan.Text = "Thông tin cá nhân";
+            this.btn_ThongTinCaNhan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThongTinCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ThongTinCaNhan.UseVisualStyleBackColor = false;
+            // 
+            // btn_Setting
+            // 
+            this.btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_Setting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Setting.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Setting.ForeColor = System.Drawing.Color.White;
+            this.btn_Setting.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.setting;
+            this.btn_Setting.Location = new System.Drawing.Point(0, 840);
+            this.btn_Setting.Name = "btn_Setting";
+            this.btn_Setting.Size = new System.Drawing.Size(213, 60);
+            this.btn_Setting.TabIndex = 9;
+            this.btn_Setting.Text = " Cài đặt";
+            this.btn_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Setting.UseVisualStyleBackColor = false;
             // 
             // panel_QuanTri
             // 
-            this.panel_QuanTri.Controls.Add(this.btn_QTriPhanQuyen);
+            this.panel_QuanTri.Controls.Add(this.btn_QtriPhanQuyen);
+            this.panel_QuanTri.Controls.Add(this.btn_QTriChucVu);
             this.panel_QuanTri.Controls.Add(this.btn_QTriNhanVien);
             this.panel_QuanTri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_QuanTri.Location = new System.Drawing.Point(0, 805);
+            this.panel_QuanTri.Location = new System.Drawing.Point(0, 660);
             this.panel_QuanTri.Name = "panel_QuanTri";
-            this.panel_QuanTri.Size = new System.Drawing.Size(213, 120);
-            this.panel_QuanTri.TabIndex = 14;
+            this.panel_QuanTri.Size = new System.Drawing.Size(213, 180);
+            this.panel_QuanTri.TabIndex = 8;
             // 
-            // btn_QTriPhanQuyen
+            // btn_QtriPhanQuyen
             // 
-            this.btn_QTriPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_QTriPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_QTriPhanQuyen.FlatAppearance.BorderSize = 0;
-            this.btn_QTriPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_QTriPhanQuyen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_QTriPhanQuyen.ForeColor = System.Drawing.Color.White;
-            this.btn_QTriPhanQuyen.Location = new System.Drawing.Point(0, 60);
-            this.btn_QTriPhanQuyen.Name = "btn_QTriPhanQuyen";
-            this.btn_QTriPhanQuyen.Size = new System.Drawing.Size(213, 60);
-            this.btn_QTriPhanQuyen.TabIndex = 1;
-            this.btn_QTriPhanQuyen.Text = "Quản trị phân quyền";
-            this.btn_QTriPhanQuyen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_QTriPhanQuyen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_QTriPhanQuyen.UseVisualStyleBackColor = false;
+            this.btn_QtriPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QtriPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QtriPhanQuyen.FlatAppearance.BorderSize = 0;
+            this.btn_QtriPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QtriPhanQuyen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QtriPhanQuyen.ForeColor = System.Drawing.Color.White;
+            this.btn_QtriPhanQuyen.Location = new System.Drawing.Point(0, 120);
+            this.btn_QtriPhanQuyen.Name = "btn_QtriPhanQuyen";
+            this.btn_QtriPhanQuyen.Size = new System.Drawing.Size(213, 60);
+            this.btn_QtriPhanQuyen.TabIndex = 2;
+            this.btn_QtriPhanQuyen.Text = "Phân quyền";
+            this.btn_QtriPhanQuyen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QtriPhanQuyen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_QtriPhanQuyen.UseVisualStyleBackColor = false;
+            // 
+            // btn_QTriChucVu
+            // 
+            this.btn_QTriChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QTriChucVu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QTriChucVu.FlatAppearance.BorderSize = 0;
+            this.btn_QTriChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QTriChucVu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QTriChucVu.ForeColor = System.Drawing.Color.White;
+            this.btn_QTriChucVu.Location = new System.Drawing.Point(0, 60);
+            this.btn_QTriChucVu.Name = "btn_QTriChucVu";
+            this.btn_QTriChucVu.Size = new System.Drawing.Size(213, 60);
+            this.btn_QTriChucVu.TabIndex = 1;
+            this.btn_QTriChucVu.Text = "Chức vụ";
+            this.btn_QTriChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QTriChucVu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_QTriChucVu.UseVisualStyleBackColor = false;
             // 
             // btn_QTriNhanVien
             // 
@@ -318,28 +321,27 @@
             this.btn_QTriNhanVien.Name = "btn_QTriNhanVien";
             this.btn_QTriNhanVien.Size = new System.Drawing.Size(213, 60);
             this.btn_QTriNhanVien.TabIndex = 0;
-            this.btn_QTriNhanVien.Text = "Quản trị nhân viên";
+            this.btn_QTriNhanVien.Text = "Nhân viên";
             this.btn_QTriNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_QTriNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_QTriNhanVien.UseVisualStyleBackColor = false;
             // 
-            // btn_QuanTri
+            // btn_QuanTriMenu
             // 
-            this.btn_QuanTri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_QuanTri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_QuanTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_QuanTri.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_QuanTri.ForeColor = System.Drawing.Color.White;
-            this.btn_QuanTri.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.user;
-            this.btn_QuanTri.Location = new System.Drawing.Point(0, 745);
-            this.btn_QuanTri.Name = "btn_QuanTri";
-            this.btn_QuanTri.Size = new System.Drawing.Size(213, 60);
-            this.btn_QuanTri.TabIndex = 13;
-            this.btn_QuanTri.Text = " Quản trị";
-            this.btn_QuanTri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_QuanTri.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_QuanTri.UseVisualStyleBackColor = false;
-            this.btn_QuanTri.Click += new System.EventHandler(this.btn_QuanTri_Click);
+            this.btn_QuanTriMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QuanTriMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QuanTriMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QuanTriMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanTriMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanTriMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.user;
+            this.btn_QuanTriMenu.Location = new System.Drawing.Point(0, 600);
+            this.btn_QuanTriMenu.Name = "btn_QuanTriMenu";
+            this.btn_QuanTriMenu.Size = new System.Drawing.Size(213, 60);
+            this.btn_QuanTriMenu.TabIndex = 7;
+            this.btn_QuanTriMenu.Text = " Quản trị";
+            this.btn_QuanTriMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QuanTriMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_QuanTriMenu.UseVisualStyleBackColor = false;
             // 
             // btn_BaoCao
             // 
@@ -349,15 +351,14 @@
             this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BaoCao.ForeColor = System.Drawing.Color.White;
             this.btn_BaoCao.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.bar_chart;
-            this.btn_BaoCao.Location = new System.Drawing.Point(0, 685);
+            this.btn_BaoCao.Location = new System.Drawing.Point(0, 540);
             this.btn_BaoCao.Name = "btn_BaoCao";
             this.btn_BaoCao.Size = new System.Drawing.Size(213, 60);
-            this.btn_BaoCao.TabIndex = 12;
-            this.btn_BaoCao.Text = " Bán cáo";
+            this.btn_BaoCao.TabIndex = 6;
+            this.btn_BaoCao.Text = " Báo cáo";
             this.btn_BaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_BaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_BaoCao.UseVisualStyleBackColor = false;
-            this.btn_BaoCao.Click += new System.EventHandler(this.btn_BaoCao_Click);
             // 
             // btn_QLKho
             // 
@@ -367,42 +368,41 @@
             this.btn_QLKho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QLKho.ForeColor = System.Drawing.Color.White;
             this.btn_QLKho.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.cube;
-            this.btn_QLKho.Location = new System.Drawing.Point(0, 625);
+            this.btn_QLKho.Location = new System.Drawing.Point(0, 480);
             this.btn_QLKho.Name = "btn_QLKho";
             this.btn_QLKho.Size = new System.Drawing.Size(213, 60);
-            this.btn_QLKho.TabIndex = 11;
+            this.btn_QLKho.TabIndex = 5;
             this.btn_QLKho.Text = " Quản lý kho";
             this.btn_QLKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_QLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_QLKho.UseVisualStyleBackColor = false;
-            this.btn_QLKho.Click += new System.EventHandler(this.btn_QLKho_Click);
             // 
             // panel_SanPham
             // 
-            this.panel_SanPham.Controls.Add(this.btn_SP);
+            this.panel_SanPham.Controls.Add(this.btn_SanPham);
             this.panel_SanPham.Controls.Add(this.btn_LoaiSP);
             this.panel_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_SanPham.Location = new System.Drawing.Point(0, 503);
+            this.panel_SanPham.Location = new System.Drawing.Point(0, 360);
             this.panel_SanPham.Name = "panel_SanPham";
-            this.panel_SanPham.Size = new System.Drawing.Size(213, 122);
-            this.panel_SanPham.TabIndex = 5;
+            this.panel_SanPham.Size = new System.Drawing.Size(213, 120);
+            this.panel_SanPham.TabIndex = 4;
             // 
-            // btn_SP
+            // btn_SanPham
             // 
-            this.btn_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_SP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_SP.FlatAppearance.BorderSize = 0;
-            this.btn_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SP.ForeColor = System.Drawing.Color.White;
-            this.btn_SP.Location = new System.Drawing.Point(0, 60);
-            this.btn_SP.Name = "btn_SP";
-            this.btn_SP.Size = new System.Drawing.Size(213, 60);
-            this.btn_SP.TabIndex = 6;
-            this.btn_SP.Text = "Sản phẩm";
-            this.btn_SP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_SP.UseVisualStyleBackColor = false;
+            this.btn_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_SanPham.FlatAppearance.BorderSize = 0;
+            this.btn_SanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SanPham.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SanPham.ForeColor = System.Drawing.Color.White;
+            this.btn_SanPham.Location = new System.Drawing.Point(0, 60);
+            this.btn_SanPham.Name = "btn_SanPham";
+            this.btn_SanPham.Size = new System.Drawing.Size(213, 60);
+            this.btn_SanPham.TabIndex = 1;
+            this.btn_SanPham.Text = "Sản phẩm";
+            this.btn_SanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_SanPham.UseVisualStyleBackColor = false;
             // 
             // btn_LoaiSP
             // 
@@ -415,57 +415,56 @@
             this.btn_LoaiSP.Location = new System.Drawing.Point(0, 0);
             this.btn_LoaiSP.Name = "btn_LoaiSP";
             this.btn_LoaiSP.Size = new System.Drawing.Size(213, 60);
-            this.btn_LoaiSP.TabIndex = 5;
+            this.btn_LoaiSP.TabIndex = 0;
             this.btn_LoaiSP.Text = "Loại sản phẩm";
             this.btn_LoaiSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_LoaiSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_LoaiSP.UseVisualStyleBackColor = false;
             // 
-            // btn_SanPham
+            // btn_SanPhamMenu
             // 
-            this.btn_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_SanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SanPham.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SanPham.ForeColor = System.Drawing.Color.White;
-            this.btn_SanPham.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.list;
-            this.btn_SanPham.Location = new System.Drawing.Point(0, 443);
-            this.btn_SanPham.Name = "btn_SanPham";
-            this.btn_SanPham.Size = new System.Drawing.Size(213, 60);
-            this.btn_SanPham.TabIndex = 4;
-            this.btn_SanPham.Text = " Sản phẩm";
-            this.btn_SanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_SanPham.UseVisualStyleBackColor = false;
-            this.btn_SanPham.Click += new System.EventHandler(this.btn_SP_Click);
+            this.btn_SanPhamMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_SanPhamMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_SanPhamMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SanPhamMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SanPhamMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_SanPhamMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.list;
+            this.btn_SanPhamMenu.Location = new System.Drawing.Point(0, 300);
+            this.btn_SanPhamMenu.Name = "btn_SanPhamMenu";
+            this.btn_SanPhamMenu.Size = new System.Drawing.Size(213, 60);
+            this.btn_SanPhamMenu.TabIndex = 3;
+            this.btn_SanPhamMenu.Text = " Sản phẩm";
+            this.btn_SanPhamMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SanPhamMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_SanPhamMenu.UseVisualStyleBackColor = false;
             // 
-            // panelBanHang
+            // panel_BanHang
             // 
-            this.panelBanHang.Controls.Add(this.btn_GiamGia);
-            this.panelBanHang.Controls.Add(this.btn_DonHangOnline);
-            this.panelBanHang.Controls.Add(this.btn_Ban);
-            this.panelBanHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBanHang.Location = new System.Drawing.Point(0, 260);
-            this.panelBanHang.Name = "panelBanHang";
-            this.panelBanHang.Size = new System.Drawing.Size(213, 183);
-            this.panelBanHang.TabIndex = 3;
+            this.panel_BanHang.Controls.Add(this.btn_DSBanOff);
+            this.panel_BanHang.Controls.Add(this.btn_DonHangOnline);
+            this.panel_BanHang.Controls.Add(this.btn_BanHang);
+            this.panel_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_BanHang.Location = new System.Drawing.Point(0, 120);
+            this.panel_BanHang.Name = "panel_BanHang";
+            this.panel_BanHang.Size = new System.Drawing.Size(213, 180);
+            this.panel_BanHang.TabIndex = 2;
             // 
-            // btn_GiamGia
+            // btn_DSBanOff
             // 
-            this.btn_GiamGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_GiamGia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_GiamGia.FlatAppearance.BorderSize = 0;
-            this.btn_GiamGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GiamGia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GiamGia.ForeColor = System.Drawing.Color.White;
-            this.btn_GiamGia.Location = new System.Drawing.Point(0, 120);
-            this.btn_GiamGia.Name = "btn_GiamGia";
-            this.btn_GiamGia.Size = new System.Drawing.Size(213, 60);
-            this.btn_GiamGia.TabIndex = 2;
-            this.btn_GiamGia.Text = "Giảm giá";
-            this.btn_GiamGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_GiamGia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_GiamGia.UseVisualStyleBackColor = false;
+            this.btn_DSBanOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DSBanOff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_DSBanOff.FlatAppearance.BorderSize = 0;
+            this.btn_DSBanOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DSBanOff.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DSBanOff.ForeColor = System.Drawing.Color.White;
+            this.btn_DSBanOff.Location = new System.Drawing.Point(0, 120);
+            this.btn_DSBanOff.Name = "btn_DSBanOff";
+            this.btn_DSBanOff.Size = new System.Drawing.Size(213, 60);
+            this.btn_DSBanOff.TabIndex = 2;
+            this.btn_DSBanOff.Text = "Đơn hàng";
+            this.btn_DSBanOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DSBanOff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_DSBanOff.UseVisualStyleBackColor = false;
             // 
             // btn_DonHangOnline
             // 
@@ -479,46 +478,44 @@
             this.btn_DonHangOnline.Name = "btn_DonHangOnline";
             this.btn_DonHangOnline.Size = new System.Drawing.Size(213, 60);
             this.btn_DonHangOnline.TabIndex = 1;
-            this.btn_DonHangOnline.Text = "Đơn hàng Online";
+            this.btn_DonHangOnline.Text = "Đặt hàng online";
             this.btn_DonHangOnline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DonHangOnline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DonHangOnline.UseVisualStyleBackColor = false;
-            // 
-            // btn_Ban
-            // 
-            this.btn_Ban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_Ban.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Ban.FlatAppearance.BorderSize = 0;
-            this.btn_Ban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Ban.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ban.ForeColor = System.Drawing.Color.White;
-            this.btn_Ban.Location = new System.Drawing.Point(0, 0);
-            this.btn_Ban.Name = "btn_Ban";
-            this.btn_Ban.Size = new System.Drawing.Size(213, 60);
-            this.btn_Ban.TabIndex = 0;
-            this.btn_Ban.Text = "Bán hàng";
-            this.btn_Ban.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Ban.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Ban.UseVisualStyleBackColor = false;
             // 
             // btn_BanHang
             // 
             this.btn_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
             this.btn_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_BanHang.FlatAppearance.BorderSize = 0;
             this.btn_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BanHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BanHang.ForeColor = System.Drawing.Color.White;
-            this.btn_BanHang.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.shopping_cart;
-            this.btn_BanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BanHang.Location = new System.Drawing.Point(0, 200);
+            this.btn_BanHang.Location = new System.Drawing.Point(0, 0);
             this.btn_BanHang.Name = "btn_BanHang";
             this.btn_BanHang.Size = new System.Drawing.Size(213, 60);
-            this.btn_BanHang.TabIndex = 2;
+            this.btn_BanHang.TabIndex = 0;
             this.btn_BanHang.Text = "Bán hàng";
             this.btn_BanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_BanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_BanHang.UseVisualStyleBackColor = false;
-            this.btn_BanHang.Click += new System.EventHandler(this.btn_BanHang_Click);
+            // 
+            // btn_BanHangMenu
+            // 
+            this.btn_BanHangMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_BanHangMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_BanHangMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BanHangMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BanHangMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_BanHangMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.shopping_cart;
+            this.btn_BanHangMenu.Location = new System.Drawing.Point(0, 60);
+            this.btn_BanHangMenu.Name = "btn_BanHangMenu";
+            this.btn_BanHangMenu.Size = new System.Drawing.Size(213, 60);
+            this.btn_BanHangMenu.TabIndex = 1;
+            this.btn_BanHangMenu.Text = " Bán hàng";
+            this.btn_BanHangMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BanHangMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_BanHangMenu.UseVisualStyleBackColor = false;
             // 
             // btn_TrangChu
             // 
@@ -527,17 +524,49 @@
             this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TrangChu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TrangChu.ForeColor = System.Drawing.Color.White;
-            this.btn_TrangChu.Image = ((System.Drawing.Image)(resources.GetObject("btn_TrangChu.Image")));
-            this.btn_TrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TrangChu.Location = new System.Drawing.Point(0, 140);
+            this.btn_TrangChu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.home;
+            this.btn_TrangChu.Location = new System.Drawing.Point(0, 0);
             this.btn_TrangChu.Name = "btn_TrangChu";
             this.btn_TrangChu.Size = new System.Drawing.Size(213, 60);
-            this.btn_TrangChu.TabIndex = 1;
-            this.btn_TrangChu.Text = "Trang chủ";
+            this.btn_TrangChu.TabIndex = 0;
+            this.btn_TrangChu.Text = " Trang chủ";
             this.btn_TrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TrangChu.UseVisualStyleBackColor = false;
-            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
+            // 
+            // btn_DoiMatKhau
+            // 
+            this.btn_DoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DoiMatKhau.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_DoiMatKhau.FlatAppearance.BorderSize = 0;
+            this.btn_DoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DoiMatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoiMatKhau.ForeColor = System.Drawing.Color.White;
+            this.btn_DoiMatKhau.Location = new System.Drawing.Point(0, 60);
+            this.btn_DoiMatKhau.Name = "btn_DoiMatKhau";
+            this.btn_DoiMatKhau.Size = new System.Drawing.Size(213, 60);
+            this.btn_DoiMatKhau.TabIndex = 1;
+            this.btn_DoiMatKhau.Text = "Đổi mật khẩu";
+            this.btn_DoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DoiMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
+            // 
+            // btn_DangXuat
+            // 
+            this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_DangXuat.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.logout;
+            this.btn_DangXuat.Location = new System.Drawing.Point(0, 1020);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(213, 60);
+            this.btn_DangXuat.TabIndex = 10;
+            this.btn_DangXuat.Text = " Đăng xuất";
+            this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_DangXuat.UseVisualStyleBackColor = false;
             // 
             // Frm_Main
             // 
@@ -555,7 +584,6 @@
             this.Text = "Quản lý của hàng máy tính";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Main_Load);
-            this.panel_DoiTac.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -563,9 +591,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelLeft.ResumeLayout(false);
+            this.panel_Menu.ResumeLayout(false);
+            this.panel_Setting.ResumeLayout(false);
             this.panel_QuanTri.ResumeLayout(false);
             this.panel_SanPham.ResumeLayout(false);
-            this.panelBanHang.ResumeLayout(false);
+            this.panel_BanHang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -582,26 +612,28 @@
         private System.Windows.Forms.Label lblNameStore;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panelLeft;
-        private Custom_Controls.Button_ControlBox btn_BanHang;
+        public System.Windows.Forms.Panel panel_Menu;
         private Custom_Controls.Button_ControlBox btn_TrangChu;
-        private Custom_Controls.Button_ControlBox btn_SanPham;
-        private System.Windows.Forms.Panel panelBanHang;
-        private System.Windows.Forms.Panel panel_SanPham;
-        private Custom_Controls.Button_NoBoder btn_SP;
-        private Custom_Controls.Button_NoBoder btn_LoaiSP;
-        private Custom_Controls.Button_NoBoder btn_GiamGia;
+        private Custom_Controls.Button_ControlBox btn_SanPhamMenu;
+        private System.Windows.Forms.Panel panel_BanHang;
+        private Custom_Controls.Button_NoBoder btn_DSBanOff;
         private Custom_Controls.Button_NoBoder btn_DonHangOnline;
-        private Custom_Controls.Button_NoBoder btn_Ban;
-        private Custom_Controls.Button_ControlBox btn_QuanTri;
+        private Custom_Controls.Button_NoBoder btn_BanHang;
+        private Custom_Controls.Button_ControlBox btn_BanHangMenu;
+        private System.Windows.Forms.Panel panel_SanPham;
+        private Custom_Controls.Button_NoBoder btn_SanPham;
+        private Custom_Controls.Button_NoBoder btn_LoaiSP;
+        private Custom_Controls.Button_ControlBox btn_QuanTriMenu;
         private Custom_Controls.Button_ControlBox btn_BaoCao;
         private Custom_Controls.Button_ControlBox btn_QLKho;
+        private Custom_Controls.Button_ControlBox btn_Setting;
         private System.Windows.Forms.Panel panel_QuanTri;
-        private Custom_Controls.Button_NoBoder btn_QTriPhanQuyen;
+        private Custom_Controls.Button_NoBoder btn_QtriPhanQuyen;
+        private Custom_Controls.Button_NoBoder btn_QTriChucVu;
         private Custom_Controls.Button_NoBoder btn_QTriNhanVien;
-        private Custom_Controls.Button_ControlBox btn_DoiTac;
-        private System.Windows.Forms.Panel panel_DoiTac;
-        private Custom_Controls.Button_NoBoder btn_NhaCungCap;
-        private Custom_Controls.Button_NoBoder btn_KhachHang;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel_Setting;
+        private Custom_Controls.Button_NoBoder btn_ThongTinCaNhan;
+        private Custom_Controls.Button_ControlBox btn_DangXuat;
+        private Custom_Controls.Button_NoBoder btn_DoiMatKhau;
     }
 }

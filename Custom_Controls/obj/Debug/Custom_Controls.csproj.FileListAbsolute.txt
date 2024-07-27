@@ -16,3 +16,59 @@ E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\CSDL\test\Ql_CuaHang_MayTinh_App\Custom_Co
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\CSDL\test\Ql_CuaHang_MayTinh_App\Custom_Controls\obj\Debug\Custom_Controls.csproj.CoreCompileInputs.cache
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\CSDL\test\Ql_CuaHang_MayTinh_App\Custom_Controls\obj\Debug\Custom_Controls.dll
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\CSDL\test\Ql_CuaHang_MayTinh_App\Custom_Controls\obj\Debug\Custom_Controls.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.AssemblyReference.cache
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.CoreCompileInputs.cache
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.dll
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.xml
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.xml
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.pdb
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.xml
+D:\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_C.898D52B4.Up2Date
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.dll
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.pdb
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.dll
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.dll
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.dll
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.xml
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.xml
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.pdb
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.xml
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.AssemblyReference.cache
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.CoreCompileInputs.cache
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_C.898D52B4.Up2Date
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.dll
+C:\Hoc_Tap\IT_VII\PhatTrienUngDungPhamMemThongMinh\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.AssemblyReference.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.CoreCompileInputs.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_C.898D52B4.Up2Date
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\Custom_Controls.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\CloudinaryDotNet.xml
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\Newtonsoft.Json.xml
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\bin\Debug\System.Drawing.Common.xml
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.AssemblyReference.cache
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.csproj.CoreCompileInputs.cache
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.dll
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_Controls.pdb
+D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\Custom_Controls\obj\Debug\Custom_C.898D52B4.Up2Date

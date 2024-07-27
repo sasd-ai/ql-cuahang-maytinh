@@ -16,5 +16,10 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         {
             InitializeComponent();
         }
+
+        private void dataGridView_SanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
