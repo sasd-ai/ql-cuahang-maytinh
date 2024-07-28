@@ -1,9 +1,0 @@
-# Bỏ qua thư mục .vs (Visual Studio)
-.vs/
-
-# Bỏ qua thư mục bin và obj
-**/bin/
-**/obj/
-
-# Bỏ qua các file .xml trong Debug thư mục
-**/Debug/*.xml

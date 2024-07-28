@@ -1,9 +1,0 @@
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\bin\Debug\CustomControl.dll
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\bin\Debug\CustomControl.pdb
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.csproj.AssemblyReference.cache
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.UC_Login.resources
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.UC_Register.resources
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.csproj.GenerateResource.cache
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.dll
-E:\HOC_TAP\HK7_2023_2024\PTPM_AI\DoAn\QL_CuaHang_MayTinh_App\CustomControl\obj\Debug\CustomControl.pdb
