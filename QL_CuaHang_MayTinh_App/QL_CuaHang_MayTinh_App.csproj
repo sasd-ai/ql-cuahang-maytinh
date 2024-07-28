@@ -216,6 +216,9 @@
     <EmbeddedResource Include="My_UC\UC_BaoCao.resx">
       <DependentUpon>UC_BaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My_UC\UC_PhanQuyen.resx">
+      <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_QLKho.resx">
       <DependentUpon>UC_QLKho.cs</DependentUpon>
     </EmbeddedResource>

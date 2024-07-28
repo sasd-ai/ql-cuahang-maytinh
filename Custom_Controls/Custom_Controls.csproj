@@ -103,7 +103,9 @@
     <Compile Include="Button_NoBoder.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomTabControl.cs" />
+    <Compile Include="CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PlaceholderTextBox .cs">
       <SubType>Component</SubType>
     </Compile>

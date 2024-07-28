@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="BUS_BanHang.cs" />
     <Compile Include="BUS_ChucVu.cs" />
+    <Compile Include="BUS_NhanVien_ChucVu.cs" />
     <Compile Include="BUS_NguoiDung_ChucVu.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_SanPham.cs" />
