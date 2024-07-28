@@ -33,38 +33,35 @@
             this.labelTime = new System.Windows.Forms.Label();
             this.lblNameUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblNameStore = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel_Menu = new System.Windows.Forms.Panel();
-            this.btn_DangXuat = new Custom_Controls.Button_ControlBox();
             this.panel_Setting = new System.Windows.Forms.Panel();
+            this.panel_QuanTri = new System.Windows.Forms.Panel();
+            this.panel_SanPham = new System.Windows.Forms.Panel();
+            this.panel_BanHang = new System.Windows.Forms.Panel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btn_DangXuat = new Custom_Controls.Button_ControlBox();
             this.btn_DoiMatKhau = new Custom_Controls.Button_NoBoder();
             this.btn_ThongTinCaNhan = new Custom_Controls.Button_NoBoder();
             this.btn_Setting = new Custom_Controls.Button_ControlBox();
-            this.panel_QuanTri = new System.Windows.Forms.Panel();
             this.btn_QtriPhanQuyen = new Custom_Controls.Button_NoBoder();
             this.btn_QTriChucVu = new Custom_Controls.Button_NoBoder();
             this.btn_QTriNhanVien = new Custom_Controls.Button_NoBoder();
             this.btn_QuanTriMenu = new Custom_Controls.Button_ControlBox();
             this.btn_BaoCao = new Custom_Controls.Button_ControlBox();
             this.btn_QLKho = new Custom_Controls.Button_ControlBox();
-            this.panel_SanPham = new System.Windows.Forms.Panel();
             this.btn_SanPham = new Custom_Controls.Button_NoBoder();
             this.btn_LoaiSP = new Custom_Controls.Button_NoBoder();
             this.btn_SanPhamMenu = new Custom_Controls.Button_ControlBox();
-            this.panel_BanHang = new System.Windows.Forms.Panel();
             this.btn_DSBanOff = new Custom_Controls.Button_NoBoder();
             this.btn_DonHangOnline = new Custom_Controls.Button_NoBoder();
             this.btn_BanHang = new Custom_Controls.Button_NoBoder();
             this.btn_BanHangMenu = new Custom_Controls.Button_ControlBox();
             this.btn_TrangChu = new Custom_Controls.Button_ControlBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -78,9 +75,9 @@
             // pannel_Main
             // 
             this.pannel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pannel_Main.Location = new System.Drawing.Point(234, 140);
+            this.pannel_Main.Location = new System.Drawing.Point(234, 64);
             this.pannel_Main.Name = "pannel_Main";
-            this.pannel_Main.Size = new System.Drawing.Size(948, 915);
+            this.pannel_Main.Size = new System.Drawing.Size(948, 991);
             this.pannel_Main.TabIndex = 6;
             // 
             // labelTime
@@ -89,7 +86,7 @@
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(839, 34);
+            this.labelTime.Location = new System.Drawing.Point(842, 18);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(106, 23);
             this.labelTime.TabIndex = 0;
@@ -100,7 +97,7 @@
             this.lblNameUser.AutoSize = true;
             this.lblNameUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameUser.ForeColor = System.Drawing.Color.White;
-            this.lblNameUser.Location = new System.Drawing.Point(166, 19);
+            this.lblNameUser.Location = new System.Drawing.Point(166, 14);
             this.lblNameUser.Name = "lblNameUser";
             this.lblNameUser.Size = new System.Drawing.Size(29, 23);
             this.lblNameUser.TabIndex = 0;
@@ -111,43 +108,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(27, 19);
+            this.label1.Location = new System.Drawing.Point(27, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Người dùng:";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.panel2.Controls.Add(this.labelTime);
-            this.panel2.Controls.Add(this.lblNameUser);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(234, 48);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(948, 92);
-            this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(18, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(354, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "North Books Shop, NLI Market Gilgit";
-            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.panel4.Controls.Add(this.labelTime);
+            this.panel4.Controls.Add(this.lblNameUser);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(234, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(948, 48);
+            this.panel4.Size = new System.Drawing.Size(948, 64);
             this.panel4.TabIndex = 3;
             // 
             // lblNameStore
@@ -220,6 +196,53 @@
             this.panel_Menu.Size = new System.Drawing.Size(213, 1200);
             this.panel_Menu.TabIndex = 1;
             // 
+            // panel_Setting
+            // 
+            this.panel_Setting.Controls.Add(this.btn_DoiMatKhau);
+            this.panel_Setting.Controls.Add(this.btn_ThongTinCaNhan);
+            this.panel_Setting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Setting.Location = new System.Drawing.Point(0, 900);
+            this.panel_Setting.Name = "panel_Setting";
+            this.panel_Setting.Size = new System.Drawing.Size(213, 120);
+            this.panel_Setting.TabIndex = 0;
+            // 
+            // panel_QuanTri
+            // 
+            this.panel_QuanTri.Controls.Add(this.btn_QtriPhanQuyen);
+            this.panel_QuanTri.Controls.Add(this.btn_QTriChucVu);
+            this.panel_QuanTri.Controls.Add(this.btn_QTriNhanVien);
+            this.panel_QuanTri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_QuanTri.Location = new System.Drawing.Point(0, 660);
+            this.panel_QuanTri.Name = "panel_QuanTri";
+            this.panel_QuanTri.Size = new System.Drawing.Size(213, 180);
+            this.panel_QuanTri.TabIndex = 8;
+            // 
+            // panel_SanPham
+            // 
+            this.panel_SanPham.Controls.Add(this.btn_SanPham);
+            this.panel_SanPham.Controls.Add(this.btn_LoaiSP);
+            this.panel_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_SanPham.Location = new System.Drawing.Point(0, 360);
+            this.panel_SanPham.Name = "panel_SanPham";
+            this.panel_SanPham.Size = new System.Drawing.Size(213, 120);
+            this.panel_SanPham.TabIndex = 4;
+            // 
+            // panel_BanHang
+            // 
+            this.panel_BanHang.Controls.Add(this.btn_DSBanOff);
+            this.panel_BanHang.Controls.Add(this.btn_DonHangOnline);
+            this.panel_BanHang.Controls.Add(this.btn_BanHang);
+            this.panel_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_BanHang.Location = new System.Drawing.Point(0, 120);
+            this.panel_BanHang.Name = "panel_BanHang";
+            this.panel_BanHang.Size = new System.Drawing.Size(213, 180);
+            this.panel_BanHang.TabIndex = 2;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // btn_DangXuat
             // 
             this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
@@ -236,16 +259,6 @@
             this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DangXuat.UseVisualStyleBackColor = false;
-            // 
-            // panel_Setting
-            // 
-            this.panel_Setting.Controls.Add(this.btn_DoiMatKhau);
-            this.panel_Setting.Controls.Add(this.btn_ThongTinCaNhan);
-            this.panel_Setting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Setting.Location = new System.Drawing.Point(0, 900);
-            this.panel_Setting.Name = "panel_Setting";
-            this.panel_Setting.Size = new System.Drawing.Size(213, 120);
-            this.panel_Setting.TabIndex = 0;
             // 
             // btn_DoiMatKhau
             // 
@@ -297,17 +310,6 @@
             this.btn_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Setting.UseVisualStyleBackColor = false;
-            // 
-            // panel_QuanTri
-            // 
-            this.panel_QuanTri.Controls.Add(this.btn_QtriPhanQuyen);
-            this.panel_QuanTri.Controls.Add(this.btn_QTriChucVu);
-            this.panel_QuanTri.Controls.Add(this.btn_QTriNhanVien);
-            this.panel_QuanTri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_QuanTri.Location = new System.Drawing.Point(0, 660);
-            this.panel_QuanTri.Name = "panel_QuanTri";
-            this.panel_QuanTri.Size = new System.Drawing.Size(213, 180);
-            this.panel_QuanTri.TabIndex = 8;
             // 
             // btn_QtriPhanQuyen
             // 
@@ -411,16 +413,6 @@
             this.btn_QLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_QLKho.UseVisualStyleBackColor = false;
             // 
-            // panel_SanPham
-            // 
-            this.panel_SanPham.Controls.Add(this.btn_SanPham);
-            this.panel_SanPham.Controls.Add(this.btn_LoaiSP);
-            this.panel_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_SanPham.Location = new System.Drawing.Point(0, 360);
-            this.panel_SanPham.Name = "panel_SanPham";
-            this.panel_SanPham.Size = new System.Drawing.Size(213, 120);
-            this.panel_SanPham.TabIndex = 4;
-            // 
             // btn_SanPham
             // 
             this.btn_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
@@ -471,17 +463,6 @@
             this.btn_SanPhamMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_SanPhamMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_SanPhamMenu.UseVisualStyleBackColor = false;
-            // 
-            // panel_BanHang
-            // 
-            this.panel_BanHang.Controls.Add(this.btn_DSBanOff);
-            this.panel_BanHang.Controls.Add(this.btn_DonHangOnline);
-            this.panel_BanHang.Controls.Add(this.btn_BanHang);
-            this.panel_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_BanHang.Location = new System.Drawing.Point(0, 120);
-            this.panel_BanHang.Name = "panel_BanHang";
-            this.panel_BanHang.Size = new System.Drawing.Size(213, 180);
-            this.panel_BanHang.TabIndex = 2;
             // 
             // btn_DSBanOff
             // 
@@ -568,18 +549,12 @@
             this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TrangChu.UseVisualStyleBackColor = false;
             // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 1055);
             this.Controls.Add(this.pannel_Main);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelLeft);
             this.IsMdiContainer = true;
@@ -589,8 +564,6 @@
             this.Text = "Quản lý của hàng máy tính";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Main_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -610,8 +583,6 @@
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Label lblNameUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblNameStore;
