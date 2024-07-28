@@ -36,5 +36,29 @@ namespace DAO
                 }
             }
         }
+        public ManHinh FindByID(string maMH)
+        {
+            return qlch.ManHinhs.Where(mh=>mh.MaManHinh==maMH).FirstOrDefault();
+
+        }
+        public bool Delete(string maMH)
+        {
+            try
+            {
+                ManHinh mhDelete=FindByID(maMH);
+                if (mhDelete != null)
+                {
+                    qlch.ManHinhs.DeleteOnSubmit(mhDelete);
+                    qlch.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+                return false;
+            }
+        }
     }
 }
