@@ -102,6 +102,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="QL_CuaHang.cs">
+      <DependentUpon>QL_CuaHang.dbml</DependentUpon>
+    </Compile>
     <Compile Include="QL_CuaHang.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

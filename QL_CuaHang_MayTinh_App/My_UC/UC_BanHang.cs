@@ -16,8 +16,14 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 {
     public partial class UC_BanHang : UserControl
     {
-        private Cloudinary cloudinary;
+        // Class_SanPham class_sp=new Class_SanPham();
+        //private Cloudinary cloudinary;
+        private Dictionary<string, int> selectedProducts = new Dictionary<string, int>();
+        private double totalPrice = 0;
+
+
         BUS_BanHang busBanHang = new BUS_BanHang();
+        BUS_SanPham bus_SanPham = new BUS_SanPham();
         private int currentPage = 1;
         private int itemsPerPage = 12; // Mỗi trang 12 sản phẩm
         private int totalPages = 1;
@@ -25,21 +31,16 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         public UC_BanHang()
         {
             InitializeComponent();
-            InitializeCloudinary();
+            bus_SanPham.InitializeCloudinary();
             LoadButtons();
             LoadComboBoxLoaiSanPham();
-        }
+            SetupDataGridView();
 
-        private void InitializeCloudinary()
-        {
-            Account account = new Account(
-                "dfiyhshnk",         // Thay thế bằng Cloud Name của bạn
-                "782519644662424",   // Thay thế bằng API Key của bạn
-                "xoXUWZ8ZiCLuF7UDfnTTOem1jg8"   // Thay thế bằng API Secret của bạn
-            );
-            cloudinary = new Cloudinary(account);
+            // Khởi tạo FlowLayoutPanel và thêm vào panel2
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            panel4.Controls.Add(flowLayoutPanel1);
         }
-
 
         private void LoadComboBoxLoaiSanPham()
         {
@@ -64,110 +65,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             guna2ComboBox_LoaiSP.SelectedIndex = 0;
         }
 
-        //private void LoadButtons()
-        //{
-        //    tableLayoutPanel_SanPham.Controls.Clear();
-
-        //    // Lấy mã loại sản phẩm được chọn
-        //    string maLoaiSanPham = guna2ComboBox_LoaiSP.SelectedItem is KeyValuePair<string, string> ?
-        //        ((KeyValuePair<string, string>)guna2ComboBox_LoaiSP.SelectedItem).Key : "0";
-
-        //    // Tải sản phẩm theo loại
-        //    List<sanpham> sanPhams = maLoaiSanPham == "0" ?
-        //        busBanHang.LoadSanPham() : // Nếu chọn "Tất cả" thì tải tất cả sản phẩm
-        //        busBanHang.LoadSanPhamTheoLoai(maLoaiSanPham);
-
-        //    // Tính toán số trang
-        //    totalPages = (int)Math.Ceiling((double)sanPhams.Count / itemsPerPage);
-
-        //    // Lấy danh sách sản phẩm cho trang hiện tại
-        //    var sanPhamsPage = sanPhams.Skip((currentPage - 1) * itemsPerPage).Take(itemsPerPage).ToList();
-        //    int currentColumn = 0; // Biến theo dõi cột hiện tại
-        //    int currentRow = 0; // Biến theo dõi dòng hiện tại
-
-        //    foreach (var sp in sanPhamsPage)
-        //    {
-        //        // Kiểm tra nếu đã đầy 3 cột trong dòng hiện tại (vì mỗi trang 12 sản phẩm, 4 cột/dòng)
-        //        if (currentColumn >= 4)
-        //        {
-        //            currentColumn = 0; // Quay về cột đầu tiên
-        //            currentRow++; // Tăng dòng lên 1
-
-        //            // Tạo dòng mới cho tableLayoutPanel
-        //            tableLayoutPanel_SanPham.RowCount = currentRow + 1;
-        //        }
-
-        //        string maSP = sp.MaSP;
-        //        double giaSP = sp.GiaBan;
-        //        string tenSP = sp.TenSP;
-        //        string imageUrl = sp.HinhAnh;
-        //        System.Drawing.Image image = LoadImageFromUrl(imageUrl);
-
-        //        // Tạo button mới
-        //        System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
-        //        btn.Width = 150;
-        //        btn.Height = 180;
-        //        btn.TextAlign = ContentAlignment.BottomCenter;
-        //        btn.FlatStyle = FlatStyle.Flat;
-        //        btn.FlatAppearance.BorderSize = 1; // Loại bỏ viền mặc định
-        //        btn.BackColor = Color.White; // Đặt màu nền cho button
-        //        btn.Tag = maSP; // Lưu mã sản phẩm trong Tag để dễ dàng truy xuất
-        //        btn.Click += Btn_Click;
-        //        // Tạo GraphicsPath để tạo border góc tròn
-        //        GraphicsPath path = new GraphicsPath();
-        //        path.ThietKeButtonSanPham(new Rectangle(0, 0, btn.Width, btn.Height), 15);
-        //        btn.Region = new Region(path);
-
-        //        // Tạo panel chứa ảnh và text
-        //        System.Windows.Forms.Panel panel = new System.Windows.Forms.Panel();
-        //        panel.Width = btn.Width;
-        //        panel.Height = btn.Height;
-        //        panel.Location = new System.Drawing.Point(0, 0); // Đặt panel ở vị trí góc trái trên
-        //        panel.Click += Panel_Click;
-        //        // Tạo PictureBox chứa ảnh
-        //        PictureBox pictureBox = new PictureBox();
-        //        pictureBox.Width = 70; // Chiều rộng ảnh = chiều rộng button - 40
-        //        pictureBox.Height = 70; // Chiều cao ảnh = nửa chiều cao button - 20
-        //        pictureBox.Image = image;
-        //        pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-        //        pictureBox.Location = new System.Drawing.Point(40, 20); // Đặt ảnh cách trái và trên 20px
-
-        //        // Tạo Label cho tên sản phẩm
-        //        System.Windows.Forms.Label labelTenSP = new System.Windows.Forms.Label();
-        //        labelTenSP.Text = tenSP;
-        //        labelTenSP.TextAlign = ContentAlignment.MiddleCenter;
-        //        labelTenSP.Font = new Font(labelTenSP.Font.FontFamily, 12, FontStyle.Bold); // Thiết kế font chữ
-        //        labelTenSP.Location = new System.Drawing.Point(10, 100);
-        //        labelTenSP.AutoSize = true; // Cho phép tự động điều chỉnh kích thước
-        //        labelTenSP.MaximumSize = new System.Drawing.Size(130, 0);
-
-        //        // Tạo Label cho giá sản phẩm
-        //        System.Windows.Forms.Label labelGiaSP = new System.Windows.Forms.Label();
-        //        labelGiaSP.Text = $"{giaSP:N0} đ"; // Định dạng giá trị và thêm "VND"
-        //        labelGiaSP.TextAlign = ContentAlignment.MiddleCenter;
-        //        labelGiaSP.Font = new Font(labelGiaSP.Font.FontFamily, 12, FontStyle.Bold); // Thiết kế font chữ
-        //        labelGiaSP.ForeColor = Color.Red; // Đặt màu chữ là màu đỏ
-        //        labelGiaSP.Location = new System.Drawing.Point(10, 150); // Đặt text cách trái 20px và cách trên 150px
-        //        labelGiaSP.AutoSize = true; // Cho phép tự động điều chỉnh kích thước
-        //        labelGiaSP.MaximumSize = new System.Drawing.Size(130, 0); // Giới hạn chiều rộng tối đa của label là 130px
-
-        //        // Thêm PictureBox và hai Label vào Panel
-        //        panel.Controls.Add(pictureBox);
-        //        panel.Controls.Add(labelTenSP);
-        //        panel.Controls.Add(labelGiaSP);
-
-        //        // Thêm Panel vào Button
-        //        btn.Controls.Add(panel);
-
-        //        // Thêm button vào TableLayoutPanel
-        //        tableLayoutPanel_SanPham.Controls.Add(btn, currentColumn, currentRow); // Thêm button vào cột hiện tại, dòng hiện tại
-
-        //        currentColumn++;
-        //    }
-
-        //    // Thêm các nút phân trang
-        //    AddPaginationButtons();
-        //}
+        
         private void LoadButtons()
         {
             tableLayoutPanel_SanPham.Controls.Clear();
@@ -216,15 +114,93 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             AddPaginationButtons();
         }
 
+        // Đảm bảo rằng panel2 là FlowLayoutPanel
         private void UcSanPham_ProductClicked(object sender, CustomControl.UC_SanPham.ProductEventArgs e)
         {
             // In thông tin sản phẩm ra console
-
             Console.WriteLine($"Mã sản phẩm: {e.MaSP}");
             Console.WriteLine($"Tên sản phẩm: {e.TenSP}");
             Console.WriteLine($"Giá sản phẩm: {e.GiaSP:N0} đ");
             Console.WriteLine("-------------------");
-            MessageBox.Show($"MaSP: {e.MaSP}, TenSP: {e.TenSP}, GiaSP: {e.GiaSP:N0}");
+
+            // Kiểm tra nếu sản phẩm đã được chọn trước đó
+            if (selectedProducts.ContainsKey(e.MaSP))
+            {
+                // Tăng số lượng sản phẩm
+                selectedProducts[e.MaSP]++;
+            }
+            else
+            {
+                // Thêm sản phẩm vào từ điển với số lượng là 1
+                selectedProducts[e.MaSP] = 1;
+            }
+
+            // Cập nhật tổng tiền
+            totalPrice += e.GiaSP; // Cộng giá của sản phẩm vào tổng tiền
+            label_TongTien.Text = $"{totalPrice:N0} đ";
+
+            // Cập nhật DataGridView
+            UpdateDataGridView(e.MaSP, e.TenSP, e.GiaSP, selectedProducts[e.MaSP]);
+        }
+
+        private void UpdateDataGridView(string maSP, string tenSP, double giaSP, int soLuong)
+        {
+            bool productFound = false;
+
+            // Kiểm tra nếu sản phẩm đã có trong DataGridView
+            foreach (DataGridViewRow row in guna2DataGridView2.Rows)
+            {
+                if (row.Cells["masp"].Value != null && row.Cells["masp"].Value.ToString() == maSP)
+                {
+                    // Cập nhật số lượng và tổng tiền
+                    row.Cells["sl"].Value = soLuong;
+                    row.Cells["giaban"].Value = $"{giaSP:N0} đ";
+                    row.Cells["tt"].Value = $"{giaSP * soLuong:N0} đ";
+                    productFound = true;
+                    break;
+                }
+            }
+
+            // Thêm sản phẩm mới vào DataGridView nếu chưa tồn tại
+            if (!productFound)
+            {
+                guna2DataGridView2.Rows.Add(maSP, tenSP, $"{giaSP:N0} đ", soLuong, $"{giaSP * soLuong:N0} đ");
+            }
+        }
+
+
+
+        // Thiết lập cấu trúc cột cho DataGridView
+        private void SetupDataGridView()
+        {
+
+            // Cột Xóa
+            DataGridViewImageColumn imgColumn = new DataGridViewImageColumn
+            {
+                Name = "Xoa",
+                HeaderText = "Hành Động",
+                Width = 80,
+                Image = Properties.Resources.delete11 // Sử dụng hình ảnh từ thư mục Resources
+            };
+
+            guna2DataGridView2.Columns.Add(imgColumn);
+            guna2DataGridView2.RowTemplate.Height = 50;
+            guna2DataGridView2.CellContentClick += Guna2DataGridView2_CellContentClick;
+        }
+
+        private void Guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView2.Columns["Xoa"].Index && e.RowIndex >= 0)
+            {
+                // Xóa hàng hiện tại
+                var rowToRemove = guna2DataGridView2.Rows[e.RowIndex];
+                double rowTotal = double.Parse(rowToRemove.Cells["tt"].Value.ToString().Replace(" đ", ""));
+                guna2DataGridView2.Rows.RemoveAt(e.RowIndex);
+
+                // Cập nhật tổng tiền
+                totalPrice -= rowTotal;
+                label_TongTien.Text = $"{totalPrice:N0} đ";
+            }
         }
 
         private void Panel_Click(object sender, EventArgs e)
@@ -292,35 +268,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             }
         }
 
-        private System.Drawing.Image LoadImageFromUrl(string url)
-        {
-            try
-            {
-                using (var webClient = new WebClient())
-                {
-                    byte[] imageBytes = webClient.DownloadData(url);
-                    using (var ms = new System.IO.MemoryStream(imageBytes))
-                    {
-                        var image = System.Drawing.Image.FromStream(ms);
-                        return ResizeImage(image, 50, 50);
-                    }
-                }
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        private System.Drawing.Image ResizeImage(System.Drawing.Image image, int width, int height)
-        {
-            var newImage = new Bitmap(width, height);
-            using (var graphics = Graphics.FromImage(newImage))
-            {
-                graphics.DrawImage(image, 0, 0, width, height);
-            }
-            return newImage;
-        }
+        
 
         private void guna2ComboBox_LoaiSP_SelectedIndexChanged(object sender, EventArgs e)
         {

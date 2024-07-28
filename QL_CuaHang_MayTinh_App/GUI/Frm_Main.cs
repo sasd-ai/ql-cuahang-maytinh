@@ -46,9 +46,12 @@ namespace QL_CuaHang_MayTinh_App.GUI
             //Chuyển chức năng
             this.btn_BanHang.Click += Btn_BanHang_Click;
             this.btn_SanPham.Click += Btn_SanPham_Click;
+            this.btn_QLKho.Click += Btn_QLKho_Click;
+            this.btn_QtriPhanQuyen.Click += Btn_QtriPhanQuyen_Click;
         }
 
        
+
 
         //Chuyển chức năng
         #region Chuyển chức năng
@@ -73,6 +76,37 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Add(uC_SanPham);
             uC_SanPham.BringToFront();
         }
+
+        //Quản lý kho, nhập hàng,...
+        private void Btn_QLKho_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của UC_Home
+            UC_QLKho uc_QLKho = new UC_QLKho();
+            uc_QLKho.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_QLKho);
+            uc_QLKho.BringToFront();
+            uc_QLKho.btn_NhapHang.Click += Btn_NhapHang_Click;
+        }
+        private void Btn_NhapHang_Click(object sender, EventArgs e)
+        {
+            UC_NhapHang uc_Nhap = new UC_NhapHang();
+            uc_Nhap.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_Nhap);
+            pannel_Main.Controls.Add(uc_Nhap);
+            uc_Nhap.BringToFront();
+        }
+        //QUản lý chức vụ của nhân viên và phân quyền
+        private void Btn_QtriPhanQuyen_Click(object sender, EventArgs e)
+        {
+            UC_PhanQuyen uC_PhanQuyen = new UC_PhanQuyen();
+            uC_PhanQuyen.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_PhanQuyen);
+            pannel_Main.Controls.Add(uC_PhanQuyen);
+            uC_PhanQuyen.BringToFront();
+        }
         #endregion
 
 
@@ -94,7 +128,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
             lblNameStore.Text = "CỦA HÀNG MÁY \n TÍNH TQĐ";
 
             //Tên User
-            //LoadThongTinUser();
+            LoadThongTinUser();
 
             // Tạo một instance của UC_Home
             UC_TrangChu homeControl = new UC_TrangChu();
@@ -171,17 +205,17 @@ namespace QL_CuaHang_MayTinh_App.GUI
             this.panel_Setting.Visible = true;
         }
         #endregion
-        //private void LoadThongTinUser()
-        //{
-        //    nhanvien nv = bus_NhanVien.FindByEmai(email);
+        private void LoadThongTinUser()
+        {
+            nhanvien nv = bus_NhanVien.FindByEmail(email);
 
-        //    if (nhanVien == null)
-        //    {
-        //        lblNameUser.Text = "Nhân viên";
-        //        return;
-        //    }
-        //    lblNameUser.Text = nhanVien.TenNV;
-        //}
+            if (nv == null)
+            {
+                lblNameUser.Text = "Nhân viên";
+                return;
+            }
+            lblNameUser.Text = nv.TenNV;
+        }
         #region  Panel
         private void Panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -228,8 +262,12 @@ namespace QL_CuaHang_MayTinh_App.GUI
                 }
             }
         }
+
         #endregion
 
-
+        private void timer_Tick(object sender, EventArgs e)
+        {
+             labelTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
     }
 }

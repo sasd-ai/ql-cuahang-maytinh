@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Custom_Controls;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Net;
 using System.Windows.Forms;
-
 namespace CustomControl
 {
     public partial class UC_SanPham : UserControl
     {
+       
+      
         public string MaSP { get; set; }
         public string TenSP { get; set; }
         public double GiaSP { get; set; }
@@ -26,13 +28,13 @@ namespace CustomControl
             InitializeButton();
         }
 
-        private void InitializeButton()
+        public void InitializeButton()
         {
             // Tạo button mới
             Button btn = new Button
             {
-                Width = 160,
-                Height = 180,
+                Width = 150,
+                Height = 170,
                 TextAlign = ContentAlignment.BottomCenter,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.White,
@@ -119,34 +121,20 @@ namespace CustomControl
             // Thêm button vào UserControl
             Controls.Add(btn);
         }
-
-        private void UC_SanPham_Click(object sender, EventArgs e)
+        public System.Drawing.Image LoadImageFromUrl(string url)
         {
-            // Xử lý sự kiện click cho tất cả các thành phần
-            ProductClicked?.Invoke(this, new ProductEventArgs(MaSP, TenSP, GiaSP));
-        }
-
-        private Image LoadImageFromUrl(string url)
-        {
-            try
+            using (var webClient = new System.Net.WebClient())
             {
-                using (var webClient = new WebClient())
+                byte[] imageBytes = webClient.DownloadData(url);
+                using (var ms = new System.IO.MemoryStream(imageBytes))
                 {
-                    byte[] imageBytes = webClient.DownloadData(url);
-                    using (var ms = new System.IO.MemoryStream(imageBytes))
-                    {
-                        var image = Image.FromStream(ms);
-                        return ResizeImage(image, 50, 50);
-                    }
+                    var image = System.Drawing.Image.FromStream(ms);
+                    return ResizeImage(image, 50, 50);
                 }
             }
-            catch
-            {
-                return null;
-            }
         }
 
-        private Image ResizeImage(Image image, int width, int height)
+        public System.Drawing.Image ResizeImage(System.Drawing.Image image, int width, int height)
         {
             var newImage = new Bitmap(width, height);
             using (var graphics = Graphics.FromImage(newImage))
@@ -155,6 +143,13 @@ namespace CustomControl
             }
             return newImage;
         }
+        private void UC_SanPham_Click(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện click cho tất cả các thành phần
+            ProductClicked?.Invoke(this, new ProductEventArgs(MaSP, TenSP, GiaSP));
+        }
+
+        
 
         //private string GetEllipsizedText(string text, int width, Font font)
         //{

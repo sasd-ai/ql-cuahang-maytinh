@@ -44,6 +44,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Drawing.Common.9.0.0-preview.6.24327.6\lib\net462\System.Drawing.Common.dll</HintPath>
     </Reference>
@@ -100,7 +101,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO_BanHang.cs" />
+    <Compile Include="DAO_ChucVu.cs" />
+    <Compile Include="DAO_NguoiDung_ChucVu.cs" />
     <Compile Include="DAO_NhanVien.cs" />
+    <Compile Include="DAO_SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

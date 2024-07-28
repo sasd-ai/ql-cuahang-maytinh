@@ -12,6 +12,11 @@ namespace BUS
         DAO_NhanVien dao_NV=new DAO_NhanVien();
         public BUS_NhanVien() { }
 
+
+        public List<nhanvien> GetData()
+        {
+            return dao_NV.GetData();
+        }
         //Thêm
         public bool Insert(string tenNV, string diaChi, string sdt, string email)
         {
@@ -43,6 +48,11 @@ namespace BUS
         public List<nhanvien> FindVyName(string name)
         {
             return dao_NV.FindByName(name);
+        }
+
+        public nhanvien FindByEmail(string email)
+        {
+            return dao_NV.FindByEmail(email);
         }
         //Login 
         public bool Login(string email,string password)

@@ -74,7 +74,7 @@
             this.txt_Password.SelectedText = "";
             this.txt_Password.Size = new System.Drawing.Size(391, 55);
             this.txt_Password.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txt_Password.TabIndex = 11;
+            this.txt_Password.TabIndex = 2;
             this.txt_Password.TextOffset = new System.Drawing.Point(10, 0);
             this.txt_Password.UseSystemPasswordChar = true;
             // 
@@ -99,7 +99,7 @@
             this.txt_Username.SelectedText = "";
             this.txt_Username.Size = new System.Drawing.Size(391, 55);
             this.txt_Username.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txt_Username.TabIndex = 12;
+            this.txt_Username.TabIndex = 1;
             this.txt_Username.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // label1
@@ -156,7 +156,7 @@
             this.btn_Login.Location = new System.Drawing.Point(635, 451);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(391, 52);
-            this.btn_Login.TabIndex = 14;
+            this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "Login";
             // 
             // label2

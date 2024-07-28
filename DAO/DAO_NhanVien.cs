@@ -9,19 +9,19 @@ namespace DAO
     public class DAO_NhanVien
     {
         QL_CuaHangDataContext qlch = new QL_CuaHangDataContext();
-        public DAO_NhanVien() 
+        public DAO_NhanVien()
         {
-           
+
         }
 
-        public List<nhanvien> GetNhanviens()
+        public List<nhanvien> GetData()
         {
-            return qlch.nhanviens.Select(nv=>nv).ToList<nhanvien>();
+            return qlch.nhanviens.Select(nv => nv).ToList<nhanvien>();
         }
         //Tìm theo mã
         public nhanvien GetByID(string id)
         {
-            return qlch.nhanviens.Where(nv=>nv.MaNV==id).FirstOrDefault();
+            return qlch.nhanviens.Where(nv => nv.MaNV == id).FirstOrDefault();
         }
 
         //Thêm mới
@@ -60,8 +60,8 @@ namespace DAO
             }
         }
         //Sửa thông tin
-        public bool Update(string Id,string tennv,string diachi,
-            string sdt,bool hoatdong)
+        public bool Update(string Id, string tennv, string diachi,
+            string sdt, bool hoatdong)
         {
             try
             {
@@ -69,10 +69,10 @@ namespace DAO
                 if (nv_Update != null)
                 {
                     //Sửa thuộc tính nhân viên
-                    nv_Update.TenNV=tennv;
-                    nv_Update.DiaChi=diachi;
+                    nv_Update.TenNV = tennv;
+                    nv_Update.DiaChi = diachi;
                     nv_Update.SDT = sdt;
-                    nv_Update.HoatDong=hoatdong;
+                    nv_Update.HoatDong = hoatdong;
 
                     qlch.SubmitChanges();
                     return true;
@@ -93,9 +93,13 @@ namespace DAO
                        .Where(nv => nv.TenNV.Contains(Name))
                        .ToList();
         }
+        public nhanvien FindByEmail(string email)
+        {
+            return qlch.nhanviens.Where(nv => nv.Email == email).FirstOrDefault();
+        }
 
         //Phương thức login
-        public  bool Login(string email, string matKhau)
+        public bool Login(string email, string matKhau)
         {
             try
             {
@@ -120,7 +124,7 @@ namespace DAO
             }
         }
         //Lấy danh sánh màn hình theo quyền
-        public  List<ManHinh> GetManHinhForUser(string email)
+        public List<ManHinh> GetManHinhForUser(string email)
         {
             try
             {

@@ -48,22 +48,41 @@ E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\BUS\obj\Debug\BU
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.Up2Date
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\BUS\obj\Debug\BUS.dll
 E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\QL_CuaHang_Application\BUS\obj\Debug\BUS.pdb
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\BUS.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\BUS.pdb
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\CloudinaryDotNet.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\DAO.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\DTO.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\Newtonsoft.Json.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\CloudinaryDotNet.xml
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\DAO.pdb
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\DTO.pdb
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\DTO.dll.config
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\Newtonsoft.Json.xml
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.pdb
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.xml
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.Up2Date
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\obj\Debug\BUS.dll
-D:\HUIT\Năm 3\HK HE\PTTM_AI\QL_CuaHang_Application\BUS\obj\Debug\BUS.pdb
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\BUS.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\BUS.pdb
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\CloudinaryDotNet.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\DAO.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\DTO.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\Newtonsoft.Json.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\CloudinaryDotNet.xml
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\DAO.pdb
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\DTO.pdb
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\DTO.dll.config
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\Newtonsoft.Json.xml
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.pdb
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.xml
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.Up2Date
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\obj\Debug\BUS.dll
+C:\Hoc_Tap\IT_VII\QL_CuaHang_Application\BUS\obj\Debug\BUS.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\obj\Debug\BUS.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\obj\Debug\BUS.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\BUS.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\BUS.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\CloudinaryDotNet.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\DAO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\DTO.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\Newtonsoft.Json.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.dll
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\CloudinaryDotNet.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\DAO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\DTO.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\DTO.dll.config
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\Newtonsoft.Json.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.pdb
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\bin\Debug\System.Drawing.Common.xml
+E:\HOC_TAP\HK7_2023_2024\PTPM_AI\Winform\Thanh\QL_CuaHang_Application\BUS\obj\Debug\BUS.csproj.Up2Date

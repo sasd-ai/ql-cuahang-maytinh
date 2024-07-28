@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\frm_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\frm_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\frm_main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\frm_main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\frm_closing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\frm_closing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|e:\\hoc_tap\\hk7_2023_2024\\ptpm_ai\\winform\\git\\ql-cuahang-maytinh\\ql_cuahang_maytinh_app\\gui\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CAEF6A-CCBE-4A5E-9AB5-1C47954A28B0}|QL_CuaHang_MayTinh_App\\QL_CuaHang_MayTinh_App.csproj|solutionrelative:ql_cuahang_maytinh_app\\gui\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\Program.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\Program.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\Program.cs",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T06:07:04.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Login.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Login.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Login.cs [Design]",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T06:01:48.336Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_Register.cs [Design]",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Register.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Register.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Register.cs [Design]",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T06:01:46.593Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Frm_CLosing.cs [Design]",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_CLosing.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Frm_CLosing.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_CLosing.cs [Design]",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Frm_CLosing.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T06:01:44.665Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_Main.cs [Design]",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs [Design]",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T05:58:51.013Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_Main.Designer.cs",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.Designer.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.Designer.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.Designer.cs",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.Designer.cs",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAMwPMAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T05:58:58.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Frm_Login.cs [Design]",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Login.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Login.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Login.cs [Design]",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T06:01:42.85Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Frm_Main.cs",
+              "DocumentMoniker": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs",
+              "RelativeDocumentMoniker": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs",
+              "ToolTip": "E:\\HOC_TAP\\HK7_2023_2024\\PTPM_AI\\Winform\\Git\\ql-cuahang-maytinh\\QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs",
+              "RelativeToolTip": "QL_CuaHang_MayTinh_App\\GUI\\Frm_Main.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T05:59:07.448Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
