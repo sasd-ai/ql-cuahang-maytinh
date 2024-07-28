@@ -60,5 +60,10 @@ namespace DAO
                 return false;
             }
         }
+
+        public bool Update()
+        {
+            return true;
+        }
     }
 }
