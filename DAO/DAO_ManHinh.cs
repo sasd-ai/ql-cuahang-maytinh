@@ -13,6 +13,7 @@ namespace DAO
 
         public List<ManHinh> GetData()
         {
+
             return qlch.ManHinhs.Select(manhinh => manhinh).ToList<ManHinh>();
         }
         public bool Insert(string maMH, string tenMH)
