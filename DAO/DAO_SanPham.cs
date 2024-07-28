@@ -84,6 +84,11 @@ namespace DAO
             }    
         }
 
-       
+       public List<khuyenmai> LoadKM()
+        {
+            return qlch.khuyenmais.Select(km=>km).ToList<khuyenmai>();
+        }
+
+        
     }
 }

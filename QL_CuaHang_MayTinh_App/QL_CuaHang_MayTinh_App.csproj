@@ -169,7 +169,9 @@
     <Compile Include="My_UC\UC_NhapHang.Designer.cs">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="My_UC\UC_PhanQuyen.cs" />
+    <Compile Include="My_UC\UC_PhanQuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My_UC\UC_PhanQuyen.Designer.cs">
       <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
     </Compile>
