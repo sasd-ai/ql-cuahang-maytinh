@@ -15,5 +15,10 @@ namespace DAO
         {
             return qlch.ManHinhs.Select(mh=>mh).ToList<ManHinh>();    
         }
+
+        public bool Update()
+        {
+            return true;
+        }
     }
 }
