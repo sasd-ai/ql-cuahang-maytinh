@@ -13,7 +13,7 @@ namespace DAO
 
         public List<ManHinh> GetData()
         {
-            return qlch.ManHinhs.Select(mh=>mh).ToList<ManHinh>();    
+            return qlch.ManHinhs.Select(md_test=> md_test).ToList<ManHinh>();    
         }
 
         public bool Update()
