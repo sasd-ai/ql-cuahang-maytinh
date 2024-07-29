@@ -79,5 +79,10 @@ namespace BUS
         {
             sp.XoaSanPham(masp);
         }
+
+        public List<sanpham> FindByName(string TenSP)
+        {
+            return sp.FindByName(TenSP);
+        }
     }
 }

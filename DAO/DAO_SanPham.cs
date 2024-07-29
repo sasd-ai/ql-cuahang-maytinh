@@ -84,11 +84,14 @@ namespace DAO
             }    
         }
 
-       public List<khuyenmai> LoadKM()
+        public List<sanpham> FindByName(string TenSP)
         {
-            return qlch.khuyenmais.Select(km=>km).ToList<khuyenmai>();
+            return qlch.sanphams
+                       .Where(sp => sp.TenSP.Contains(TenSP))
+                       .ToList();
         }
 
-        
+
+
     }
 }

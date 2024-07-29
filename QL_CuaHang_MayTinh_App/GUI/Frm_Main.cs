@@ -208,7 +208,6 @@ namespace QL_CuaHang_MayTinh_App.GUI
         private void LoadThongTinUser()
         {
             nhanvien nv = bus_NhanVien.FindByEmail(email);
-
             if (nv == null)
             {
                 lblNameUser.Text = "Nhân viên";
