@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QL_CuaHang_MayTinh_App.My_UC
+namespace QL_CuaHang_MayTinh_App.GUI
 {
-    public partial class UC_NhapHang : UserControl
+    public partial class Frm_NhapSP : Form
     {
-        public UC_NhapHang()
+        public Frm_NhapSP()
         {
             InitializeComponent();
         }
-
-       
     }
 }

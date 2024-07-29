@@ -63,8 +63,8 @@
       <Column Name="DonGiaNhap" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="GhiChu" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Association Name="phieunhaphang_chitietphieunhap" Member="phieunhaphang" ThisKey="MaPN" OtherKey="MaPN" Type="phieunhaphang" IsForeignKey="true" />
       <Association Name="sanpham_chitietphieunhap" Member="sanpham" ThisKey="MaSP" OtherKey="MaSP" Type="sanpham" IsForeignKey="true" />
+      <Association Name="phieunhaphang_chitietphieunhap" Member="phieunhaphang" ThisKey="MaPN" OtherKey="MaPN" Type="phieunhaphang" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.chucvu" Member="chucvus">
@@ -197,18 +197,6 @@
       <Association Name="ManHinh_PhanQuyen" Member="ManHinh" ThisKey="MaManHinh" OtherKey="MaManHinh" Type="ManHinh" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.phieunhaphang" Member="phieunhaphangs">
-    <Type Name="phieunhaphang">
-      <Column Name="MaPN" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaNV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
-      <Column Name="MaNCC" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
-      <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="GhiChu" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Association Name="phieunhaphang_chitietphieunhap" Member="chitietphieunhaps" ThisKey="MaPN" OtherKey="MaPN" Type="chitietphieunhap" />
-      <Association Name="nhacungcap_phieunhaphang" Member="nhacungcap" ThisKey="MaNCC" OtherKey="MaNCC" Type="nhacungcap" IsForeignKey="true" />
-      <Association Name="nhanvien_phieunhaphang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.sanpham" Member="sanphams">
     <Type Name="sanpham">
       <Column Name="MaSP" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -250,6 +238,19 @@
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="MaNV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
       <Column Name="MaCV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.phieunhaphang" Member="phieunhaphangs">
+    <Type Name="phieunhaphang">
+      <Column Name="MaPN" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaNV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNCC" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="phieunhaphang_chitietphieunhap" Member="chitietphieunhaps" ThisKey="MaPN" OtherKey="MaPN" Type="chitietphieunhap" />
+      <Association Name="nhacungcap_phieunhaphang" Member="nhacungcap" ThisKey="MaNCC" OtherKey="MaNCC" Type="nhacungcap" IsForeignKey="true" />
+      <Association Name="nhanvien_phieunhaphang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

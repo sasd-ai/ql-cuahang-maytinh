@@ -138,6 +138,12 @@
     <Compile Include="GUI\Frm_Main.Designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Frm_NhapSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_NhapSP.Designer.cs">
+      <DependentUpon>Frm_NhapSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <EmbeddedResource Include="GUI\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_NhapSP.resx">
+      <DependentUpon>Frm_NhapSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_Register.resx">
       <DependentUpon>Frm_Register.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_BaoCao.resx">
       <DependentUpon>UC_BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_UC\UC_NhapHang.resx">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_PhanQuyen.resx">
       <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
@@ -332,6 +344,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
