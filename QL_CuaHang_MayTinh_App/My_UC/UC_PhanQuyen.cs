@@ -217,21 +217,6 @@ namespace QL_CuaHang_MayTinh_App.My_UC
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string manv = textBox1.Text;
-            string macv=textBox2.Text;
-
-            NhanVien_ChucVu kq = bus_NhanVien_ChucVu.FindByID(manv, macv);
-            if(kq!=null)
-            {
-                Console.WriteLine($"MaNV: {kq.MaNV}, MaCV: {kq.MaCV}");
-            }  
-            else
-            {
-                Console.WriteLine("Không tìm thấy");
-
-            }    
-        }
+       
     }
 }
