@@ -9,7 +9,7 @@ namespace BUS
 {
     public class BUS_BanHang
     {
-        DAO_BanHang bh=new DAO_BanHang();
+        DAO_BanHang bh = new DAO_BanHang();
         public BUS_BanHang() { }
 
         public List<sanpham> LoadSanPham()
@@ -21,11 +21,36 @@ namespace BUS
         {
             return bh.LoadSanPhamTheoLoai(loaiSanPham);
         }
-      
+
 
         public List<loaisp> LoadLoaiSanPham()
         {
             return bh.LoadLoaiSanPham();
+        }
+
+        public List<khachhang> FindBySDT(string sdt)
+        {
+            return bh.FindBySDT(sdt);
+        }
+
+        public List<khuyenmai> LoadKhuyenMai()
+        {
+            return bh.LoadKhuyenMai();
+        }
+
+        public khuyenmai LoadKhuyenMaiTheoMa(string maKM)
+        {
+            return bh.LoadKhuyenMaiTheoMa(maKM); 
+        }
+
+        public bool InsertBanHang(banhang banHang)
+        {
+            return bh.InsertBanHang(banHang);
+        }
+
+        public bool InsertChiTietBanHang(chitietbanhang chiTietBanHang)
+        {
+            return bh.InsertChiTietBanHang(chiTietBanHang);
         }
     }
 }

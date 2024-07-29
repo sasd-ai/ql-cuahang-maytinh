@@ -13,7 +13,8 @@ namespace DAO
 
         public List<ManHinh> GetData()
         {
-            return qlch.ManHinhs.Select(mh => mh).ToList<ManHinh>();
+
+            return qlch.ManHinhs.Select(manhinh => manhinh).ToList<ManHinh>();
         }
         public bool Insert(string maMH, string tenMH)
         {
@@ -35,6 +36,35 @@ namespace DAO
                     return false;
                 }
             }
+        }
+        public ManHinh FindByID(string maMH)
+        {
+            return qlch.ManHinhs.Where(mh=>mh.MaManHinh==maMH).FirstOrDefault();
+
+        }
+        public bool Delete(string maMH)
+        {
+            try
+            {
+                ManHinh mhDelete=FindByID(maMH);
+                if (mhDelete != null)
+                {
+                    qlch.ManHinhs.DeleteOnSubmit(mhDelete);
+                    qlch.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+                return false;
+            }
+        }
+
+        public bool Update()
+        {
+            return true;
         }
     }
 }

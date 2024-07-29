@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ql_cuahang_maytinh" Class="QL_CuaHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=True;User ID=sa;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ql_cuahang_maytinhConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.banhang" Member="banhangs">
-    <Type Name="banhang">
-      <Column Name="MaBanHang" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaNV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
-      <Column Name="MaKhachHang" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
-      <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="MaKM" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
-      <Column Name="GhiChu" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="NgayBan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="banhang_chitietbanhang" Member="chitietbanhangs" ThisKey="MaBanHang" OtherKey="MaBanHang" Type="chitietbanhang" />
-      <Association Name="khuyenmai_banhang" Member="khuyenmai" ThisKey="MaKM" OtherKey="MaKM" Type="khuyenmai" IsForeignKey="true" />
-      <Association Name="nhanvien_banhang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-D6K1SJRH\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=True;User ID=sa;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ql_cuahang_maytinhConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.taikhoankh" Member="taikhoankhs">
     <Type Name="taikhoankh">
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -30,8 +16,8 @@
       <Column Name="MaBanHang" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaSP" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Association Name="banhang_chitietbanhang" Member="banhang" ThisKey="MaBanHang" OtherKey="MaBanHang" Type="banhang" IsForeignKey="true" />
       <Association Name="sanpham_chitietbanhang" Member="sanpham" ThisKey="MaSP" OtherKey="MaSP" Type="sanpham" IsForeignKey="true" />
+      <Association Name="banhang_chitietbanhang" Member="banhang" ThisKey="MaBanHang" OtherKey="MaBanHang" Type="banhang" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.chitietdathang" Member="chitietdathangs">
@@ -138,7 +124,6 @@
       <Column Name="GiaTri" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="NgayBD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NgayKT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="khuyenmai_banhang" Member="banhangs" ThisKey="MaKM" OtherKey="MaKM" Type="banhang" />
       <Association Name="khuyenmai_dathang" Member="dathangs" ThisKey="MaKM" OtherKey="MaKM" Type="dathang" />
     </Type>
   </Table>
@@ -174,8 +159,8 @@
       <Column Name="Email" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
       <Column Name="MatKhau" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
       <Column Name="HoatDong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="nhanvien_banhang" Member="banhangs" ThisKey="MaNV" OtherKey="MaNV" Type="banhang" />
       <Association Name="nhanvien_NhanVien_ChucVu" Member="NhanVien_ChucVus" ThisKey="MaNV" OtherKey="MaNV" Type="NhanVien_ChucVu" />
+      <Association Name="nhanvien_banhang" Member="banhangs" ThisKey="MaNV" OtherKey="MaNV" Type="banhang" />
       <Association Name="nhanvien_phieunhaphang" Member="phieunhaphangs" ThisKey="MaNV" OtherKey="MaNV" Type="phieunhaphang" />
     </Type>
   </Table>
@@ -240,6 +225,20 @@
       <Column Name="MaCV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+
+  <Table Name="dbo.banhang" Member="banhangs">
+    <Type Name="banhang">
+      <Column Name="MaBanHang" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaNV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhachHang" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NgayBan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="banhang_chitietbanhang" Member="chitietbanhangs" ThisKey="MaBanHang" OtherKey="MaBanHang" Type="chitietbanhang" />
+      <Association Name="nhanvien_banhang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
+    </Type>
+  </Table>
+
   <Table Name="dbo.phieunhaphang" Member="phieunhaphangs">
     <Type Name="phieunhaphang">
       <Column Name="MaPN" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

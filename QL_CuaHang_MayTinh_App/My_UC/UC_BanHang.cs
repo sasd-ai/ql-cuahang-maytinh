@@ -18,10 +18,11 @@ namespace QL_CuaHang_MayTinh_App.My_UC
     {
         // Class_SanPham class_sp=new Class_SanPham();
         //private Cloudinary cloudinary;
-        private Dictionary<string, int> selectedProducts = new Dictionary<string, int>();
+        private Dictionary<string, (int SoLuong, double GiaSP)> selectedProducts = new Dictionary<string, (int, double)>();
         private double totalPrice = 0;
+        private double thanhTien = 0;
 
-
+        public string MaNV;
         BUS_BanHang busBanHang = new BUS_BanHang();
         BUS_SanPham bus_SanPham = new BUS_SanPham();
         private int currentPage = 1;
@@ -35,6 +36,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             LoadButtons();
             LoadComboBoxLoaiSanPham();
             SetupDataGridView();
+          
 
             // Khởi tạo FlowLayoutPanel và thêm vào panel2
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -42,42 +44,57 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             panel4.Controls.Add(flowLayoutPanel1);
         }
 
+        
+       
         private void LoadComboBoxLoaiSanPham()
-        {
-            // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
-            List<loaisp> loaiSanPhams = busBanHang.LoadLoaiSanPham();
-
-            // Thêm vào combobox
-            guna2ComboBox_LoaiSP.Items.Clear();
-            guna2ComboBox_LoaiSP.Items.Add(new KeyValuePair<string, string>("0", "Tất cả")); // Thêm mục "Tất cả"
-
-            foreach (loaisp loai in loaiSanPhams)
             {
-                // Thêm vào combobox, sử dụng mã loại làm giá trị và tên loại làm hiển thị
-                guna2ComboBox_LoaiSP.Items.Add(new KeyValuePair<string, string>(loai.MaLoai, loai.TenLoai));
+                // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
+                List<loaisp> loaiSanPhams = busBanHang.LoadLoaiSanPham();
+
+                // Thêm vào combobox
+                guna2ComboBox_LoaiSP.Items.Clear();
+                guna2ComboBox_LoaiSP.Items.Add(new KeyValuePair<string, string>("0", "Tất cả")); // Thêm mục "Tất cả"
+
+                foreach (loaisp loai in loaiSanPhams)
+                {
+                    // Thêm vào combobox, sử dụng mã loại làm giá trị và tên loại làm hiển thị
+                    guna2ComboBox_LoaiSP.Items.Add(new KeyValuePair<string, string>(loai.MaLoai, loai.TenLoai));
+                }
+
+                // Thiết lập DisplayMember và ValueMember
+                guna2ComboBox_LoaiSP.DisplayMember = "Value";
+                guna2ComboBox_LoaiSP.ValueMember = "Key";
+
+                // Thiết lập mục mặc định là "Tất cả"
+                guna2ComboBox_LoaiSP.SelectedIndex = 0;
             }
-
-            // Thiết lập DisplayMember và ValueMember
-            guna2ComboBox_LoaiSP.DisplayMember = "Value";
-            guna2ComboBox_LoaiSP.ValueMember = "Key";
-
-            // Thiết lập mục mặc định là "Tất cả"
-            guna2ComboBox_LoaiSP.SelectedIndex = 0;
-        }
 
         
         private void LoadButtons()
         {
             tableLayoutPanel_SanPham.Controls.Clear();
 
-            // Lấy mã loại sản phẩm được chọn
-            string maLoaiSanPham = guna2ComboBox_LoaiSP.SelectedItem is KeyValuePair<string, string> ?
-                ((KeyValuePair<string, string>)guna2ComboBox_LoaiSP.SelectedItem).Key : "0";
+            string searchText = textBox_SearchTenSP.Text.Trim();
 
-            // Tải sản phẩm theo loại
-            List<sanpham> sanPhams = maLoaiSanPham == "0" ?
+            List<sanpham> sanPhams;
+
+            // Kiểm tra nếu có giá trị tìm kiếm
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                // Gọi hàm tìm kiếm trong BUS_BanHang
+                sanPhams = bus_SanPham.FindByName(searchText);
+            }
+            else
+            {
+                // Lấy mã loại sản phẩm được chọn
+                string maLoaiSanPham = guna2ComboBox_LoaiSP.SelectedItem is KeyValuePair<string, string> ?
+                    ((KeyValuePair<string, string>)guna2ComboBox_LoaiSP.SelectedItem).Key : "0";
+
+                // Tải sản phẩm theo loại
+                sanPhams = maLoaiSanPham == "0" ?
                 busBanHang.LoadSanPham() : // Nếu chọn "Tất cả" thì tải tất cả sản phẩm
                 busBanHang.LoadSanPhamTheoLoai(maLoaiSanPham);
+            }
 
             // Tính toán số trang
             totalPages = (int)Math.Ceiling((double)sanPhams.Count / itemsPerPage);
@@ -117,42 +134,33 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         // Đảm bảo rằng panel2 là FlowLayoutPanel
         private void UcSanPham_ProductClicked(object sender, CustomControl.UC_SanPham.ProductEventArgs e)
         {
-            // In thông tin sản phẩm ra console
-            Console.WriteLine($"Mã sản phẩm: {e.MaSP}");
-            Console.WriteLine($"Tên sản phẩm: {e.TenSP}");
-            Console.WriteLine($"Giá sản phẩm: {e.GiaSP:N0} đ");
-            Console.WriteLine("-------------------");
-
-            // Kiểm tra nếu sản phẩm đã được chọn trước đó
             if (selectedProducts.ContainsKey(e.MaSP))
             {
-                // Tăng số lượng sản phẩm
-                selectedProducts[e.MaSP]++;
+                var current = selectedProducts[e.MaSP];
+                selectedProducts[e.MaSP] = (current.SoLuong + 1, e.GiaSP);
             }
             else
             {
-                // Thêm sản phẩm vào từ điển với số lượng là 1
-                selectedProducts[e.MaSP] = 1;
+                selectedProducts[e.MaSP] = (1, e.GiaSP);
             }
 
-            // Cập nhật tổng tiền
-            totalPrice += e.GiaSP; // Cộng giá của sản phẩm vào tổng tiền
+            totalPrice += e.GiaSP;
             label_TongTien.Text = $"{totalPrice:N0} đ";
 
-            // Cập nhật DataGridView
-            UpdateDataGridView(e.MaSP, e.TenSP, e.GiaSP, selectedProducts[e.MaSP]);
+            // Truyền giá trị riêng lẻ thay vì tuple
+            UpdateDataGridView(e.MaSP, e.TenSP, e.GiaSP, selectedProducts[e.MaSP].SoLuong);
+           
         }
+
 
         private void UpdateDataGridView(string maSP, string tenSP, double giaSP, int soLuong)
         {
             bool productFound = false;
 
-            // Kiểm tra nếu sản phẩm đã có trong DataGridView
             foreach (DataGridViewRow row in guna2DataGridView2.Rows)
             {
                 if (row.Cells["masp"].Value != null && row.Cells["masp"].Value.ToString() == maSP)
                 {
-                    // Cập nhật số lượng và tổng tiền
                     row.Cells["sl"].Value = soLuong;
                     row.Cells["giaban"].Value = $"{giaSP:N0} đ";
                     row.Cells["tt"].Value = $"{giaSP * soLuong:N0} đ";
@@ -161,12 +169,12 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 }
             }
 
-            // Thêm sản phẩm mới vào DataGridView nếu chưa tồn tại
             if (!productFound)
             {
                 guna2DataGridView2.Rows.Add(maSP, tenSP, $"{giaSP:N0} đ", soLuong, $"{giaSP * soLuong:N0} đ");
             }
         }
+
 
 
 
@@ -200,6 +208,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 // Cập nhật tổng tiền
                 totalPrice -= rowTotal;
                 label_TongTien.Text = $"{totalPrice:N0} đ";
+               
             }
         }
 
@@ -279,5 +288,117 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         {
 
         }
+
+        private void button_SearchTenSP_Click(object sender, EventArgs e)
+        {
+            LoadButtons();
+        }
+
+        private void btn_Searchsdt_Click(object sender, EventArgs e)
+        {
+            string sdt = txt_Searchsdt.Text.Trim(); // Lấy text tìm kiếm
+            label_makh.Visible = false;
+            // Kiểm tra text tìm kiếm có rỗng hay không
+            if (string.IsNullOrEmpty(sdt))
+            {
+                // Nếu text tìm kiếm rỗng, làm label trống
+                label_KhachHang.Text = "";
+            }
+            else
+            {
+                // Nếu text tìm kiếm không rỗng, thực hiện tìm kiếm
+                List<khachhang> khachhangs = busBanHang.FindBySDT(sdt);
+
+                if (khachhangs.Count > 0)
+                {
+                    // Hiển thị chỉ tên khách hàng
+                    label_KhachHang.Text = $"Tên khách hàng: {khachhangs[0].TenKH}";
+                    label_makh.Text = khachhangs[0].MaKH;
+                    
+                }
+                else
+                {
+                    // Hiển thị thông báo không tìm thấy
+                    label_KhachHang.Text = "Không tìm thấy khách hàng";
+                }
+            }
+        }
+        
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                string maBanHang = "MBH" + new Random().Next(100, 9999).ToString();
+
+              
+                string maKhachHang = label_makh.Text;  
+
+              
+                double tongTien = totalPrice;
+                double thanhtien = thanhTien;
+
+               
+               
+             
+                DateTime ngayBan = DateTime.Now;
+
+              
+                banhang bh = new banhang
+                {
+                    MaBanHang = maBanHang,
+                    MaNV = this.MaNV,  
+                    MaKhachHang = maKhachHang,
+                    TongTien = (float)tongTien,                 
+                    GhiChu = "",
+                    NgayBan = ngayBan,
+                   
+                };
+
+               
+                if (busBanHang.InsertBanHang(bh))
+                {
+                   
+                    foreach (var item in selectedProducts)
+                    {
+                       
+                        double thanhTien = item.Value.SoLuong * item.Value.GiaSP;
+
+                        chitietbanhang ctb = new chitietbanhang
+                        {
+                            MaBanHang = maBanHang,
+                            MaSP = item.Key,
+                            ThanhTien = thanhTien
+                        };
+
+                        if (!busBanHang.InsertChiTietBanHang(ctb))
+                        {
+                            MessageBox.Show("Lỗi khi lưu chi tiết bán hàng. Vui lòng thử lại.");
+                            return;
+                        }
+                    }
+
+                    MessageBox.Show("Thanh toán thành công!");
+                 
+                    selectedProducts.Clear();
+                    totalPrice = 0;
+                    label_TongTien.Text = "0 đ";
+                   
+                    guna2DataGridView2.Rows.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi khi thanh toán. Vui lòng thử lại.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+             
+                Console.WriteLine("Exception caught: " + ex.Message);
+                Console.WriteLine("Stack Trace: " + ex.StackTrace);
+            }
+        }
+
     }
 }

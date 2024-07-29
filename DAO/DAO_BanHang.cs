@@ -26,6 +26,52 @@ namespace DAO
            return qlch.loaisps.Select(loaisp=>loaisp).ToList<loaisp>();
         }
 
+        public List<khachhang> FindBySDT (string sdt)
+        {
+            return qlch.khachhangs.Where(kh=>kh.SDT==sdt).ToList();
+        }
 
+        public List<khuyenmai> LoadKhuyenMai()
+        {
+            return qlch.khuyenmais.Select(km => km).ToList<khuyenmai>();
+        }
+
+        public khuyenmai LoadKhuyenMaiTheoMa(string maKM)
+        {
+            return qlch.khuyenmais.SingleOrDefault(km => km.MaKM == maKM);
+        }
+
+        public bool InsertBanHang(banhang bh)
+        {
+            try
+            {
+                qlch.banhangs.InsertOnSubmit(bh);
+                qlch.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+              
+                Console.WriteLine("Error inserting banhang: " + ex.Message);
+                Console.WriteLine("Stack Trace: " + ex.StackTrace);
+               
+                return false;
+            }
+        }
+
+
+        public bool InsertChiTietBanHang(chitietbanhang ctb)
+        {
+            try
+            {
+                qlch.chitietbanhangs.InsertOnSubmit(ctb);
+                qlch.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

@@ -83,5 +83,15 @@ namespace DAO
                 qlch.SubmitChanges();
             }    
         }
+
+        public List<sanpham> FindByName(string TenSP)
+        {
+            return qlch.sanphams
+                       .Where(sp => sp.TenSP.Contains(TenSP))
+                       .ToList();
+        }
+
+
+
     }
 }
