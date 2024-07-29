@@ -40,6 +40,7 @@
             this.paginationPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ComboBox_LoaiSP = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_ThanhToan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,6 +52,8 @@
             this.tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_makh = new System.Windows.Forms.Label();
+            this.label_KhachHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.btn_Searchsdt = new System.Windows.Forms.Button();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -63,13 +66,6 @@
             this.textBox_SearchTenSP = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label_KhachHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox_KM = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label_ThanhTien = new System.Windows.Forms.Label();
-            this.btn_ThanhToan = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label_makh = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -123,10 +119,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_ThanhToan);
-            this.panel1.Controls.Add(this.label_ThanhTien);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox_KM);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.panel3);
@@ -135,6 +127,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(857, 866);
             this.panel1.TabIndex = 5;
+            // 
+            // btn_ThanhToan
+            // 
+            this.btn_ThanhToan.BorderRadius = 20;
+            this.btn_ThanhToan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_ThanhToan.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_ThanhToan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_ThanhToan.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_ThanhToan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btn_ThanhToan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_ThanhToan.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_ThanhToan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_ThanhToan.Location = new System.Drawing.Point(189, 801);
+            this.btn_ThanhToan.Name = "btn_ThanhToan";
+            this.btn_ThanhToan.Size = new System.Drawing.Size(578, 52);
+            this.btn_ThanhToan.TabIndex = 41;
+            this.btn_ThanhToan.Text = "THANH TOÁN VÀ XUÁT HÓA ĐƠN";
+            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
             // label2
             // 
@@ -317,6 +328,25 @@
             this.panel3.Size = new System.Drawing.Size(857, 165);
             this.panel3.TabIndex = 11;
             // 
+            // label_makh
+            // 
+            this.label_makh.AutoSize = true;
+            this.label_makh.Location = new System.Drawing.Point(153, 149);
+            this.label_makh.Name = "label_makh";
+            this.label_makh.Size = new System.Drawing.Size(0, 16);
+            this.label_makh.TabIndex = 39;
+            // 
+            // label_KhachHang
+            // 
+            this.label_KhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.label_KhachHang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_KhachHang.ForeColor = System.Drawing.Color.Red;
+            this.label_KhachHang.Location = new System.Drawing.Point(170, 120);
+            this.label_KhachHang.Name = "label_KhachHang";
+            this.label_KhachHang.Size = new System.Drawing.Size(3, 2);
+            this.label_KhachHang.TabIndex = 38;
+            this.label_KhachHang.Text = null;
+            // 
             // groupBox9
             // 
             this.groupBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -491,84 +521,6 @@
             this.guna2GradientButton1.TabIndex = 40;
             this.guna2GradientButton1.Text = "THÔNG TIN SẢN PHẨM";
             // 
-            // label_KhachHang
-            // 
-            this.label_KhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.label_KhachHang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_KhachHang.ForeColor = System.Drawing.Color.Red;
-            this.label_KhachHang.Location = new System.Drawing.Point(170, 120);
-            this.label_KhachHang.Name = "label_KhachHang";
-            this.label_KhachHang.Size = new System.Drawing.Size(3, 2);
-            this.label_KhachHang.TabIndex = 38;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 728);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 25);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Tiền Khuyến mãi:";
-            // 
-            // comboBox_KM
-            // 
-            this.comboBox_KM.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_KM.FormattingEnabled = true;
-            this.comboBox_KM.Location = new System.Drawing.Point(243, 722);
-            this.comboBox_KM.Name = "comboBox_KM";
-            this.comboBox_KM.Size = new System.Drawing.Size(392, 37);
-            this.comboBox_KM.TabIndex = 15;
-            this.comboBox_KM.SelectedIndexChanged += new System.EventHandler(this.comboBox_KM_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 773);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 25);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Thành Tiền :";
-            // 
-            // label_ThanhTien
-            // 
-            this.label_ThanhTien.AutoSize = true;
-            this.label_ThanhTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ThanhTien.ForeColor = System.Drawing.Color.Red;
-            this.label_ThanhTien.Location = new System.Drawing.Point(249, 773);
-            this.label_ThanhTien.Name = "label_ThanhTien";
-            this.label_ThanhTien.Size = new System.Drawing.Size(43, 25);
-            this.label_ThanhTien.TabIndex = 17;
-            this.label_ThanhTien.Text = "0 đ";
-            // 
-            // btn_ThanhToan
-            // 
-            this.btn_ThanhToan.BorderRadius = 20;
-            this.btn_ThanhToan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
-            this.btn_ThanhToan.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
-            this.btn_ThanhToan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_ThanhToan.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_ThanhToan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btn_ThanhToan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
-            this.btn_ThanhToan.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
-            this.btn_ThanhToan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(189, 801);
-            this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(578, 52);
-            this.btn_ThanhToan.TabIndex = 41;
-            this.btn_ThanhToan.Text = "THANH TOÁN VÀ XUÁT HÓA ĐƠN";
-            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
-            // 
-            // label_makh
-            // 
-            this.label_makh.AutoSize = true;
-            this.label_makh.Location = new System.Drawing.Point(153, 149);
-            this.label_makh.Name = "label_makh";
-            this.label_makh.Size = new System.Drawing.Size(0, 16);
-            this.label_makh.TabIndex = 39;
-            // 
             // UC_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -629,11 +581,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel label_KhachHang;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox_KM;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientButton btn_ThanhToan;
-        private System.Windows.Forms.Label label_ThanhTien;
         private System.Windows.Forms.Label label_makh;
     }
 }

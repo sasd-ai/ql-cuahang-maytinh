@@ -22,7 +22,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         private double totalPrice = 0;
         private double thanhTien = 0;
 
-
+        public string MaNV;
         BUS_BanHang busBanHang = new BUS_BanHang();
         BUS_SanPham bus_SanPham = new BUS_SanPham();
         private int currentPage = 1;
@@ -36,7 +36,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             LoadButtons();
             LoadComboBoxLoaiSanPham();
             SetupDataGridView();
-            LoaadCBB_KhuyenMai(totalPrice);
+          
 
             // Khởi tạo FlowLayoutPanel và thêm vào panel2
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -44,55 +44,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             panel4.Controls.Add(flowLayoutPanel1);
         }
 
-        private void LoaadCBB_KhuyenMai(double totalPrice)
-        {
-            // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
-            List<khuyenmai> khuyenmai = busBanHang.LoadKhuyenMai();
-
-            // Thêm vào combobox
-            comboBox_KM.Items.Clear();
-            comboBox_KM.Items.Add(new KeyValuePair<string, string>("0", "Tất cả")); // Thêm mục "Tất cả"
-
-            // Kiểm tra tổng tiền
-            if (totalPrice >= 2000000)
-            {
-                // Hiển thị tất cả khuyến mãi
-                foreach (khuyenmai km in khuyenmai)
-                {
-                    // Tạo chuỗi hiển thị (TenKM và GiaTri)
-                    string displayText = $"{km.TenKM} - {km.GiaTri:N0} đ"; // Loại bỏ "Giảm"
-
-                    // Thêm vào combobox
-                    comboBox_KM.Items.Add(new KeyValuePair<string, string>(km.MaKM, displayText));
-                }
-            }
-            else
-            {
-                // Hiển thị khuyến mãi có giá trị dưới 200.000
-                foreach (khuyenmai km in khuyenmai)
-                {
-                    if (km.GiaTri <= 200000) // Thay đổi điều kiện thành 200000
-                    {
-                        // Tạo chuỗi hiển thị (TenKM và GiaTri)
-                        string displayText = $"{km.TenKM} - {km.GiaTri:N0} đ"; // Loại bỏ "Giảm"
-
-                        // Thêm vào combobox
-                        comboBox_KM.Items.Add(new KeyValuePair<string, string>(km.MaKM, displayText));
-                    }
-                }
-            }
-
-            // Thiết lập DisplayMember và ValueMember
-            comboBox_KM.DisplayMember = "Value"; // Hiển thị text của KeyValuePair
-            comboBox_KM.ValueMember = "Key"; // Lưu trữ giá trị MaKM
-
-            // Thiết lập mục mặc định là "Tất cả"
-            comboBox_KM.SelectedIndex = 0;
-        }
-        private void UpdateComboBoxKhuyenMai()
-        {
-            LoaadCBB_KhuyenMai(totalPrice); // Gọi hàm LoaadCBB_KhuyenMai() để cập nhật ComboBox
-        }
+        
+       
         private void LoadComboBoxLoaiSanPham()
             {
                 // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
@@ -196,7 +149,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
             // Truyền giá trị riêng lẻ thay vì tuple
             UpdateDataGridView(e.MaSP, e.TenSP, e.GiaSP, selectedProducts[e.MaSP].SoLuong);
-            UpdateComboBoxKhuyenMai();
+           
         }
 
 
@@ -255,7 +208,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 // Cập nhật tổng tiền
                 totalPrice -= rowTotal;
                 label_TongTien.Text = $"{totalPrice:N0} đ";
-                UpdateComboBoxKhuyenMai();
+               
             }
         }
 
@@ -370,30 +323,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 }
             }
         }
-        private void comboBox_KM_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Lấy giá trị khuyến mãi từ combobox
-            string maKM = comboBox_KM.SelectedItem is KeyValuePair<string, string> ?
-                ((KeyValuePair<string, string>)comboBox_KM.SelectedItem).Key : "0";
-
-            // Tìm khuyến mãi dựa trên mã khuyến mãi
-            khuyenmai km = busBanHang.LoadKhuyenMaiTheoMa(maKM); // Hàm LoadKhuyenMaiTheoMa() cần được thêm vào BUS_BanHang
-
-            double giaTriKhuyenMai = 0;
-
-            if (km != null)
-            {
-                // Lấy giá trị khuyến mãi
-                giaTriKhuyenMai = km.GiaTri;
-            }
-
-            // Tính toán giá trị thanh toán
-             thanhTien = totalPrice - giaTriKhuyenMai;
-
-            // Cập nhật label_ThanhTien
-            label_ThanhTien.Text = $"{thanhTien:N0} đ"; // Giả sử bạn đã thêm label_ThanhTien vào form
-        }
-
+        
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             try
@@ -409,9 +339,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 double thanhtien = thanhTien;
 
                
-                string maKM = comboBox_KM.SelectedItem is KeyValuePair<string, string> ?
-                    ((KeyValuePair<string, string>)comboBox_KM.SelectedItem).Key : "0";
-
+               
              
                 DateTime ngayBan = DateTime.Now;
 
@@ -419,13 +347,12 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 banhang bh = new banhang
                 {
                     MaBanHang = maBanHang,
-                    MaNV = "NV04",  
+                    MaNV = this.MaNV,  
                     MaKhachHang = maKhachHang,
-                    TongTien = (float)tongTien,
-                    MaKM = maKM,
+                    TongTien = (float)tongTien,                 
                     GhiChu = "",
                     NgayBan = ngayBan,
-                    ThanhTien =(float) thanhtien
+                   
                 };
 
                
@@ -456,7 +383,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     selectedProducts.Clear();
                     totalPrice = 0;
                     label_TongTien.Text = "0 đ";
-                    UpdateComboBoxKhuyenMai();
+                   
                     guna2DataGridView2.Rows.Clear();
                 }
                 else

@@ -51,11 +51,10 @@ namespace DAO
             }
             catch (Exception ex)
             {
-                // Log exception details to console or a file
+              
                 Console.WriteLine("Error inserting banhang: " + ex.Message);
                 Console.WriteLine("Stack Trace: " + ex.StackTrace);
-                // Optionally, log to a file or other logging system
-                // LogErrorToFile(ex);
+               
                 return false;
             }
         }

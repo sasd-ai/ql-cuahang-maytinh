@@ -65,6 +65,12 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Clear();
             pannel_Main.Controls.Add(uC_BanHang);
             uC_BanHang.BringToFront();
+            nhanvien nv = bus_NhanVien.FindByEmail(email);
+            if (nv != null)
+            {
+                uC_BanHang.MaNV = nv.MaNV;
+            }
+          
         }
         //Mở chắc năng quản lý sản phẩm
         private void Btn_SanPham_Click(object sender, EventArgs e)
