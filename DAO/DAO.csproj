@@ -106,6 +106,7 @@
     <Compile Include="DAO_NguoiDung_ChucVu.cs" />
     <Compile Include="DAO_NhanVien.cs" />
     <Compile Include="DAO_NhanVien_ChucVu.cs" />
+    <Compile Include="DAO_QuanLyDonHang.cs" />
     <Compile Include="DAO_SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

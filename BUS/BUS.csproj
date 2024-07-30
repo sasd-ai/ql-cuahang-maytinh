@@ -107,6 +107,7 @@
     <Compile Include="BUS_NhanVien_ChucVu.cs" />
     <Compile Include="BUS_NguoiDung_ChucVu.cs" />
     <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_QuanLyDonHang.cs" />
     <Compile Include="BUS_SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

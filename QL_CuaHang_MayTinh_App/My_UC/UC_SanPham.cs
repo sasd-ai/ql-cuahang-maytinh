@@ -47,48 +47,18 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         }
         public void LoadCBB_NhaCC()
         {
-            // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
-            List<nhacungcap> nhacc = bus_SanPham.LoadNCC();
-
-            // Thêm vào combobox
-            cbb_TenNCC.Items.Clear();
-            // cbb_TenLoai.Items.Add(new KeyValuePair<string, string>("0", "Tất cả")); // Thêm mục "Tất cả"
-
-            foreach (nhacungcap ncc in nhacc)
-            {
-                // Thêm vào combobox, sử dụng mã loại làm giá trị và tên loại làm hiển thị
-                cbb_TenNCC.Items.Add(new KeyValuePair<string, string>(ncc.MaNCC, ncc.TenNCC));
-            }
-
-            // Thiết lập DisplayMember và ValueMember
-            cbb_TenNCC.DisplayMember = "Value";
-            cbb_TenNCC.ValueMember = "Key";
-
-            // Thiết lập mục mặc định là "Tất cả"
-            cbb_TenNCC.SelectedIndex = 0;
+            
+            cbb_TenNCC.DataSource = bus_SanPham.LoadNCC();
+            cbb_TenNCC.DisplayMember = "TenNCC";
+            cbb_TenNCC.ValueMember= "MaNCC";
         }
 
         public void LoadCBB_LoaiSP()
         {
-            // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
-            List<loaisp> loaiSanPhams = bus_SanPham.LoadLoaiSP();
             
-            // Thêm vào combobox
-            cbb_TenLoai.Items.Clear();
-           // cbb_TenLoai.Items.Add(new KeyValuePair<string, string>("0", "Tất cả")); // Thêm mục "Tất cả"
-
-            foreach (loaisp loai in loaiSanPhams)
-            {
-                // Thêm vào combobox, sử dụng mã loại làm giá trị và tên loại làm hiển thị
-                cbb_TenLoai.Items.Add(new KeyValuePair<string, string>(loai.MaLoai, loai.TenLoai));
-            }
-
-            // Thiết lập DisplayMember và ValueMember
-            cbb_TenLoai.DisplayMember = "Value";
-            cbb_TenLoai.ValueMember = "Key";
-
-            // Thiết lập mục mặc định là "Tất cả"
-            cbb_TenLoai.SelectedIndex = 0;
+            cbb_TenLoai.DataSource = bus_SanPham.LoadLoaiSP();
+            cbb_TenLoai.DisplayMember = "TenLoai";
+            cbb_TenLoai.ValueMember = "MaLoai";
         }
         public void LoadDLSanPham()
         {
@@ -271,43 +241,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             btn_Huy.Enabled = true;
             btn_update.Enabled = false;
             btn_delete.Enabled = false;
-            txt_maSP.Enabled = true;
-            //    string MaSP = txt_maSP.Text;
-            //    string TenSP = text_tenSP.Text;
-            //    string GiaDeXuat = int.Parse(txt_GDX.Text).ToString();
-            //    string SoLuong = int.Parse(txt_SL.Text).ToString();
-            //    string GiaBan =int.Parse(txt_GB.Text).ToString();                       
-            //    string MoTa = txt_MoTa.Text;
-            //    string Tg_BaoHanh = int.Parse(txt_TGBH.Text).ToString();
-            //    var selectedLoai = (KeyValuePair<string, string>)cbb_TenLoai.SelectedItem;
-            //    string MaLoai = selectedLoai.Key;
-            //    var selectedNCC = (KeyValuePair<string, string>)cbb_TenNCC.SelectedItem;
-            //    string MaNCC = selectedNCC.Key;
-            //if (pictureBox_Image.Image != null)
-            //    {
-            //        // Tải hình ảnh từ PictureBox lên Cloudinary
-            //        using (var memoryStream = new System.IO.MemoryStream())
-            //        {
-            //            pictureBox_Image.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
-            //            memoryStream.Position = 0;
-
-            //            var uploadParams = new ImageUploadParams()
-            //            {
-            //                File = new FileDescription("image.png", memoryStream)
-            //            };
-            //            var uploadResult = cloudinary.Upload(uploadParams);
-            //            string imageUrl = uploadResult.SecureUrl.ToString();
-
-            //            // Lưu URL hình ảnh vào cơ sở dữ liệu
-            //            bus_SanPham.ThemSanPham(MaSP,TenSP,imageUrl,GiaDeXuat,SoLuong,GiaBan, MoTa,Tg_BaoHanh, MaLoai,MaNCC);
-            //        MessageBox.Show("Bạn đã thêm sản phẩm thành công rồi nha!!!");
-            //        LoadDLSanPham();
-            //    }
-            //    }
-            //else
-            //{
-            //    MessageBox.Show("Vui lòng chọn hình ảnh từ PictureBox trước.");
-            //}
+            txt_maSP.Enabled = false;
+            
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -326,13 +261,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 MessageBox.Show("Vui Lòng nhập dữ liệu đầy đủ !!");
                 return;
             }
-            //if (MessageBox.Show("Bạn có chắc muốn xóa sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            //{
-            //    string MaSP = txt_maSP.Text;
-            //    bus_SanPham.XoaSanPham(MaSP);
-            //    MessageBox.Show("Xóa Sản Phẩm thành công!");
-            //    LoadDLSanPham() ;
-            //}
+            
         }
 
         private  void btn_update_Click(object sender, EventArgs e)
@@ -346,37 +275,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 btnThem.Enabled = false;
                 btn_delete.Enabled = false;
             
-            //string MaSP = txt_maSP.Text;
-            //string TenSP = text_tenSP.Text;
-            //string GiaDeXuat = int.Parse(txt_GDX.Text).ToString();
-            //string SoLuong = int.Parse(txt_SL.Text).ToString();
-            //string GiaBan = int.Parse(txt_GB.Text).ToString();
-            //string MoTa = txt_MoTa.Text;
-            //string Tg_BaoHanh = int.Parse(txt_TGBH.Text).ToString();
-            //var selectedLoai = (KeyValuePair<string, string>)cbb_TenLoai.SelectedItem;
-            //string MaLoai = selectedLoai.Key;
-            //var selectedNCC = (KeyValuePair<string, string>)cbb_TenNCC.SelectedItem;
-            //string MaNCC = selectedNCC.Key;
-
-            //if (pictureBox_Image.Image != null)
-            //{
-                
-            //        using (var memoryStream = new System.IO.MemoryStream())
-            //        {
-            //        pictureBox_Image.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
-            //            memoryStream.Position = 0;
-
-            //            var uploadParams = new ImageUploadParams()
-            //            {
-            //                File = new FileDescription("image.png", memoryStream)
-            //            };
-            //            var uploadResult = await cloudinary.UploadAsync(uploadParams); // Sử dụng UploadAsync để đảm bảo async
-            //            string imageUrl = uploadResult.SecureUrl.ToString();
-            //        bus_SanPham.SuaSanPham(MaSP, TenSP, imageUrl, GiaDeXuat, SoLuong, GiaBan, MoTa, Tg_BaoHanh, MaLoai, MaNCC);
-            //        MessageBox.Show("Sửa sản phẩm thành công.");
-            //        LoadDLSanPham();
-            //    }            
-            // }
+            
         }
 
         private async void btn_save_Click(object sender, EventArgs e)
@@ -386,17 +285,16 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 MessageBox.Show("Vui Lòng nhập đầy đủ thông tin nha!!");
                 return;
             }
+            string MaSP_random = new Random().Next(100, 9999).ToString();
             string MaSP = txt_maSP.Text;
             string TenSP = text_tenSP.Text;
             string GiaDeXuat = int.Parse(txt_GDX.Text).ToString();
             string SoLuong = int.Parse(txt_SL.Text).ToString();
             string GiaBan = int.Parse(txt_GB.Text).ToString();
             string MoTa = txt_MoTa.Text;
-            string Tg_BaoHanh = int.Parse(txt_TGBH.Text).ToString();
-            var selectedLoai = (KeyValuePair<string, string>)cbb_TenLoai.SelectedItem;
-            string MaLoai = selectedLoai.Key;
-            var selectedNCC = (KeyValuePair<string, string>)cbb_TenNCC.SelectedItem;
-            string MaNCC = selectedNCC.Key;
+            string Tg_BaoHanh = int.Parse(txt_TGBH.Text).ToString();      
+            string MaLoai = cbb_TenLoai.SelectedValue.ToString();
+            string MaNCC = cbb_TenNCC.SelectedValue.ToString();
             string imageUrl=null;
             if (pictureBox_Image.Image != null)
             {
@@ -413,7 +311,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     var uploadResult = await cloudinary.UploadAsync(uploadParams);
                     imageUrl = uploadResult.SecureUrl.ToString();
 
-                    // Lưu URL hình ảnh vào cơ sở dữ liệu
+                 
                    
                 }
             }
@@ -421,7 +319,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             switch (HanhDong)
             {
                 case "Them":
-                    bus_SanPham.ThemSanPham(MaSP, TenSP, imageUrl, GiaDeXuat, SoLuong, GiaBan, MoTa, Tg_BaoHanh, MaLoai, MaNCC);
+                    bus_SanPham.ThemSanPham(MaSP_random, TenSP, imageUrl, GiaDeXuat, SoLuong, GiaBan, MoTa, Tg_BaoHanh, MaLoai, MaNCC);
                     MessageBox.Show("Bạn đã thêm sản phẩm thành công rồi nha!!!");
                     LoadDLSanPham();
                     break;

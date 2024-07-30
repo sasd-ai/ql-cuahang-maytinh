@@ -252,4 +252,14 @@
       <Association Name="sanpham_chitietbanhang" Member="sanpham" ThisKey="MaSP" OtherKey="MaSP" Type="sanpham" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.View_DonHang" Member="View_DonHangs">
+    <Type Name="View_DonHang">
+      <Column Name="MaDH" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDatHang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TinhTrang_DH" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

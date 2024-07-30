@@ -131,12 +131,6 @@
     <Compile Include="GUI\Frm_CLosing.Designer.cs">
       <DependentUpon>Frm_CLosing.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frm_InHoaDonBanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frm_InHoaDonBanHang.Designer.cs">
-      <DependentUpon>frm_InHoaDonBanHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,12 +154,6 @@
     </Compile>
     <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InHoaDon_BanHang.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InHoaDon_BanHang.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My_UC\ThietKeButton.cs" />
     <Compile Include="My_UC\UC_BanHang.cs">
@@ -198,6 +186,12 @@
     <Compile Include="My_UC\UC_QLKho.Designer.cs">
       <DependentUpon>UC_QLKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="My_UC\UC_QuanLyDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My_UC\UC_QuanLyDonHang.Designer.cs">
+      <DependentUpon>UC_QuanLyDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="My_UC\UC_SanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,9 +209,6 @@
     <EmbeddedResource Include="GUI\Frm_CLosing.resx">
       <DependentUpon>Frm_CLosing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frm_InHoaDonBanHang.resx">
-      <DependentUpon>frm_InHoaDonBanHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,10 +221,6 @@
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InHoaDon_BanHang.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>InHoaDon_BanHang.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_BanHang.resx">
       <DependentUpon>UC_BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_QLKho.resx">
       <DependentUpon>UC_QLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_UC\UC_QuanLyDonHang.resx">
+      <DependentUpon>UC_QuanLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_SanPham.resx">
       <DependentUpon>UC_SanPham.cs</DependentUpon>
@@ -357,6 +347,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xacnhan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xemchitiet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oder1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
