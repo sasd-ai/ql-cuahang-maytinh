@@ -337,7 +337,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
               
                 double tongTien = totalPrice;
                 double thanhtien = thanhTien;
-
+                string ghichu = txt_GhiChu.Text;
                
                
              
@@ -350,7 +350,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     MaNV = this.MaNV,  
                     MaKhachHang = maKhachHang,
                     TongTien = (float)tongTien,                 
-                    GhiChu = "",
+                    GhiChu = ghichu,
                     NgayBan = ngayBan,
                    
                 };
@@ -368,6 +368,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                         {
                             MaBanHang = maBanHang,
                             MaSP = item.Key,
+                            SoLuong=item.Value.SoLuong,
+                            DonGia=item.Value.GiaSP,
                             ThanhTien = thanhTien
                         };
 

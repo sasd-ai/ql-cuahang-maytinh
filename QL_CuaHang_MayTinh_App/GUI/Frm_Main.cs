@@ -274,5 +274,14 @@ namespace QL_CuaHang_MayTinh_App.GUI
         {
              labelTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+
+        private void btn_DSBanOff_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyDonHang uC_QuanLyDonHang = new UC_QuanLyDonHang();
+            uC_QuanLyDonHang.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_QuanLyDonHang);
+            uC_QuanLyDonHang.BringToFront();
+        }
     }
 }

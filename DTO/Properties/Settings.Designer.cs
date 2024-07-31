@@ -26,9 +26,8 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D6K1SJRH\\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persi" +
-            "st Security Info=True;User ID=sa;Password=1234567;TrustServerCertificate=True;En" +
-            "crypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
+            "e;User ID=dien;Password=123;TrustServerCertificate=True;Encrypt=False")]
         public string ql_cuahang_maytinhConnectionString {
             get {
                 return ((string)(this["ql_cuahang_maytinhConnectionString"]));

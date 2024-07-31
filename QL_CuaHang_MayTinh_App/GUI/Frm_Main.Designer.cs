@@ -39,29 +39,29 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel_Menu = new System.Windows.Forms.Panel();
-            this.panel_Setting = new System.Windows.Forms.Panel();
-            this.panel_QuanTri = new System.Windows.Forms.Panel();
-            this.panel_SanPham = new System.Windows.Forms.Panel();
-            this.panel_BanHang = new System.Windows.Forms.Panel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.btn_DangXuat = new Custom_Controls.Button_ControlBox();
+            this.panel_Setting = new System.Windows.Forms.Panel();
             this.btn_DoiMatKhau = new Custom_Controls.Button_NoBoder();
             this.btn_ThongTinCaNhan = new Custom_Controls.Button_NoBoder();
             this.btn_Setting = new Custom_Controls.Button_ControlBox();
+            this.panel_QuanTri = new System.Windows.Forms.Panel();
             this.btn_QtriPhanQuyen = new Custom_Controls.Button_NoBoder();
             this.btn_QTriChucVu = new Custom_Controls.Button_NoBoder();
             this.btn_QTriNhanVien = new Custom_Controls.Button_NoBoder();
             this.btn_QuanTriMenu = new Custom_Controls.Button_ControlBox();
             this.btn_BaoCao = new Custom_Controls.Button_ControlBox();
             this.btn_QLKho = new Custom_Controls.Button_ControlBox();
+            this.panel_SanPham = new System.Windows.Forms.Panel();
             this.btn_SanPham = new Custom_Controls.Button_NoBoder();
             this.btn_LoaiSP = new Custom_Controls.Button_NoBoder();
             this.btn_SanPhamMenu = new Custom_Controls.Button_ControlBox();
+            this.panel_BanHang = new System.Windows.Forms.Panel();
             this.btn_DSBanOff = new Custom_Controls.Button_NoBoder();
             this.btn_DonHangOnline = new Custom_Controls.Button_NoBoder();
             this.btn_BanHang = new Custom_Controls.Button_NoBoder();
             this.btn_BanHangMenu = new Custom_Controls.Button_ControlBox();
             this.btn_TrangChu = new Custom_Controls.Button_ControlBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -196,53 +196,6 @@
             this.panel_Menu.Size = new System.Drawing.Size(213, 1200);
             this.panel_Menu.TabIndex = 1;
             // 
-            // panel_Setting
-            // 
-            this.panel_Setting.Controls.Add(this.btn_DoiMatKhau);
-            this.panel_Setting.Controls.Add(this.btn_ThongTinCaNhan);
-            this.panel_Setting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Setting.Location = new System.Drawing.Point(0, 900);
-            this.panel_Setting.Name = "panel_Setting";
-            this.panel_Setting.Size = new System.Drawing.Size(213, 120);
-            this.panel_Setting.TabIndex = 0;
-            // 
-            // panel_QuanTri
-            // 
-            this.panel_QuanTri.Controls.Add(this.btn_QtriPhanQuyen);
-            this.panel_QuanTri.Controls.Add(this.btn_QTriChucVu);
-            this.panel_QuanTri.Controls.Add(this.btn_QTriNhanVien);
-            this.panel_QuanTri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_QuanTri.Location = new System.Drawing.Point(0, 660);
-            this.panel_QuanTri.Name = "panel_QuanTri";
-            this.panel_QuanTri.Size = new System.Drawing.Size(213, 180);
-            this.panel_QuanTri.TabIndex = 8;
-            // 
-            // panel_SanPham
-            // 
-            this.panel_SanPham.Controls.Add(this.btn_SanPham);
-            this.panel_SanPham.Controls.Add(this.btn_LoaiSP);
-            this.panel_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_SanPham.Location = new System.Drawing.Point(0, 360);
-            this.panel_SanPham.Name = "panel_SanPham";
-            this.panel_SanPham.Size = new System.Drawing.Size(213, 120);
-            this.panel_SanPham.TabIndex = 4;
-            // 
-            // panel_BanHang
-            // 
-            this.panel_BanHang.Controls.Add(this.btn_DSBanOff);
-            this.panel_BanHang.Controls.Add(this.btn_DonHangOnline);
-            this.panel_BanHang.Controls.Add(this.btn_BanHang);
-            this.panel_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_BanHang.Location = new System.Drawing.Point(0, 120);
-            this.panel_BanHang.Name = "panel_BanHang";
-            this.panel_BanHang.Size = new System.Drawing.Size(213, 180);
-            this.panel_BanHang.TabIndex = 2;
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
             // btn_DangXuat
             // 
             this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
@@ -259,6 +212,16 @@
             this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DangXuat.UseVisualStyleBackColor = false;
+            // 
+            // panel_Setting
+            // 
+            this.panel_Setting.Controls.Add(this.btn_DoiMatKhau);
+            this.panel_Setting.Controls.Add(this.btn_ThongTinCaNhan);
+            this.panel_Setting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Setting.Location = new System.Drawing.Point(0, 900);
+            this.panel_Setting.Name = "panel_Setting";
+            this.panel_Setting.Size = new System.Drawing.Size(213, 120);
+            this.panel_Setting.TabIndex = 0;
             // 
             // btn_DoiMatKhau
             // 
@@ -310,6 +273,17 @@
             this.btn_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Setting.UseVisualStyleBackColor = false;
+            // 
+            // panel_QuanTri
+            // 
+            this.panel_QuanTri.Controls.Add(this.btn_QtriPhanQuyen);
+            this.panel_QuanTri.Controls.Add(this.btn_QTriChucVu);
+            this.panel_QuanTri.Controls.Add(this.btn_QTriNhanVien);
+            this.panel_QuanTri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_QuanTri.Location = new System.Drawing.Point(0, 660);
+            this.panel_QuanTri.Name = "panel_QuanTri";
+            this.panel_QuanTri.Size = new System.Drawing.Size(213, 180);
+            this.panel_QuanTri.TabIndex = 8;
             // 
             // btn_QtriPhanQuyen
             // 
@@ -413,6 +387,16 @@
             this.btn_QLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_QLKho.UseVisualStyleBackColor = false;
             // 
+            // panel_SanPham
+            // 
+            this.panel_SanPham.Controls.Add(this.btn_SanPham);
+            this.panel_SanPham.Controls.Add(this.btn_LoaiSP);
+            this.panel_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_SanPham.Location = new System.Drawing.Point(0, 360);
+            this.panel_SanPham.Name = "panel_SanPham";
+            this.panel_SanPham.Size = new System.Drawing.Size(213, 120);
+            this.panel_SanPham.TabIndex = 4;
+            // 
             // btn_SanPham
             // 
             this.btn_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
@@ -464,6 +448,17 @@
             this.btn_SanPhamMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_SanPhamMenu.UseVisualStyleBackColor = false;
             // 
+            // panel_BanHang
+            // 
+            this.panel_BanHang.Controls.Add(this.btn_DSBanOff);
+            this.panel_BanHang.Controls.Add(this.btn_DonHangOnline);
+            this.panel_BanHang.Controls.Add(this.btn_BanHang);
+            this.panel_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_BanHang.Location = new System.Drawing.Point(0, 120);
+            this.panel_BanHang.Name = "panel_BanHang";
+            this.panel_BanHang.Size = new System.Drawing.Size(213, 180);
+            this.panel_BanHang.TabIndex = 2;
+            // 
             // btn_DSBanOff
             // 
             this.btn_DSBanOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
@@ -480,6 +475,7 @@
             this.btn_DSBanOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DSBanOff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DSBanOff.UseVisualStyleBackColor = false;
+            this.btn_DSBanOff.Click += new System.EventHandler(this.btn_DSBanOff_Click);
             // 
             // btn_DonHangOnline
             // 
@@ -548,6 +544,11 @@
             this.btn_TrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TrangChu.UseVisualStyleBackColor = false;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Frm_Main
             // 

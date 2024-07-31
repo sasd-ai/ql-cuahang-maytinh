@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SanPham));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,21 +39,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnThem = new System.Windows.Forms.Button();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.btn_Huy = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.btn_Search_TenSP = new System.Windows.Forms.Button();
             this.txt_Search_tenSP = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button_Search_Gia = new System.Windows.Forms.Button();
             this.cbb_Search_Gia = new System.Windows.Forms.ComboBox();
-            this.btn_update = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_exits = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_GDX = new System.Windows.Forms.TextBox();
             this.cbb_TenNCC = new System.Windows.Forms.ComboBox();
@@ -62,7 +54,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.txt_TGBH = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -77,6 +68,15 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_SL = new System.Windows.Forms.TextBox();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btn_Huy = new System.Windows.Forms.Button();
+            this.btn_Search_TenSP = new System.Windows.Forms.Button();
+            this.button_Search_Gia = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_exits = new System.Windows.Forms.Button();
+            this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -126,23 +126,23 @@
             // dataGridView_SanPham
             // 
             this.dataGridView_SanPham.AllowUserToAddRows = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_SanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_SanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_SanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_SanPham.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_SanPham.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_SanPham.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_SanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -193,25 +193,6 @@
             this.panel5.Size = new System.Drawing.Size(738, 262);
             this.panel5.TabIndex = 44;
             // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.ImageKey = "add.png";
-            this.btnThem.ImageList = this.imageList2;
-            this.btnThem.Location = new System.Drawing.Point(51, 209);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(171, 51);
-            this.btnThem.TabIndex = 38;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // imageList2
             // 
             this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
@@ -223,25 +204,7 @@
             this.imageList2.Images.SetKeyName(4, "save.png");
             this.imageList2.Images.SetKeyName(5, "update.png");
             this.imageList2.Images.SetKeyName(6, "search.png");
-            // 
-            // btn_Huy
-            // 
-            this.btn_Huy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Huy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Huy.FlatAppearance.BorderSize = 0;
-            this.btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Huy.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Huy.ImageKey = "cancel.png";
-            this.btn_Huy.ImageList = this.imageList2;
-            this.btn_Huy.Location = new System.Drawing.Point(275, 206);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(159, 55);
-            this.btn_Huy.TabIndex = 37;
-            this.btn_Huy.Text = "Hủy";
-            this.btn_Huy.UseVisualStyleBackColor = true;
-            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            this.imageList2.Images.SetKeyName(7, "xacnhan.png");
             // 
             // groupBox9
             // 
@@ -258,23 +221,6 @@
             this.groupBox9.TabIndex = 36;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Theo Tên Sản Phẩm";
-            // 
-            // btn_Search_TenSP
-            // 
-            this.btn_Search_TenSP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Search_TenSP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Search_TenSP.FlatAppearance.BorderSize = 0;
-            this.btn_Search_TenSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search_TenSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search_TenSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search_TenSP.ImageKey = "search.png";
-            this.btn_Search_TenSP.ImageList = this.imageList2;
-            this.btn_Search_TenSP.Location = new System.Drawing.Point(238, 23);
-            this.btn_Search_TenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Search_TenSP.Name = "btn_Search_TenSP";
-            this.btn_Search_TenSP.Size = new System.Drawing.Size(77, 48);
-            this.btn_Search_TenSP.TabIndex = 24;
-            this.btn_Search_TenSP.UseVisualStyleBackColor = true;
             // 
             // txt_Search_tenSP
             // 
@@ -300,23 +246,6 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Theo Giá Bán";
             // 
-            // button_Search_Gia
-            // 
-            this.button_Search_Gia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Search_Gia.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_Search_Gia.FlatAppearance.BorderSize = 0;
-            this.button_Search_Gia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search_Gia.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Search_Gia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Search_Gia.ImageKey = "search.png";
-            this.button_Search_Gia.ImageList = this.imageList2;
-            this.button_Search_Gia.Location = new System.Drawing.Point(229, 25);
-            this.button_Search_Gia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Search_Gia.Name = "button_Search_Gia";
-            this.button_Search_Gia.Size = new System.Drawing.Size(66, 48);
-            this.button_Search_Gia.TabIndex = 23;
-            this.button_Search_Gia.UseVisualStyleBackColor = true;
-            // 
             // cbb_Search_Gia
             // 
             this.cbb_Search_Gia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,25 +255,6 @@
             this.cbb_Search_Gia.Name = "cbb_Search_Gia";
             this.cbb_Search_Gia.Size = new System.Drawing.Size(207, 30);
             this.cbb_Search_Gia.TabIndex = 0;
-            // 
-            // btn_update
-            // 
-            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_update.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_update.FlatAppearance.BorderSize = 0;
-            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_update.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_update.ImageKey = "update.png";
-            this.btn_update.ImageList = this.imageList2;
-            this.btn_update.Location = new System.Drawing.Point(275, 148);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(152, 51);
-            this.btn_update.TabIndex = 1;
-            this.btn_update.Text = "Sửa";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // panel6
             // 
@@ -367,63 +277,6 @@
             this.label7.Size = new System.Drawing.Size(150, 32);
             this.label7.TabIndex = 0;
             this.label7.Text = "Chức Năng";
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_delete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.ImageKey = "delete1.png";
-            this.btn_delete.ImageList = this.imageList2;
-            this.btn_delete.Location = new System.Drawing.Point(51, 148);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(156, 51);
-            this.btn_delete.TabIndex = 2;
-            this.btn_delete.Text = "Xóa";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_save.FlatAppearance.BorderSize = 0;
-            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save.ImageKey = "save.png";
-            this.btn_save.ImageList = this.imageList2;
-            this.btn_save.Location = new System.Drawing.Point(529, 148);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(168, 51);
-            this.btn_save.TabIndex = 0;
-            this.btn_save.Text = "Lưu";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_exits
-            // 
-            this.btn_exits.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_exits.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_exits.FlatAppearance.BorderSize = 0;
-            this.btn_exits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exits.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exits.ImageKey = "delete.png";
-            this.btn_exits.ImageList = this.imageList2;
-            this.btn_exits.Location = new System.Drawing.Point(529, 203);
-            this.btn_exits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_exits.Name = "btn_exits";
-            this.btn_exits.Size = new System.Drawing.Size(179, 55);
-            this.btn_exits.TabIndex = 0;
-            this.btn_exits.Text = "Thoát";
-            this.btn_exits.UseVisualStyleBackColor = true;
-        //    this.btn_exits.Click += new System.EventHandler(this.btn_exits_Click);
             // 
             // panel3
             // 
@@ -526,18 +379,6 @@
             this.label6.Size = new System.Drawing.Size(81, 22);
             this.label6.TabIndex = 28;
             this.label6.Text = "Tên Loại";
-            // 
-            // pictureBox_Image
-            // 
-            this.pictureBox_Image.BackColor = System.Drawing.Color.LightBlue;
-            this.pictureBox_Image.Location = new System.Drawing.Point(47, 74);
-            this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Image.TabIndex = 0;
-            this.pictureBox_Image.TabStop = false;
-            this.pictureBox_Image.Click += new System.EventHandler(this.pictureBox_Image_Click);
             // 
             // txt_TGBH
             // 
@@ -681,6 +522,165 @@
             this.txt_SL.Name = "txt_SL";
             this.txt_SL.Size = new System.Drawing.Size(265, 30);
             this.txt_SL.TabIndex = 7;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.ImageKey = "add.png";
+            this.btnThem.ImageList = this.imageList2;
+            this.btnThem.Location = new System.Drawing.Point(51, 209);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(171, 51);
+            this.btnThem.TabIndex = 38;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btn_Huy
+            // 
+            this.btn_Huy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Huy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Huy.FlatAppearance.BorderSize = 0;
+            this.btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Huy.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Huy.ImageKey = "cancel.png";
+            this.btn_Huy.ImageList = this.imageList2;
+            this.btn_Huy.Location = new System.Drawing.Point(275, 206);
+            this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Huy.Name = "btn_Huy";
+            this.btn_Huy.Size = new System.Drawing.Size(159, 55);
+            this.btn_Huy.TabIndex = 37;
+            this.btn_Huy.Text = "Hủy";
+            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            // 
+            // btn_Search_TenSP
+            // 
+            this.btn_Search_TenSP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Search_TenSP.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Search_TenSP.FlatAppearance.BorderSize = 0;
+            this.btn_Search_TenSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search_TenSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search_TenSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Search_TenSP.ImageKey = "search.png";
+            this.btn_Search_TenSP.ImageList = this.imageList2;
+            this.btn_Search_TenSP.Location = new System.Drawing.Point(238, 23);
+            this.btn_Search_TenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Search_TenSP.Name = "btn_Search_TenSP";
+            this.btn_Search_TenSP.Size = new System.Drawing.Size(77, 48);
+            this.btn_Search_TenSP.TabIndex = 24;
+            this.btn_Search_TenSP.UseVisualStyleBackColor = true;
+            // 
+            // button_Search_Gia
+            // 
+            this.button_Search_Gia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Search_Gia.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button_Search_Gia.FlatAppearance.BorderSize = 0;
+            this.button_Search_Gia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search_Gia.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Search_Gia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Search_Gia.ImageKey = "search.png";
+            this.button_Search_Gia.ImageList = this.imageList2;
+            this.button_Search_Gia.Location = new System.Drawing.Point(229, 25);
+            this.button_Search_Gia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Search_Gia.Name = "button_Search_Gia";
+            this.button_Search_Gia.Size = new System.Drawing.Size(66, 48);
+            this.button_Search_Gia.TabIndex = 23;
+            this.button_Search_Gia.UseVisualStyleBackColor = true;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_update.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_update.FlatAppearance.BorderSize = 0;
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_update.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_update.ImageKey = "update.png";
+            this.btn_update.ImageList = this.imageList2;
+            this.btn_update.Location = new System.Drawing.Point(275, 148);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(152, 51);
+            this.btn_update.TabIndex = 1;
+            this.btn_update.Text = "Sửa";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_delete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_delete.ImageKey = "delete1.png";
+            this.btn_delete.ImageList = this.imageList2;
+            this.btn_delete.Location = new System.Drawing.Point(51, 148);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(156, 51);
+            this.btn_delete.TabIndex = 2;
+            this.btn_delete.Text = "Xóa";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_save.FlatAppearance.BorderSize = 0;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save.ImageKey = "save.png";
+            this.btn_save.ImageList = this.imageList2;
+            this.btn_save.Location = new System.Drawing.Point(529, 148);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(168, 51);
+            this.btn_save.TabIndex = 0;
+            this.btn_save.Text = "Lưu";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_exits
+            // 
+            this.btn_exits.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_exits.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_exits.FlatAppearance.BorderSize = 0;
+            this.btn_exits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exits.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_exits.ImageKey = "delete.png";
+            this.btn_exits.ImageList = this.imageList2;
+            this.btn_exits.Location = new System.Drawing.Point(529, 203);
+            this.btn_exits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exits.Name = "btn_exits";
+            this.btn_exits.Size = new System.Drawing.Size(179, 55);
+            this.btn_exits.TabIndex = 0;
+            this.btn_exits.Text = "Thoát";
+            this.btn_exits.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox_Image
+            // 
+            this.pictureBox_Image.BackColor = System.Drawing.Color.LightBlue;
+            this.pictureBox_Image.Location = new System.Drawing.Point(47, 74);
+            this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox_Image.Name = "pictureBox_Image";
+            this.pictureBox_Image.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Image.TabIndex = 0;
+            this.pictureBox_Image.TabStop = false;
+            this.pictureBox_Image.Click += new System.EventHandler(this.pictureBox_Image_Click);
             // 
             // UC_SanPham
             // 

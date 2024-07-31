@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ql_cuahang_maytinh" Class="QL_CuaHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-D6K1SJRH\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=True;User ID=sa;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ql_cuahang_maytinhConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=True;User ID=dien;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ql_cuahang_maytinhConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.taikhoankh" Member="taikhoankhs">
     <Type Name="taikhoankh">
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -9,15 +9,6 @@
       <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="khachhang_taikhoankh" Member="khachhang" ThisKey="MaKH" OtherKey="MaKH" Type="khachhang" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.chitietbanhang" Member="chitietbanhangs">
-    <Type Name="chitietbanhang">
-      <Column Name="MaBanHang" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaSP" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Association Name="sanpham_chitietbanhang" Member="sanpham" ThisKey="MaSP" OtherKey="MaSP" Type="sanpham" IsForeignKey="true" />
-      <Association Name="banhang_chitietbanhang" Member="banhang" ThisKey="MaBanHang" OtherKey="MaBanHang" Type="banhang" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.chitietdathang" Member="chitietdathangs">
@@ -194,11 +185,11 @@
       <Column Name="Tg_BaoHanh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MaLoai" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
       <Column Name="MaNCC" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
-      <Association Name="sanpham_chitietbanhang" Member="chitietbanhangs" ThisKey="MaSP" OtherKey="MaSP" Type="chitietbanhang" />
       <Association Name="sanpham_chitietdathang" Member="chitietdathangs" ThisKey="MaSP" OtherKey="MaSP" Type="chitietdathang" />
       <Association Name="sanpham_chitietgiohang" Member="chitietgiohangs" ThisKey="MaSP" OtherKey="MaSP" Type="chitietgiohang" />
       <Association Name="sanpham_chitietphieunhap" Member="chitietphieunhaps" ThisKey="MaSP" OtherKey="MaSP" Type="chitietphieunhap" />
       <Association Name="sanpham_danhgia" Member="danhgias" ThisKey="MaSP" OtherKey="masp" Type="danhgia" />
+      <Association Name="sanpham_chitietbanhang" Member="chitietbanhangs" ThisKey="MaSP" OtherKey="MaSP" Type="chitietbanhang" />
       <Association Name="loaisp_sanpham" Member="loaisp" ThisKey="MaLoai" OtherKey="MaLoai" Type="loaisp" IsForeignKey="true" />
     </Type>
   </Table>
@@ -225,7 +216,6 @@
       <Column Name="MaCV" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-
   <Table Name="dbo.banhang" Member="banhangs">
     <Type Name="banhang">
       <Column Name="MaBanHang" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -238,7 +228,6 @@
       <Association Name="nhanvien_banhang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
     </Type>
   </Table>
-
   <Table Name="dbo.phieunhaphang" Member="phieunhaphangs">
     <Type Name="phieunhaphang">
       <Column Name="MaPN" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -250,6 +239,27 @@
       <Association Name="phieunhaphang_chitietphieunhap" Member="chitietphieunhaps" ThisKey="MaPN" OtherKey="MaPN" Type="chitietphieunhap" />
       <Association Name="nhacungcap_phieunhaphang" Member="nhacungcap" ThisKey="MaNCC" OtherKey="MaNCC" Type="nhacungcap" IsForeignKey="true" />
       <Association Name="nhanvien_phieunhaphang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chitietbanhang" Member="chitietbanhangs">
+    <Type Name="chitietbanhang">
+      <Column Name="MaBanHang" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaSP" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="banhang_chitietbanhang" Member="banhang" ThisKey="MaBanHang" OtherKey="MaBanHang" Type="banhang" IsForeignKey="true" />
+      <Association Name="sanpham_chitietbanhang" Member="sanpham" ThisKey="MaSP" OtherKey="MaSP" Type="sanpham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_DonHang" Member="View_DonHangs">
+    <Type Name="View_DonHang">
+      <Column Name="MaDH" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDatHang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TinhTrang_DH" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

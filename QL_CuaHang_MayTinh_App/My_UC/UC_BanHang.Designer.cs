@@ -40,6 +40,8 @@
             this.paginationPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ComboBox_LoaiSP = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_GhiChu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_ThanhToan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -118,6 +120,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_GhiChu);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_ThanhToan);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
@@ -127,6 +131,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(857, 866);
             this.panel1.TabIndex = 5;
+            // 
+            // txt_GhiChu
+            // 
+            this.txt_GhiChu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_GhiChu.DefaultText = "";
+            this.txt_GhiChu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_GhiChu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_GhiChu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_GhiChu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_GhiChu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_GhiChu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_GhiChu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_GhiChu.Location = new System.Drawing.Point(126, 739);
+            this.txt_GhiChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_GhiChu.Name = "txt_GhiChu";
+            this.txt_GhiChu.PasswordChar = '\0';
+            this.txt_GhiChu.PlaceholderText = "";
+            this.txt_GhiChu.SelectedText = "";
+            this.txt_GhiChu.Size = new System.Drawing.Size(714, 48);
+            this.txt_GhiChu.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 755);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Ghi Chú:";
             // 
             // btn_ThanhToan
             // 
@@ -144,14 +178,14 @@
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(578, 52);
             this.btn_ThanhToan.TabIndex = 41;
-            this.btn_ThanhToan.Text = "THANH TOÁN VÀ XUÁT HÓA ĐƠN";
+            this.btn_ThanhToan.Text = "THANH TOÁN VÀ XUẤT HÓA ĐƠN";
             this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 691);
+            this.label2.Location = new System.Drawing.Point(15, 710);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 25);
             this.label2.TabIndex = 13;
@@ -424,7 +458,7 @@
             this.label_TongTien.AutoSize = true;
             this.label_TongTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TongTien.ForeColor = System.Drawing.Color.Red;
-            this.label_TongTien.Location = new System.Drawing.Point(249, 691);
+            this.label_TongTien.Location = new System.Drawing.Point(249, 710);
             this.label_TongTien.Name = "label_TongTien";
             this.label_TongTien.Size = new System.Drawing.Size(43, 25);
             this.label_TongTien.TabIndex = 6;
@@ -583,5 +617,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel label_KhachHang;
         private Guna.UI2.WinForms.Guna2GradientButton btn_ThanhToan;
         private System.Windows.Forms.Label label_makh;
+        private Guna.UI2.WinForms.Guna2TextBox txt_GhiChu;
+        private System.Windows.Forms.Label label1;
     }
 }
