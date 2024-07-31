@@ -274,4 +274,12 @@
       <Column Name="TenNCC" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.View_ChiTietDatHang" Member="View_ChiTietDatHangs">
+    <Type Name="View_ChiTietDatHang">
+      <Column Name="MaDH" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSP" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

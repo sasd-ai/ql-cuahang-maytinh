@@ -93,7 +93,7 @@ namespace DTO
     #endregion
 		
 		public QL_CuaHangDataContext() : 
-				base(global::DTO.Properties.Settings.Default.ql_cuahang_maytinhConnectionString1, mappingSource)
+				base(global::DTO.Properties.Settings.Default.ql_cuahang_maytinhConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -311,6 +311,14 @@ namespace DTO
 			get
 			{
 				return this.GetTable<DS_PhieuNhap>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_ChiTietDatHang> View_ChiTietDatHangs
+		{
+			get
+			{
+				return this.GetTable<View_ChiTietDatHang>();
 			}
 		}
 	}
@@ -5666,6 +5674,87 @@ namespace DTO
 				if ((this._TenNCC != value))
 				{
 					this._TenNCC = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_ChiTietDatHang")]
+	public partial class View_ChiTietDatHang
+	{
+		
+		private string _MaDH;
+		
+		private string _TenSP;
+		
+		private int _SoLuong;
+		
+		private int _ThanhTien;
+		
+		public View_ChiTietDatHang()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDH", DbType="VarChar(36) NOT NULL", CanBeNull=false)]
+		public string MaDH
+		{
+			get
+			{
+				return this._MaDH;
+			}
+			set
+			{
+				if ((this._MaDH != value))
+				{
+					this._MaDH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSP", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
+		public string TenSP
+		{
+			get
+			{
+				return this._TenSP;
+			}
+			set
+			{
+				if ((this._TenSP != value))
+				{
+					this._TenSP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int NOT NULL")]
+		public int SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this._SoLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int NOT NULL")]
+		public int ThanhTien
+		{
+			get
+			{
+				return this._ThanhTien;
+			}
+			set
+			{
+				if ((this._ThanhTien != value))
+				{
+					this._ThanhTien = value;
 				}
 			}
 		}
