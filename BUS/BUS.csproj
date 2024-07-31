@@ -103,10 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_BanHang.cs" />
+    <Compile Include="BUS_ChiTietPhieuNhap.cs" />
     <Compile Include="BUS_ChucVu.cs" />
     <Compile Include="BUS_NhanVien_ChucVu.cs" />
     <Compile Include="BUS_NguoiDung_ChucVu.cs" />
     <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_PhieuNhapHang.cs" />
     <Compile Include="BUS_QuanLyDonHang.cs" />
     <Compile Include="BUS_SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

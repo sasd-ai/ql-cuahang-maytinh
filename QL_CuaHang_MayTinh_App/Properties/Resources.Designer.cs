@@ -143,16 +143,6 @@ namespace QL_CuaHang_MayTinh_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap delete2 {
-            get {
-                object obj = ResourceManager.GetObject("delete2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap delete3 {
             get {
                 object obj = ResourceManager.GetObject("delete3", resourceCulture);

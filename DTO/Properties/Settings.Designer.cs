@@ -33,5 +33,16 @@ namespace DTO.Properties {
                 return ((string)(this["ql_cuahang_maytinhConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
+            "e;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True")]
+        public string ql_cuahang_maytinhConnectionString1 {
+            get {
+                return ((string)(this["ql_cuahang_maytinhConnectionString1"]));
+            }
+        }
     }
 }
