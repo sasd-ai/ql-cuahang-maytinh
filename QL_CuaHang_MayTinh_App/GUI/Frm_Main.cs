@@ -148,7 +148,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
 
         private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Program.frm_Login.Visible = true;
         }
 
         private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
