@@ -11,9 +11,9 @@ namespace DAO
         QL_CuaHangDataContext qlch=new QL_CuaHangDataContext();
         public DAO_QuanLyDonHang() { }
 
-        public List<View_DonHang> LoadXacNhanDonHang()
+        public List<View_DonHang> LoadDonHang(string NewTrangThai)
         {
-            return qlch.View_DonHangs.Where(dhxn=>dhxn.TinhTrang_DH== "Chờ Xác Nhận Đơn").ToList<View_DonHang>();
+            return qlch.View_DonHangs.Where(dhxn=>dhxn.TinhTrang_DH== NewTrangThai).ToList<View_DonHang>();
         }
 
         public bool CapNhatTrangThaiDonHang(string maDH, string trangThaiMoi)
@@ -40,9 +40,10 @@ namespace DAO
             }
         }
 
-        public List<chitietdathang> LoadChiTietDatHang(string NewMaDH)
+
+        public List<View_ChiTietDatHang> LoadChiTietDatHang(string NewMaDH)
         {
-            return qlch.chitietdathangs.Where(ct=>ct.MaDH==NewMaDH).ToList<chitietdathang>();
+            return qlch.View_ChiTietDatHangs.Where(ct=>ct.MaDH==NewMaDH).ToList<View_ChiTietDatHang>();
         }
 
     }

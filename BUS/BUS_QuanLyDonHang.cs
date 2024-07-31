@@ -12,9 +12,9 @@ namespace BUS
         DAO_QuanLyDonHang dh=new DAO_QuanLyDonHang();
         public BUS_QuanLyDonHang() { }  
 
-        public List<View_DonHang> LoadDonHangChoXacNhan()
+        public List<View_DonHang> LoadDonHang(string NewTrangThai)
         {
-            return dh.LoadXacNhanDonHang();
+            return dh.LoadDonHang(NewTrangThai);
         }
 
         public bool CapNhatTTXacNhanDonHang(string madh, string trangThaiMoi)
@@ -22,7 +22,7 @@ namespace BUS
             return dh.CapNhatTrangThaiDonHang(madh, trangThaiMoi);
         }
 
-        public List<chitietdathang> LoadChiTietDatHang(string NewMADH)
+        public List<View_ChiTietDatHang> LoadChiTietDatHang(string NewMADH)
         {
             return dh.LoadChiTietDatHang(NewMADH);
         }
