@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using QL_CuaHang_MayTinh_App.GUI;
 namespace QL_CuaHang_MayTinh_App.My_UC
 {
     public partial class UC_NhapHang : UserControl
@@ -66,7 +67,16 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 dgv_PhieuNhapHang.Columns["MaNCC"].Visible = false;
             }
         }
-        
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            if (Program.frm_NhapSP == null || Program.frm_NhapSP.IsDisposed)
+            {
+                Program.frm_NhapSP = new Frm_NhapSP();
+            }
+            Program.frm_NhapSP.Show();
+            Program.frm_NhapSP.BringToFront(); // Optional: Bring the form to the front if it is already open
+        }
 
     }
 }

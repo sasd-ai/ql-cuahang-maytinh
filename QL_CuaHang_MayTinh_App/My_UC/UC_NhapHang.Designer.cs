@@ -167,6 +167,7 @@
             this.btnThemMoi.Size = new System.Drawing.Size(180, 45);
             this.btnThemMoi.TabIndex = 8;
             this.btnThemMoi.Text = "Thêm mới";
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // panel1
             // 

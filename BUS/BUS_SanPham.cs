@@ -12,7 +12,7 @@ namespace BUS
     public class BUS_SanPham
     {
         private Cloudinary cloudinary;
-        DAO_SanPham sp=new DAO_SanPham();
+        DAO_SanPham sp = new DAO_SanPham();
         public BUS_SanPham() { }
 
 
@@ -66,13 +66,13 @@ namespace BUS
         public void ThemSanPham(string masp, string tensp, string hinhanh, string giadx,
                                 string sl, string giaban, string mota, string tgbh, string maloai, string mancc)
         {
-            sp.ThemSanPham(masp,tensp,hinhanh,giadx,sl,giaban,mota,tgbh,maloai,mancc);
+            sp.ThemSanPham(masp, tensp, hinhanh, giadx, sl, giaban, mota, tgbh, maloai, mancc);
         }
 
         public void SuaSanPham(string masp, string tensp, string hinhanh, string giadx,
                           string sl, string giaban, string mota, string tgbh, string maloai, string mancc)
         {
-           
+
             sp.SuaSanPham(masp, tensp, hinhanh, giadx, sl, giaban, mota, tgbh, maloai, mancc);
         }
         public void XoaSanPham(string masp)
@@ -84,5 +84,20 @@ namespace BUS
         {
             return sp.FindByName(TenSP);
         }
+        //Lấy danh sách sản phẩm
+        public List<sanpham> GetData()
+        {
+            return sp.GetData(); 
+        }
+        //Tìm kiếm theo mã loại,mã nhà sản xuất
+        public List<sanpham> FindByMaLoai(string maLoai, List<sanpham> sanphams)
+        {
+            return sanphams.Where(sp => sp.MaLoai == maLoai).ToList<sanpham>();
+        }
+        public List<sanpham> FindByMaNCC(string maNCC)
+        {
+            return sp.FindByMaNCC(maNCC);
+        }
+
     }
 }

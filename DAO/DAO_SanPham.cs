@@ -84,14 +84,22 @@ namespace DAO
             }    
         }
 
+        //Tìm kiếm theo tên
         public List<sanpham> FindByName(string TenSP)
         {
             return qlch.sanphams
                        .Where(sp => sp.TenSP.Contains(TenSP))
                        .ToList();
         }
-
-
-
+        //Lấy dánh sách sản phẩm
+        public List<sanpham> GetData()
+        {
+            return qlch.sanphams.Select(sp => sp).ToList<sanpham>();
+        }
+        public List<sanpham> FindByMaNCC(string maNCC)
+        {
+            return qlch.sanphams.Where(sp => sp.MaNCC==maNCC).ToList<sanpham>();
+        }
+       
     }
 }

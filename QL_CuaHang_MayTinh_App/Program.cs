@@ -10,6 +10,7 @@ namespace QL_CuaHang_MayTinh_App
     {
         public static Login frm_Login;
         public static Frm_Main frmMain;
+        public static Frm_NhapSP frm_NhapSP;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
