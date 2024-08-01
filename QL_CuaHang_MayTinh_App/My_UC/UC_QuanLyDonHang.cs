@@ -33,8 +33,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             string TrangThai = "Đã xác nhận đơn";
             guna2DataGridView_DH.DataSource = dh.LoadDonHang(TrangThai);
             guna2DataGridView_DH.Columns["XacNhan"].Visible = false;
-            //int sl = dh.LoadDonHang(TrangThai).Count;
-            //label_SL_CXN.Text = sl.ToString();
+            label_dsDon.Text = "Danh Sách Đơn Hàng Chưa Xác Nhận";
         }
 
         private void Panel_DaHuy_Click(object sender, EventArgs e)
@@ -43,7 +42,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             string TrangThai = "Đã xác nhận hủy";
             guna2DataGridView_DH.DataSource = dh.LoadDonHang(TrangThai);
             guna2DataGridView_DH.Columns["XacNhan"].Visible = false;
-        
+            label_dsDon.Text = "Danh Sách Đơn Hàng Đã xác nhận hủy";
+
         }
 
         private void Panel_ChoXacNhan_Click(object sender, EventArgs e)
@@ -51,6 +51,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             flag = 1;
             string TrangThai = "Chờ Xác Nhận Đơn";
             guna2DataGridView_DH.DataSource = dh.LoadDonHang(TrangThai);
+            guna2DataGridView_DH.Columns["XacNhan"].Visible = true;
+            label_dsDon.Text = "Danh Sách Đơn Hàng Chờ Xác Nhận Đơn";
         }
 
         private void Panel_YeuCauHuy_Click(object sender, EventArgs e)
@@ -58,11 +60,13 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             flag = 3;
             string TrangThai = "Chờ Xác Nhận Hủy Đơn Hàng";
             guna2DataGridView_DH.DataSource = dh.LoadDonHang(TrangThai);
+            guna2DataGridView_DH.Columns["XacNhan"].Visible = true;
+            label_dsDon.Text = "Danh Sách Đơn Hàng Chờ Xác Nhận Hủy Đơn Hàng";
         }
 
         private void LoadSLDonHang()
         {
-            label_SL_CXN.Text = dh.LoadDonHang("Chờ xác nhận").Count.ToString();
+            label_SL_CXN.Text = dh.LoadDonHang("Chờ Xác Nhận Đơn").Count.ToString();
             label_SL_DXN.Text = dh.LoadDonHang("Đã xác nhận đơn").Count.ToString();
             label_SL_YCH.Text = dh.LoadDonHang("Chờ Xác Nhận Hủy Đơn Hàng").Count.ToString();
             label_SL_H.Text = dh.LoadDonHang("Đã xác nhận hủy").Count.ToString();
