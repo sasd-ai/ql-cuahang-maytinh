@@ -26,25 +26,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.customTabControl1 = new CustomTabControl();
             this.tabPage_NguoiDung_Nhom = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -66,9 +64,19 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.chart_Ngay_off = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.chart_ThangTong = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblDoanhThuThang = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbb_Month = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.chart_TheoThang = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btn_month = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_Today = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel_TongTienDonHang = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label_TongTienDonHang = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel_TongDonHang = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label_SoLuongDonHang = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.customTabControl1.SuspendLayout();
             this.tabPage_NguoiDung_Nhom.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,15 +94,19 @@
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Ngay_off)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_ThangTong)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_TheoThang)).BeginInit();
+            this.panel_TongTienDonHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel_TongDonHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // customTabControl1
             // 
             this.customTabControl1.Controls.Add(this.tabPage_NguoiDung_Nhom);
             this.customTabControl1.Controls.Add(this.tabPage_Nhom_ManHinh);
-            this.customTabControl1.Controls.Add(this.tabPage1);
+            this.customTabControl1.Controls.Add(this.tabPage2);
             this.customTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.customTabControl1.ItemSize = new System.Drawing.Size(200, 40);
@@ -150,25 +162,25 @@
             // 
             // chart_Ngay
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart_Ngay.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart_Ngay.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart_Ngay.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_Ngay.Legends.Add(legend1);
             this.chart_Ngay.Location = new System.Drawing.Point(14, 64);
             this.chart_Ngay.Name = "chart_Ngay";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.IsXValueIndexed = true;
-            series7.Legend = "Legend1";
-            series7.Name = "Ngay";
-            series7.YValuesPerPoint = 3;
-            this.chart_Ngay.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Ngay";
+            series1.YValuesPerPoint = 3;
+            this.chart_Ngay.Series.Add(series1);
             this.chart_Ngay.Size = new System.Drawing.Size(1608, 282);
             this.chart_Ngay.TabIndex = 2;
             this.chart_Ngay.Text = "chart_Ngay";
-            title7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title7.Name = "Title1";
-            this.chart_Ngay.Titles.Add(title7);
+            title1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            this.chart_Ngay.Titles.Add(title1);
             // 
             // panel_Main_Tab1
             // 
@@ -198,7 +210,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1676, 55);
             this.panel8.TabIndex = 4;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label8
             // 
@@ -213,20 +224,19 @@
             // 
             // chart_month
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart_month.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart_month.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart_month.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_month.Legends.Add(legend2);
             this.chart_month.Location = new System.Drawing.Point(21, 47);
             this.chart_month.Name = "chart_month";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Thang";
-            this.chart_month.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Thang";
+            this.chart_month.Series.Add(series2);
             this.chart_month.Size = new System.Drawing.Size(1599, 364);
             this.chart_month.TabIndex = 3;
             this.chart_month.Text = "chart_Thang";
-            this.chart_month.Click += new System.EventHandler(this.chart_month_Click);
             // 
             // tabPage_Nhom_ManHinh
             // 
@@ -282,16 +292,16 @@
             // 
             // chart_thang_off
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart_thang_off.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart_thang_off.Legends.Add(legend9);
+            chartArea3.Name = "ChartArea1";
+            this.chart_thang_off.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart_thang_off.Legends.Add(legend3);
             this.chart_thang_off.Location = new System.Drawing.Point(21, 47);
             this.chart_thang_off.Name = "chart_thang_off";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Thang";
-            this.chart_thang_off.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Thang";
+            this.chart_thang_off.Series.Add(series3);
             this.chart_thang_off.Size = new System.Drawing.Size(1599, 364);
             this.chart_thang_off.TabIndex = 3;
             this.chart_thang_off.Text = "chart_Thang";
@@ -329,74 +339,204 @@
             // 
             // chart_Ngay_off
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart_Ngay_off.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart_Ngay_off.Legends.Add(legend10);
+            chartArea4.Name = "ChartArea1";
+            this.chart_Ngay_off.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart_Ngay_off.Legends.Add(legend4);
             this.chart_Ngay_off.Location = new System.Drawing.Point(14, 64);
             this.chart_Ngay_off.Name = "chart_Ngay_off";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.IsXValueIndexed = true;
-            series10.Legend = "Legend1";
-            series10.Name = "Ngay";
-            series10.YValuesPerPoint = 3;
-            this.chart_Ngay_off.Series.Add(series10);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.IsXValueIndexed = true;
+            series4.Legend = "Legend1";
+            series4.Name = "Ngay";
+            series4.YValuesPerPoint = 3;
+            this.chart_Ngay_off.Series.Add(series4);
             this.chart_Ngay_off.Size = new System.Drawing.Size(1608, 282);
             this.chart_Ngay_off.TabIndex = 2;
             this.chart_Ngay_off.Text = "chart1";
-            title8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title8.Name = "Title1";
-            this.chart_Ngay_off.Titles.Add(title8);
+            title2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            this.chart_Ngay_off.Titles.Add(title2);
             // 
-            // tabPage1
+            // tabPage2
             // 
-            this.tabPage1.Controls.Add(this.lblDoanhThuThang);
-            this.tabPage1.Controls.Add(this.chart_ThangTong);
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1692, 802);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Doanh Thu Tổng";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.cbb_Month);
+            this.tabPage2.Controls.Add(this.chart_TheoThang);
+            this.tabPage2.Controls.Add(this.btn_month);
+            this.tabPage2.Controls.Add(this.btn_Today);
+            this.tabPage2.Controls.Add(this.panel_TongTienDonHang);
+            this.tabPage2.Controls.Add(this.panel_TongDonHang);
+            this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1692, 802);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "Doanh Thu Tổng";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chart_ThangTong
+            // cbb_Month
             // 
-            this.chart_ThangTong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea6.Name = "ChartArea1";
-            this.chart_ThangTong.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart_ThangTong.Legends.Add(legend6);
-            this.chart_ThangTong.Location = new System.Drawing.Point(63, 85);
-            this.chart_ThangTong.Name = "chart_ThangTong";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart_ThangTong.Series.Add(series6);
-            this.chart_ThangTong.Size = new System.Drawing.Size(1099, 652);
-            this.chart_ThangTong.TabIndex = 11;
-            this.chart_ThangTong.Text = "chart2";
-            title5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "Title1";
-            title6.Alignment = System.Drawing.ContentAlignment.BottomCenter;
-            title6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.ForeColor = System.Drawing.Color.Red;
-            title6.Name = "Title2";
-            this.chart_ThangTong.Titles.Add(title5);
-            this.chart_ThangTong.Titles.Add(title6);
+            this.cbb_Month.BackColor = System.Drawing.Color.Transparent;
+            this.cbb_Month.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbb_Month.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_Month.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_Month.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_Month.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_Month.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbb_Month.ItemHeight = 30;
+            this.cbb_Month.Location = new System.Drawing.Point(951, 72);
+            this.cbb_Month.Name = "cbb_Month";
+            this.cbb_Month.Size = new System.Drawing.Size(140, 36);
+            this.cbb_Month.TabIndex = 13;
             // 
-            // lblDoanhThuThang
+            // chart_TheoThang
             // 
-            this.lblDoanhThuThang.AutoSize = true;
-            this.lblDoanhThuThang.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoanhThuThang.ForeColor = System.Drawing.Color.Red;
-            this.lblDoanhThuThang.Location = new System.Drawing.Point(81, 33);
-            this.lblDoanhThuThang.Name = "lblDoanhThuThang";
-            this.lblDoanhThuThang.Size = new System.Drawing.Size(0, 38);
-            this.lblDoanhThuThang.TabIndex = 12;
+            chartArea5.Name = "ChartArea1";
+            this.chart_TheoThang.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart_TheoThang.Legends.Add(legend5);
+            this.chart_TheoThang.Location = new System.Drawing.Point(112, 373);
+            this.chart_TheoThang.Name = "chart_TheoThang";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart_TheoThang.Series.Add(series5);
+            this.chart_TheoThang.Size = new System.Drawing.Size(1188, 300);
+            this.chart_TheoThang.TabIndex = 12;
+            this.chart_TheoThang.Text = "chart1";
+            // 
+            // btn_month
+            // 
+            this.btn_month.BorderRadius = 20;
+            this.btn_month.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_month.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_month.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_month.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_month.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_month.ForeColor = System.Drawing.Color.White;
+            this.btn_month.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_month.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_month.Location = new System.Drawing.Point(664, 72);
+            this.btn_month.Name = "btn_month";
+            this.btn_month.Size = new System.Drawing.Size(237, 52);
+            this.btn_month.TabIndex = 11;
+            this.btn_month.Text = "Last 30 days";
+            this.btn_month.Click += new System.EventHandler(this.btn_month_Click_1);
+            // 
+            // btn_Today
+            // 
+            this.btn_Today.BorderRadius = 20;
+            this.btn_Today.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_Today.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_Today.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_Today.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_Today.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Today.ForeColor = System.Drawing.Color.White;
+            this.btn_Today.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
+            this.btn_Today.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
+            this.btn_Today.Location = new System.Drawing.Point(277, 72);
+            this.btn_Today.Name = "btn_Today";
+            this.btn_Today.Size = new System.Drawing.Size(227, 52);
+            this.btn_Today.TabIndex = 9;
+            this.btn_Today.Text = "ToDay";
+            this.btn_Today.Click += new System.EventHandler(this.btn_Today_Click_1);
+            // 
+            // panel_TongTienDonHang
+            // 
+            this.panel_TongTienDonHang.BorderRadius = 20;
+            this.panel_TongTienDonHang.Controls.Add(this.label_TongTienDonHang);
+            this.panel_TongTienDonHang.Controls.Add(this.pictureBox3);
+            this.panel_TongTienDonHang.Controls.Add(this.label11);
+            this.panel_TongTienDonHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.panel_TongTienDonHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.panel_TongTienDonHang.Location = new System.Drawing.Point(632, 161);
+            this.panel_TongTienDonHang.Name = "panel_TongTienDonHang";
+            this.panel_TongTienDonHang.Size = new System.Drawing.Size(403, 140);
+            this.panel_TongTienDonHang.TabIndex = 7;
+            // 
+            // label_TongTienDonHang
+            // 
+            this.label_TongTienDonHang.AutoSize = true;
+            this.label_TongTienDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.label_TongTienDonHang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TongTienDonHang.ForeColor = System.Drawing.Color.White;
+            this.label_TongTienDonHang.Location = new System.Drawing.Point(67, 57);
+            this.label_TongTienDonHang.Name = "label_TongTienDonHang";
+            this.label_TongTienDonHang.Size = new System.Drawing.Size(94, 44);
+            this.label_TongTienDonHang.TabIndex = 0;
+            this.label_TongTienDonHang.Text = "5.7K";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.pictureBox3.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.xacnhan;
+            this.pictureBox3.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(18, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(106, 23);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "TỔNG TIỀN";
+            // 
+            // panel_TongDonHang
+            // 
+            this.panel_TongDonHang.BorderRadius = 20;
+            this.panel_TongDonHang.Controls.Add(this.label_SoLuongDonHang);
+            this.panel_TongDonHang.Controls.Add(this.pictureBox2);
+            this.panel_TongDonHang.Controls.Add(this.label6);
+            this.panel_TongDonHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.panel_TongDonHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.panel_TongDonHang.Location = new System.Drawing.Point(232, 161);
+            this.panel_TongDonHang.Name = "panel_TongDonHang";
+            this.panel_TongDonHang.Size = new System.Drawing.Size(297, 140);
+            this.panel_TongDonHang.TabIndex = 8;
+            // 
+            // label_SoLuongDonHang
+            // 
+            this.label_SoLuongDonHang.AutoSize = true;
+            this.label_SoLuongDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.label_SoLuongDonHang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SoLuongDonHang.ForeColor = System.Drawing.Color.White;
+            this.label_SoLuongDonHang.Location = new System.Drawing.Point(55, 57);
+            this.label_SoLuongDonHang.Name = "label_SoLuongDonHang";
+            this.label_SoLuongDonHang.Size = new System.Drawing.Size(105, 44);
+            this.label_SoLuongDonHang.TabIndex = 0;
+            this.label_SoLuongDonHang.Text = "405K";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.pictureBox2.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.oder1;
+            this.pictureBox2.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(18, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 23);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "ĐƠN HÀNG ";
             // 
             // UC_ThongKeDoanhThu
             // 
@@ -426,9 +566,14 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Ngay_off)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_ThangTong)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart_TheoThang)).EndInit();
+            this.panel_TongTienDonHang.ResumeLayout(false);
+            this.panel_TongTienDonHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel_TongDonHang.ResumeLayout(false);
+            this.panel_TongDonHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,8 +601,18 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_thang_off;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_ThangTong;
-        private System.Windows.Forms.Label lblDoanhThuThang;
+        private System.Windows.Forms.TabPage tabPage2;
+        private Guna.UI2.WinForms.Guna2GradientPanel panel_TongDonHang;
+        private System.Windows.Forms.Label label_SoLuongDonHang;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2GradientPanel panel_TongTienDonHang;
+        private System.Windows.Forms.Label label_TongTienDonHang;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_Today;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_TheoThang;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_month;
+        private Guna.UI2.WinForms.Guna2ComboBox cbb_Month;
     }
 }

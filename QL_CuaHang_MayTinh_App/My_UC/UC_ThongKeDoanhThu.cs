@@ -20,37 +20,32 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         public UC_ThongKeDoanhThu()
         {
             InitializeComponent();
-            LoadCharts();
+            LoadCharts_Online();
             LoadCharts_off();
-            LoadChartsTong();
-            chart_ThangTong.Click += Chart_ThangTong_Click;
-        }
 
-        private void Chart_ThangTong_Click(object sender, EventArgs e)
+            LoadMonths();
+        }
+        private void LoadMonths()
         {
-            // Kiểm tra sự kiện nhấp chuột trên biểu đồ
-            var result = chart_ThangTong.HitTest(MousePosition.X, MousePosition.Y, ChartElementType.DataPoint);
-            if (result.ChartElementType == ChartElementType.DataPoint)
+            // Sử dụng mảng để lưu trữ tên các tháng tiếng Việt
+            string[] monthNames = { "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6",
+                                    "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12" };
+
+            for (int i = 0; i < 12; i++)
             {
-                // Lấy điểm dữ liệu được nhấp
-                var dataPoint = chart_ThangTong.Series["Series1"].Points[result.PointIndex];
-
-                // Lấy tháng và doanh thu từ điểm dữ liệu
-                int month = (int)dataPoint.XValue;
-                double totalRevenue = dataPoint.YValues[0];
-
-                // Cập nhật Label với tổng doanh thu của tháng được chọn
-                lblDoanhThuThang.Text = $"Tổng doanh thu tháng {month}: {totalRevenue:#,###,###,##0} VND";
+                cbb_Month.Items.Add(monthNames[i]);
             }
+            cbb_Month.SelectedIndex = 0; // Chọn tháng đầu tiên (tháng 1)
         }
 
 
-        private void LoadCharts()
+
+        private void LoadCharts_Online()
         {
             DateTime today = DateTime.Now;
 
-            
-            List<Tuple<DateTime, int>> dailySales = tk.GetDoanhThuNgay(today);
+
+            List<Tuple<DateTime, int>> dailySales = tk.GetDoanhThuNgay_Online(today);
             chart_Ngay.Series["Ngay"].Points.Clear();
             foreach (var sale in dailySales)
             {
@@ -58,11 +53,11 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             }
             chart_Ngay.ChartAreas[0].AxisX.Interval = 1;
 
-          
-            chart_Ngay.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";  
 
-           
-            List<Tuple<DateTime, int>> monthlySales = tk.GetDoanhThuThang(today);
+            chart_Ngay.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";
+
+
+            List<Tuple<DateTime, int>> monthlySales = tk.GetDoanhThuThang_Online(today);
             chart_month.Series["Thang"].Points.Clear();
             foreach (var sale in monthlySales)
             {
@@ -70,8 +65,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             }
             chart_month.ChartAreas[0].AxisX.Interval = 1;
 
-          
-            chart_month.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";  
+
+            chart_month.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";
         }
 
 
@@ -104,50 +99,62 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             chart_thang_off.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";
         }
 
-        private void LoadChartsTong()
+
+        private void LoadCharts_Tong(DateTime date, bool showMonth = false)
         {
-            DateTime today = DateTime.Now;
+            chart_TheoThang.Series["Series1"].Points.Clear();
 
-            // Get data for online and offline sales
-            List<Tuple<DateTime, int>> onlineSalesDateTime = tk.GetDoanhThuThang(today);
-            List<Tuple<int, double>> offlineSales = tk.GetDoanhThu12Thang_Tong(today.Year);
+            // Biến để lưu tổng tiền và số lượng hóa đơn
+            double tongTien = 0;
+            int soLuongHoaDon = 0;
 
-            // Convert onlineSalesDateTime to List<Tuple<int, int>>
-            List<Tuple<int, int>> onlineSales = onlineSalesDateTime
-                .Select(x => new Tuple<int, int>(x.Item1.Month, x.Item2))
-                .ToList();
-
-            // Combine online and offline sales
-            List<Tuple<int, double>> combinedSales = new List<Tuple<int, double>>();
-            for (int month = 1; month <= 12; month++)
+            if (showMonth)
             {
-                double onlineTotal = onlineSales.FirstOrDefault(x => x.Item1 == month)?.Item2 ?? 0;
-                double offlineTotal = offlineSales.FirstOrDefault(x => x.Item1 == month)?.Item2 ?? 0;
-                combinedSales.Add(new Tuple<int, double>(month, onlineTotal + offlineTotal));
+                // Load biểu đồ theo tháng
+                DateTime firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+                DateTime lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+                List<DTO_ThongKe> monthlySales = tk.GetDoanhThuThang_Tong(firstDayOfMonth, lastDayOfMonth);
+
+                foreach (var sale in monthlySales)
+                {
+                    chart_TheoThang.Series["Series1"].Points.AddXY(sale.Ngay.ToString("MM/yyyy"), sale.TongTien);
+                    tongTien += sale.TongTien;
+                    soLuongHoaDon += sale.SoLuongHoaDon; // Cập nhật số lượng hóa đơn từ DTO
+                }
+            }
+            else
+            {
+                // Load biểu đồ theo ngày
+                List<DTO_ThongKe> dailySales = tk.GetDoanhThuNgay_Tong(date);
+
+                foreach (var sale in dailySales)
+                {
+                    chart_TheoThang.Series["Series1"].Points.AddXY(sale.Ngay.ToString("dd/MM/yyyy"), sale.TongTien);
+                    tongTien += sale.TongTien;
+                    soLuongHoaDon += sale.SoLuongHoaDon; // Cập nhật số lượng hóa đơn từ DTO
+                }
             }
 
-            // Populate the combined chart
-            chart_ThangTong.Series["Series1"].Points.Clear();
-            foreach (var sale in combinedSales)
-            {
-                // Convert month number to month name in Vietnamese
-                string monthName = new DateTime(today.Year, sale.Item1, 1)
-                                   .ToString("MMMM", new System.Globalization.CultureInfo("vi-VN"));
-                chart_ThangTong.Series["Series1"].Points.AddXY(monthName, sale.Item2);
-            }
+            chart_TheoThang.ChartAreas[0].AxisX.Interval = 1;
+            chart_TheoThang.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";
 
-            // Format Y-axis for the combined chart
-            chart_ThangTong.ChartAreas[0].AxisY.LabelStyle.Format = "#,###,###,##0 VND";
+            // Cập nhật label
+            label_SoLuongDonHang.Text = soLuongHoaDon.ToString();
+            label_TongTienDonHang.Text = tongTien.ToString("#,###,###,##0 VND");
         }
 
-        private void chart_month_Click(object sender, EventArgs e)
+        private void btn_Today_Click_1(object sender, EventArgs e)
         {
-
+            LoadCharts_Tong(DateTime.Now, false); // Hiển thị theo ngày
         }
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
+        private void btn_month_Click_1(object sender, EventArgs e)
         {
-
+            // Lấy tháng được chọn từ combobox (chỉ số bắt đầu từ 0)
+            int selectedMonth = cbb_Month.SelectedIndex + 1;
+            DateTime firstDayOfMonth = new DateTime(DateTime.Now.Year, selectedMonth, 1);
+            LoadCharts_Tong(firstDayOfMonth, true); // Hiển thị theo tháng
         }
+
     }
 }
