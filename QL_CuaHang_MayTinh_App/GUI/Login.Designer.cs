@@ -64,6 +64,7 @@
             this.txt_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
             this.txt_Password.Font = new System.Drawing.Font("Bookman Old Style", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password.ForeColor = System.Drawing.Color.Black;
             this.txt_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.txt_Password.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txt_Password.Location = new System.Drawing.Point(635, 335);
@@ -89,6 +90,7 @@
             this.txt_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
             this.txt_Username.Font = new System.Drawing.Font("Bookman Old Style", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Username.ForeColor = System.Drawing.Color.Black;
             this.txt_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.txt_Username.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txt_Username.Location = new System.Drawing.Point(635, 250);
