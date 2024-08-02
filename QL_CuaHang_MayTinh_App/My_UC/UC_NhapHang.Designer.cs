@@ -167,7 +167,6 @@
             this.btnThemMoi.Size = new System.Drawing.Size(180, 45);
             this.btnThemMoi.TabIndex = 8;
             this.btnThemMoi.Text = "Thêm mới";
-            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // panel1
             // 
@@ -285,7 +284,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnThemMoi;
+        public Guna.UI2.WinForms.Guna2Button btnThemMoi;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;

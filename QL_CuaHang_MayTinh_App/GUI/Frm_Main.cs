@@ -12,18 +12,21 @@ using System.Windows.Forms;
 using BUS;
 using DTO;
 using QL_CuaHang_MayTinh_App.My_Form;
+using System.Web.UI;
 namespace QL_CuaHang_MayTinh_App.GUI
 {
     public partial class Frm_Main : Form
     {
         public string email;
         private BUS_NhanVien bus_NhanVien;
+        public UC_SPNhapHang uc_SPNhap { get; private set; }
         public Frm_Main()
         {
             InitializeComponent();
 
             //Khai báo 
             bus_NhanVien = new BUS_NhanVien();
+            uc_SPNhap =new UC_SPNhapHang();
             //----------
             this.panel3.Paint += Panel3_Paint;
             this.FormClosing += Frm_Main_FormClosing;
@@ -102,7 +105,41 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Add(uc_Nhap);
             pannel_Main.Controls.Add(uc_Nhap);
             uc_Nhap.BringToFront();
+            uc_Nhap.btnThemMoi.Click += BtnThemMoi_Click;
         }
+        //Mở form nhập hàng từ ds đơn nhập hàng
+        private void BtnThemMoi_Click(object sender, EventArgs e)
+        {
+            
+            uc_SPNhap.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_SPNhap);
+            pannel_Main.Controls.Add(uc_SPNhap);
+            uc_SPNhap.BringToFront();
+            uc_SPNhap.btn_Huy.Click += Btn_Huy_Click;
+            uc_SPNhap.btn_AddSP.Click += Btn_AddSP_Click;
+
+           
+        }
+
+        private void Btn_AddSP_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        //Đóng form nhập hàng
+        private void Btn_Huy_Click(object sender, EventArgs e)
+        {
+            UC_NhapHang uc_Nhap = new UC_NhapHang();
+            uc_Nhap.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_Nhap);
+            pannel_Main.Controls.Add(uc_Nhap);
+            uc_Nhap.BringToFront();
+            uc_Nhap.btnThemMoi.Click += BtnThemMoi_Click;
+           
+        }
+
         //QUản lý chức vụ của nhân viên và phân quyền
         private void Btn_QtriPhanQuyen_Click(object sender, EventArgs e)
         {

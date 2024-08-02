@@ -211,6 +211,12 @@
     <Compile Include="My_UC\UC_SanPham.Designer.cs">
       <DependentUpon>UC_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="My_UC\UC_SPNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My_UC\UC_SPNhapHang.Designer.cs">
+      <DependentUpon>UC_SPNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="My_UC\UC_ThongKeDoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_SanPham.resx">
       <DependentUpon>UC_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_UC\UC_SPNhapHang.resx">
+      <DependentUpon>UC_SPNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_ThongKeDoanhThu.resx">
       <DependentUpon>UC_ThongKeDoanhThu.cs</DependentUpon>
