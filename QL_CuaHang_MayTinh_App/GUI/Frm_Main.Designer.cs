@@ -39,29 +39,29 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel_Menu = new System.Windows.Forms.Panel();
+            this.btn_DangXuat = new Custom_Controls.Button_ControlBox();
             this.panel_Setting = new System.Windows.Forms.Panel();
             this.btn_DoiMatKhau = new Custom_Controls.Button_NoBoder();
             this.btn_ThongTinCaNhan = new Custom_Controls.Button_NoBoder();
+            this.btn_Setting = new Custom_Controls.Button_ControlBox();
             this.panel_QuanTri = new System.Windows.Forms.Panel();
             this.btn_QtriPhanQuyen = new Custom_Controls.Button_NoBoder();
             this.btn_QTriChucVu = new Custom_Controls.Button_NoBoder();
             this.btn_QTriNhanVien = new Custom_Controls.Button_NoBoder();
+            this.btn_QuanTriMenu = new Custom_Controls.Button_ControlBox();
+            this.btn_BaoCao = new Custom_Controls.Button_ControlBox();
+            this.btn_QLKho = new Custom_Controls.Button_ControlBox();
             this.panel_SanPham = new System.Windows.Forms.Panel();
             this.btn_SanPham = new Custom_Controls.Button_NoBoder();
             this.btn_LoaiSP = new Custom_Controls.Button_NoBoder();
+            this.btn_SanPhamMenu = new Custom_Controls.Button_ControlBox();
             this.panel_BanHang = new System.Windows.Forms.Panel();
             this.btn_DSBanOff = new Custom_Controls.Button_NoBoder();
             this.btn_DonHangOnline = new Custom_Controls.Button_NoBoder();
             this.btn_BanHang = new Custom_Controls.Button_NoBoder();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btn_DangXuat = new Custom_Controls.Button_ControlBox();
-            this.btn_Setting = new Custom_Controls.Button_ControlBox();
-            this.btn_QuanTriMenu = new Custom_Controls.Button_ControlBox();
-            this.btn_BaoCao = new Custom_Controls.Button_ControlBox();
-            this.btn_QLKho = new Custom_Controls.Button_ControlBox();
-            this.btn_SanPhamMenu = new Custom_Controls.Button_ControlBox();
             this.btn_BanHangMenu = new Custom_Controls.Button_ControlBox();
             this.btn_TrangChu = new Custom_Controls.Button_ControlBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -196,6 +196,23 @@
             this.panel_Menu.Size = new System.Drawing.Size(213, 1200);
             this.panel_Menu.TabIndex = 1;
             // 
+            // btn_DangXuat
+            // 
+            this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_DangXuat.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.logout;
+            this.btn_DangXuat.Location = new System.Drawing.Point(0, 1020);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(213, 60);
+            this.btn_DangXuat.TabIndex = 10;
+            this.btn_DangXuat.Text = " Đăng xuất";
+            this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_DangXuat.UseVisualStyleBackColor = false;
+            // 
             // panel_Setting
             // 
             this.panel_Setting.Controls.Add(this.btn_DoiMatKhau);
@@ -239,6 +256,23 @@
             this.btn_ThongTinCaNhan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ThongTinCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ThongTinCaNhan.UseVisualStyleBackColor = false;
+            // 
+            // btn_Setting
+            // 
+            this.btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_Setting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Setting.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Setting.ForeColor = System.Drawing.Color.White;
+            this.btn_Setting.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.setting;
+            this.btn_Setting.Location = new System.Drawing.Point(0, 840);
+            this.btn_Setting.Name = "btn_Setting";
+            this.btn_Setting.Size = new System.Drawing.Size(213, 60);
+            this.btn_Setting.TabIndex = 9;
+            this.btn_Setting.Text = " Cài đặt";
+            this.btn_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Setting.UseVisualStyleBackColor = false;
             // 
             // panel_QuanTri
             // 
@@ -302,6 +336,58 @@
             this.btn_QTriNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_QTriNhanVien.UseVisualStyleBackColor = false;
             // 
+            // btn_QuanTriMenu
+            // 
+            this.btn_QuanTriMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QuanTriMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QuanTriMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QuanTriMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QuanTriMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanTriMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.user;
+            this.btn_QuanTriMenu.Location = new System.Drawing.Point(0, 600);
+            this.btn_QuanTriMenu.Name = "btn_QuanTriMenu";
+            this.btn_QuanTriMenu.Size = new System.Drawing.Size(213, 60);
+            this.btn_QuanTriMenu.TabIndex = 7;
+            this.btn_QuanTriMenu.Text = " Quản trị";
+            this.btn_QuanTriMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QuanTriMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_QuanTriMenu.UseVisualStyleBackColor = false;
+            // 
+            // btn_BaoCao
+            // 
+            this.btn_BaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_BaoCao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_BaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BaoCao.ForeColor = System.Drawing.Color.White;
+            this.btn_BaoCao.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.bar_chart;
+            this.btn_BaoCao.Location = new System.Drawing.Point(0, 540);
+            this.btn_BaoCao.Name = "btn_BaoCao";
+            this.btn_BaoCao.Size = new System.Drawing.Size(213, 60);
+            this.btn_BaoCao.TabIndex = 6;
+            this.btn_BaoCao.Text = " Báo cáo";
+            this.btn_BaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_BaoCao.UseVisualStyleBackColor = false;
+            this.btn_BaoCao.Click += new System.EventHandler(this.btn_BaoCao_Click);
+            // 
+            // btn_QLKho
+            // 
+            this.btn_QLKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QLKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QLKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QLKho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QLKho.ForeColor = System.Drawing.Color.White;
+            this.btn_QLKho.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.cube;
+            this.btn_QLKho.Location = new System.Drawing.Point(0, 480);
+            this.btn_QLKho.Name = "btn_QLKho";
+            this.btn_QLKho.Size = new System.Drawing.Size(213, 60);
+            this.btn_QLKho.TabIndex = 5;
+            this.btn_QLKho.Text = " Quản lý kho";
+            this.btn_QLKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_QLKho.UseVisualStyleBackColor = false;
+            // 
             // panel_SanPham
             // 
             this.panel_SanPham.Controls.Add(this.btn_SanPham);
@@ -345,6 +431,23 @@
             this.btn_LoaiSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_LoaiSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_LoaiSP.UseVisualStyleBackColor = false;
+            // 
+            // btn_SanPhamMenu
+            // 
+            this.btn_SanPhamMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_SanPhamMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_SanPhamMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SanPhamMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SanPhamMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_SanPhamMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.list;
+            this.btn_SanPhamMenu.Location = new System.Drawing.Point(0, 300);
+            this.btn_SanPhamMenu.Name = "btn_SanPhamMenu";
+            this.btn_SanPhamMenu.Size = new System.Drawing.Size(213, 60);
+            this.btn_SanPhamMenu.TabIndex = 3;
+            this.btn_SanPhamMenu.Text = " Sản phẩm";
+            this.btn_SanPhamMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SanPhamMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_SanPhamMenu.UseVisualStyleBackColor = false;
             // 
             // panel_BanHang
             // 
@@ -410,114 +513,6 @@
             this.btn_BanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_BanHang.UseVisualStyleBackColor = false;
             // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // btn_DangXuat
-            // 
-            this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_DangXuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
-            this.btn_DangXuat.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.logout;
-            this.btn_DangXuat.Location = new System.Drawing.Point(0, 1020);
-            this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Size = new System.Drawing.Size(213, 60);
-            this.btn_DangXuat.TabIndex = 10;
-            this.btn_DangXuat.Text = " Đăng xuất";
-            this.btn_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_DangXuat.UseVisualStyleBackColor = false;
-            // 
-            // btn_Setting
-            // 
-            this.btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_Setting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Setting.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Setting.ForeColor = System.Drawing.Color.White;
-            this.btn_Setting.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.setting;
-            this.btn_Setting.Location = new System.Drawing.Point(0, 840);
-            this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(213, 60);
-            this.btn_Setting.TabIndex = 9;
-            this.btn_Setting.Text = " Cài đặt";
-            this.btn_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Setting.UseVisualStyleBackColor = false;
-            // 
-            // btn_QuanTriMenu
-            // 
-            this.btn_QuanTriMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_QuanTriMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_QuanTriMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_QuanTriMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_QuanTriMenu.ForeColor = System.Drawing.Color.White;
-            this.btn_QuanTriMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.user;
-            this.btn_QuanTriMenu.Location = new System.Drawing.Point(0, 600);
-            this.btn_QuanTriMenu.Name = "btn_QuanTriMenu";
-            this.btn_QuanTriMenu.Size = new System.Drawing.Size(213, 60);
-            this.btn_QuanTriMenu.TabIndex = 7;
-            this.btn_QuanTriMenu.Text = " Quản trị";
-            this.btn_QuanTriMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_QuanTriMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_QuanTriMenu.UseVisualStyleBackColor = false;
-            // 
-            // btn_BaoCao
-            // 
-            this.btn_BaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_BaoCao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_BaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BaoCao.ForeColor = System.Drawing.Color.White;
-            this.btn_BaoCao.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.bar_chart;
-            this.btn_BaoCao.Location = new System.Drawing.Point(0, 540);
-            this.btn_BaoCao.Name = "btn_BaoCao";
-            this.btn_BaoCao.Size = new System.Drawing.Size(213, 60);
-            this.btn_BaoCao.TabIndex = 6;
-            this.btn_BaoCao.Text = " Báo cáo";
-            this.btn_BaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_BaoCao.UseVisualStyleBackColor = false;
-            this.btn_BaoCao.Click += new System.EventHandler(this.btn_BaoCao_Click);
-            // 
-            // btn_QLKho
-            // 
-            this.btn_QLKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_QLKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_QLKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_QLKho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_QLKho.ForeColor = System.Drawing.Color.White;
-            this.btn_QLKho.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.cube;
-            this.btn_QLKho.Location = new System.Drawing.Point(0, 480);
-            this.btn_QLKho.Name = "btn_QLKho";
-            this.btn_QLKho.Size = new System.Drawing.Size(213, 60);
-            this.btn_QLKho.TabIndex = 5;
-            this.btn_QLKho.Text = " Quản lý kho";
-            this.btn_QLKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_QLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_QLKho.UseVisualStyleBackColor = false;
-            // 
-            // btn_SanPhamMenu
-            // 
-            this.btn_SanPhamMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
-            this.btn_SanPhamMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_SanPhamMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SanPhamMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SanPhamMenu.ForeColor = System.Drawing.Color.White;
-            this.btn_SanPhamMenu.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.list;
-            this.btn_SanPhamMenu.Location = new System.Drawing.Point(0, 300);
-            this.btn_SanPhamMenu.Name = "btn_SanPhamMenu";
-            this.btn_SanPhamMenu.Size = new System.Drawing.Size(213, 60);
-            this.btn_SanPhamMenu.TabIndex = 3;
-            this.btn_SanPhamMenu.Text = " Sản phẩm";
-            this.btn_SanPhamMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SanPhamMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_SanPhamMenu.UseVisualStyleBackColor = false;
-            // 
             // btn_BanHangMenu
             // 
             this.btn_BanHangMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
@@ -551,6 +546,12 @@
             this.btn_TrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TrangChu.UseVisualStyleBackColor = false;
+            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Frm_Main
             // 

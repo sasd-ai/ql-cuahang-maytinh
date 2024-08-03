@@ -92,6 +92,22 @@ namespace BUS
             return tk.GetDoanhThuThang_Tong(startDate, endDate);
         }
 
+        public List<dathang> LoadDatHang()
+        {
+            return tk.LoadDatHang();
+        }
+        public List<banhang> LoadBanHang()
+        {
+            return tk.LoadBanHang();
+        }
 
+        public (int TongHoaDon, double TongDoanhThu, int TongKhachHang, int TongNhanVien) ThongKe()
+        {
+            return tk.ThongKe();
+        }
+        public List<(string TenSP, int SoLuong)> GetTop5SanPhamBanChay()
+        {
+            return tk.GetTop5SanPhamBanChay();
+        }
     }
 }

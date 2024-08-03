@@ -297,5 +297,14 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Add(uC_ThongKeDoanhThu);
             uC_ThongKeDoanhThu.BringToFront();
         }
+
+        private void btn_TrangChu_Click(object sender, EventArgs e)
+        {
+            UC_TrangChu uC_TrangChu = new UC_TrangChu();
+            uC_TrangChu.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_TrangChu);
+            uC_TrangChu.BringToFront();
+        }
     }
 }
