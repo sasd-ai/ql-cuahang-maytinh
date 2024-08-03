@@ -334,5 +334,15 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Add(uC_ThongKeDoanhThu);
             uC_ThongKeDoanhThu.BringToFront();
         }
+
+        private void btn_QTriChucVu_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của UC_Home
+            UC_TrangChu homeControl = new UC_TrangChu();
+            homeControl.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(homeControl);
+            homeControl.BringToFront();
+        }
     }
 }

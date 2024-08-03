@@ -31,6 +31,33 @@ namespace QL_CuaHang_MayTinh_App.GUI
             this.dgv_SP_DaChon.CellContentClick += Dgv_SP_DaChon_CellContentClick;
             
         }
+        private void Frm_NhapSP_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = true;
+            sanPhamDaChon = new BindingList<sanpham>();
+            //Load dữ liệu
+
+            //Load sản phẩm
+            loadDataSanPham(maNCC);
+            //Danh sách sản phẩm
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+            checkBoxColumn.Name = "Chon";
+            checkBoxColumn.HeaderText = "Chọn";
+            checkBoxColumn.Width = 50;
+            checkBoxColumn.ReadOnly = false;
+            dgv_List_SP.Columns.Insert(0, checkBoxColumn);
+
+
+            loadSanPhamDaChon();
+            loadCBBLoaiSP();
+
+            //Thay đổi
+            formatDataGridView_SanPham();
+            formatDataGridVieew_SPDaChon();
+            this.cbo_LoaiSP.SelectedIndexChanged += Cbo_LoaiSP_SelectedIndexChanged;
+        }
 
         private void Dgv_SP_DaChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -71,23 +98,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
         }
 
 
-        private void Frm_NhapSP_Load(object sender, EventArgs e)
-        {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = true;
-            sanPhamDaChon=new BindingList<sanpham>();
-            //Load dữ liệu
-
-            //Load sản phẩm
-            loadDataSanPham(maNCC);
-            loadSanPhamDaChon();
-            loadCBBLoaiSP();
-
-            //Thay đổi
-
-            formatDataGridVieew_SPDaChon();
-        }
+      
         //Load combobox loại sản phẩm
         void loadCBBLoaiSP()
         {
@@ -100,6 +111,20 @@ namespace QL_CuaHang_MayTinh_App.GUI
             cbo_LoaiSP.DataSource = loaisps;
             cbo_LoaiSP.DisplayMember = "TenLoai";
             cbo_LoaiSP.ValueMember = "MaLoai";
+        }
+
+        private void Cbo_LoaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           if(cbo_LoaiSP.SelectedValue.ToString().Equals("ALL"))
+           {
+                loadDataSanPham(maNCC);
+                return;
+           }
+          
+            List<sanpham> sanphams = listSanPham.Where(sp => sp.MaLoai == cbo_LoaiSP.SelectedValue.ToString()).ToList();
+            dgv_List_SP.DataSource = null;
+            dgv_List_SP.DataSource = sanphams;
+            formatDataGridView_SanPham();
         }
 
         //Add sản phẩm vào danh sách chọn
@@ -159,12 +184,15 @@ namespace QL_CuaHang_MayTinh_App.GUI
         //Load sản phẩm theo ncc
         void loadDataSanPham(string maNCC)
         {
-            listSanPham=bUS_SanPham.FindByMaNCC(maNCC);
+           
+            listSanPham =bUS_SanPham.FindByMaNCC(maNCC);
             dgv_List_SP.DataSource = listSanPham;
-            formatDataGridView_SanPham();
         }
         private void btn_Huy_Click(object sender, EventArgs e)
         {
+            dgv_List_SP.DataSource = null;
+            dgv_SP_DaChon.DataSource= null;
+            listSanPham.Clear();
             this.Close();
         }
 
@@ -183,7 +211,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
             buttonColumn.UseColumnTextForButtonValue = true;
             buttonColumn.Width = 100;
 
-            dgv_SP_DaChon.Columns.Insert(0, buttonColumn);
+            dgv_SP_DaChon.Columns.Add( buttonColumn);
 
             // Căn giữa tiêu đề các cột
             foreach (DataGridViewColumn column in dgv_List_SP.Columns)
@@ -234,14 +262,9 @@ namespace QL_CuaHang_MayTinh_App.GUI
         }
         void formatDataGridView_SanPham()
         {
-            //Danh sách sản phẩm
-            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-            checkBoxColumn.Name = "Chon";
-            checkBoxColumn.HeaderText = "Chọn";
-            checkBoxColumn.Width = 50;
-            checkBoxColumn.ReadOnly = false;
+           
 
-            dgv_List_SP.Columns.Insert(0, checkBoxColumn);
+        
             // Căn giữa tiêu đề các cột
             foreach (DataGridViewColumn column in dgv_List_SP.Columns)
             {
@@ -288,6 +311,25 @@ namespace QL_CuaHang_MayTinh_App.GUI
             }
             // Đặt thuộc tính Font của DataGridView
             dgv_List_SP.Font = new Font("Arial", 12, FontStyle.Regular);
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            string tenSP= txt_TenSP.Text;
+            if(String.IsNullOrEmpty(tenSP))
+            {
+                dgv_List_SP.DataSource = null;
+                dgv_List_SP.DataSource = bUS_SanPham.FindByMaNCC(maNCC);
+               
+                formatDataGridView_SanPham();
+            }
+            else
+            {
+                List<sanpham> sanphams=listSanPham.Where(sp=>sp.TenSP.Contains(tenSP)).ToList();
+                dgv_List_SP.DataSource = null;
+                dgv_List_SP.DataSource = sanphams;
+                formatDataGridView_SanPham();
+            }
         }
     }
 }

@@ -24,7 +24,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_TimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ThemVaoPN = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Huy = new Guna.UI2.WinForms.Guna2Button();
             this.txt_TenSP = new Custom_Controls.PlaceholderTextBox();
@@ -51,19 +51,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm từ kho hàng hóa";
             // 
-            // guna2Button1
+            // btn_TimKiem
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(911, 64);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Tìm kiếm";
+            this.btn_TimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_TimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_TimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_TimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_TimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem.Location = new System.Drawing.Point(911, 64);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(180, 45);
+            this.btn_TimKiem.TabIndex = 8;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // btn_ThemVaoPN
             // 
@@ -288,7 +289,7 @@
             this.Controls.Add(this.txt_TenSP);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.btn_ThemVaoPN);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Frm_NhapSP";
@@ -304,7 +305,7 @@
 
         }
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_TimKiem;
         private Guna.UI2.WinForms.Guna2Button btn_ThemVaoPN;
         private Guna.UI2.WinForms.Guna2Button btn_Huy;
         private Custom_Controls.PlaceholderTextBox txt_TenSP;

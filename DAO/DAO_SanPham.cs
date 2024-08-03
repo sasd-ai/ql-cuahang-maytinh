@@ -88,7 +88,7 @@ namespace DAO
         public List<sanpham> FindByName(string TenSP)
         {
             return qlch.sanphams
-                       .Where(sp => sp.TenSP.Contains(TenSP))
+                       .Where(sp => sp.TenSP.Contains(TenSP)) 
                        .ToList();
         }
         //Lấy dánh sách sản phẩm

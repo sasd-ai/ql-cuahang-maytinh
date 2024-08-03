@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ql_cuahang_maytinh" Class="QL_CuaHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=True;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ql_cuahang_maytinhConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=True;User ID=dien;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="ql_cuahang_maytinhConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.taikhoankh" Member="taikhoankhs">
     <Type Name="taikhoankh">
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -282,4 +282,18 @@
       <Column Name="ThanhTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Function Name="dbo.InPhieuNhap" Method="InPhieuNhap">
+    <Parameter Name="MaPN" Parameter="maPN" Type="System.String" DbType="VarChar(36)" />
+    <ElementType Name="InPhieuNhapResult">
+      <Column Name="TenNV" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TenNCC" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSP" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="DonGiaNhap" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ThanhTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MaPN" Type="System.String" DbType="VarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>
