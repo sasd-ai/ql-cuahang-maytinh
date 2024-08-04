@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data.Common;
 namespace DAO
 {
     public class DAO_BanHang
@@ -72,6 +74,15 @@ namespace DAO
             {
                 return false;
             }
+        }
+        public bool KiemTraKhachHangTonTai(string maKhachHang)
+        {
+            return qlch.khachhangs.Any(kh => kh.MaKH == maKhachHang);
+        }
+        public List<HoaDon> LayHoaDonTheoMaBanHang(string maBanHang)
+        {
+            string query = $"EXEC InHoaDon @MaBanHang = '{maBanHang}'";
+            return qlch.ExecuteQuery<HoaDon>(query).ToList();
         }
     }
 }

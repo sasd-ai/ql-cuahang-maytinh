@@ -11,6 +11,9 @@ using CustomControl;
 using Custom_Controls;
 using BUS;
 using DTO;
+using System.Data.SqlClient;
+using System.Data;
+using QL_CuaHang_MayTinh_App.GUI;
 
 namespace QL_CuaHang_MayTinh_App.My_UC
 {
@@ -19,7 +22,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         // Class_SanPham class_sp=new Class_SanPham();
         //private Cloudinary cloudinary;
         private Dictionary<string, (int SoLuong, double GiaSP)> selectedProducts = new Dictionary<string, (int, double)>();
-        private double totalPrice = 0;
+        private float totalPrice = 0;
         private double thanhTien = 0;
 
         public string MaNV;
@@ -43,9 +46,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             flowLayoutPanel1.Dock = DockStyle.Fill;
             panel4.Controls.Add(flowLayoutPanel1);
         }
-
-        
-       
+     
         private void LoadComboBoxLoaiSanPham()
             {
                 // Lấy danh sách các loại sản phẩm từ cơ sở dữ liệu
@@ -134,23 +135,25 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         // Đảm bảo rằng panel2 là FlowLayoutPanel
         private void UcSanPham_ProductClicked(object sender, CustomControl.UC_SanPham.ProductEventArgs e)
         {
+            float giaSP = (float)e.GiaSP; // Ép kiểu từ double sang float
+
             if (selectedProducts.ContainsKey(e.MaSP))
             {
                 var current = selectedProducts[e.MaSP];
-                selectedProducts[e.MaSP] = (current.SoLuong + 1, e.GiaSP);
+                selectedProducts[e.MaSP] = (current.SoLuong + 1, giaSP);
             }
             else
             {
-                selectedProducts[e.MaSP] = (1, e.GiaSP);
+                selectedProducts[e.MaSP] = (1, giaSP);
             }
 
-            totalPrice += e.GiaSP;
+            totalPrice += giaSP; // Sử dụng giá trị float đã ép kiểu
             label_TongTien.Text = $"{totalPrice:N0} đ";
 
             // Truyền giá trị riêng lẻ thay vì tuple
-            UpdateDataGridView(e.MaSP, e.TenSP, e.GiaSP, selectedProducts[e.MaSP].SoLuong);
-           
+            UpdateDataGridView(e.MaSP, e.TenSP, giaSP, selectedProducts[e.MaSP].SoLuong);
         }
+
 
 
         private void UpdateDataGridView(string maSP, string tenSP, double giaSP, int soLuong)
@@ -202,7 +205,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             {
                 // Xóa hàng hiện tại
                 var rowToRemove = guna2DataGridView2.Rows[e.RowIndex];
-                double rowTotal = double.Parse(rowToRemove.Cells["tt"].Value.ToString().Replace(" đ", ""));
+                float rowTotal = float.Parse(rowToRemove.Cells["tt"].Value.ToString().Replace(" đ", ""));
                 guna2DataGridView2.Rows.RemoveAt(e.RowIndex);
 
                 // Cập nhật tổng tiền
@@ -355,21 +358,26 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                    
                 };
 
-               
+                if (!busBanHang.KiemTraKhachHangTonTai(maKhachHang))
+                {
+                    MessageBox.Show("Chưa có thông tin khách hàng!");
+                    return;
+                }
+
                 if (busBanHang.InsertBanHang(bh))
                 {
                    
                     foreach (var item in selectedProducts)
                     {
                        
-                        double thanhTien = item.Value.SoLuong * item.Value.GiaSP;
+                        float thanhTien = item.Value.SoLuong * (float)item.Value.GiaSP;
 
                         chitietbanhang ctb = new chitietbanhang
                         {
                             MaBanHang = maBanHang,
                             MaSP = item.Key,
                             SoLuong=item.Value.SoLuong,
-                            DonGia=item.Value.GiaSP,
+                            DonGia=(float)item.Value.GiaSP,
                             ThanhTien = thanhTien
                         };
 
@@ -381,7 +389,19 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     }
 
                     MessageBox.Show("Thanh toán thành công!");
-                 
+                    List<HoaDon> hoaDon = busBanHang.LayHoaDon(maBanHang);
+
+                    // Tạo report
+                    XuatHoaDonBanHang rpt = new XuatHoaDonBanHang();
+
+                    // Set data source cho report
+                    rpt.SetDataSource(hoaDon); // Sử dụng danh sách HoaDon làm data source
+
+                    // Hiển thị report
+                    Frm_XuatHoaDonBanHang frm = new Frm_XuatHoaDonBanHang();
+                    frm.crystalReportViewer1.ReportSource = rpt;
+                    frm.ShowDialog();
+
                     selectedProducts.Clear();
                     totalPrice = 0;
                     label_TongTien.Text = "0 đ";
@@ -400,6 +420,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 Console.WriteLine("Exception caught: " + ex.Message);
                 Console.WriteLine("Stack Trace: " + ex.StackTrace);
             }
+
+            
         }
 
     }
