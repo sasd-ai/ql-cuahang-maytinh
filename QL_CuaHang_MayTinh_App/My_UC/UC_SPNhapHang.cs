@@ -266,86 +266,6 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             dgv_DSSanPham.Font = new Font("Arial", 12, FontStyle.Regular);
         }
 
-        //private void btn_NhapHang_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        if(dgv_DSSanPham.Rows.Count>=0)
-        //        {
-        //            string maNV = bUS_NhanVien.FindByEmail(Program.frmMain.email).MaNV;
-        //            if (maNV == null)
-        //            {
-        //                MessageBox.Show("Hệ thống lỗi!");
-        //                return;
-        //            }
-
-        //            // Tạo mã đơn hàng
-        //            DateTime selectedDate = txt_NgayNhap.Value;
-        //            string ngayNhap = selectedDate.ToString("yyyyMMdd");
-
-        //            List<phieunhaphang> list = bUS_PhieuNhapHang.GetData();
-        //            var phieuNhapTrongNgay = list.Where(pn => pn.NgayNhap.ToString("yyyyMMdd") == ngayNhap).ToList();
-
-        //            // Đếm số lượng phiếu nhập trong ngày hiện tại
-        //            int soLuongPhieuNhap = phieuNhapTrongNgay.Count;
-        //            string maPN = $"PN{ngayNhap}{soLuongPhieuNhap + 1:D2}";
-        //            string ghiChu = txt_GhiChu.Text;
-
-        //            // Insert phiếu nhập
-        //            phieunhaphang phieunhap = new phieunhaphang()
-        //            {
-        //                MaPN = maPN,
-        //                MaNV = maNV,
-        //                MaNCC = maNCC,
-        //                TongTien = tongTien,
-        //                GhiChu = ghiChu,
-        //                NgayNhap = selectedDate
-        //            };
-
-        //            bool insertPN = bUS_PhieuNhapHang.Insert(phieunhap);
-        //            if (insertPN)
-        //            {
-        //                foreach (DataGridViewRow item in dgv_DSSanPham.Rows)
-        //                {
-        //                    if (item.Cells["MaSP"].Value != null && item.Cells["sl"].Value != null && item.Cells["TongTien"].Value != null)
-        //                    {
-        //                        // Chi tiết phiếu nhập có mã phiếu nhập, mã sản phẩm, số lượng, thành tiền, ghi chú
-        //                        chitietphieunhap chiTiet = new chitietphieunhap()
-        //                        {
-        //                            MaPN = maPN,
-        //                            MaSP = item.Cells["MaSP"].Value.ToString(),
-        //                            SoLuong = int.Parse(item.Cells["sl"].Value.ToString()),
-        //                            ThanhTien = float.Parse(item.Cells["TongTien"].Value.ToString()),
-        //                            GhiChu = ghiChu,
-        //                            //GiaNhap
-        //                            DonGiaNhap = float.Parse(item.Cells["GiaNhap"].Value.ToString())
-        //                        };
-
-        //                        bUS_ChiTietPhieuNhap.Insert(chiTiet);
-        //                    }
-        //                }
-
-        //                dgv_DSSanPham.DataSource = null;
-        //                listSanPham.Clear();
-        //                //In report
-        //                //In Hoá đơn
-        //                InPhieuNhapResult inPhieuNhap = bUS_Report.GetDataPhieuNhap(maPN);
-
-        //                rpt_InPhieuNhap rpt = new rpt_InPhieuNhap();
-        //                rpt.SetDataSource(inPhieuNhap);
-        //                Frm_InPhieuNhap frm_PhieuNhap = new Frm_InPhieuNhap();
-        //                frm_PhieuNhap.rpt_PhieuNhap.ReportSource = rpt;
-        //                frm_PhieuNhap.Show();
-
-        //            }
-
-        //        } 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi: " + ex.Message);
-        //    }
-        //}
         private void btn_NhapHang_Click(object sender, EventArgs e)
         {
 
@@ -400,6 +320,13 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                             };
 
                             bUS_ChiTietPhieuNhap.Insert(chiTiet);
+                     
+                            sanpham spUpdate=  bUSanPham.FindByID(chiTiet.MaSP);
+                            if(spUpdate != null)
+                            {
+                                bUSanPham.UpdateSLNhap(chiTiet.MaSP,(int)chiTiet.SoLuong);
+                            }
+                            txt_TongTienNhap.Text = "0 VND";
                         }
                     }
 

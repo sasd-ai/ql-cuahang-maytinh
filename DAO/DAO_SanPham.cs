@@ -32,7 +32,11 @@ namespace DAO
         {
             return qlch.nhacungcaps.Select(ncc=>ncc).ToList<nhacungcap>();
         }
-
+        //tìm kiếm
+        public sanpham FindByID(string maSP)
+        {
+            return qlch.sanphams.Where(sp => sp.MaSP == maSP).FirstOrDefault();
+        }
         public void ThemSanPham(string masp, string tensp, string hinhanh, string giadx,
                                 string sl, string giaban, string mota, string tgbh, string maloai, string mancc)
         {
@@ -52,7 +56,7 @@ namespace DAO
             qlch.sanphams.InsertOnSubmit(sp);
             qlch.SubmitChanges();
         }
-
+        //Update
         public void SuaSanPham(string masp, string tensp, string hinhanh, string giadx,
                            string sl, string giaban, string mota, string tgbh, string maloai, string mancc)
         {
@@ -74,6 +78,32 @@ namespace DAO
             }
             
         }
+        public bool UpdateSLNhap(string maSP, int sl)
+        {
+            try
+            {
+                sanpham sp=FindByID(maSP);
+                if(sp != null)
+                {
+                    if(sp.SoLuong==0)
+                    {
+                        sp.SoLuong = sl;
+                    }    
+                    else
+                    {
+                        sp.SoLuong += sl;
+                    } 
+                    qlch.SubmitChanges();
+                    return true;
+                }    
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public void XoaSanPham(string masp)
         {
             var masanpham = qlch.sanphams.FirstOrDefault(sp => sp.MaSP == masp);
@@ -101,10 +131,10 @@ namespace DAO
             return qlch.sanphams.Where(sp => sp.MaNCC==maNCC).ToList<sanpham>();
         }
 
-        public sanpham FindByID(string maSP)
-        {
-            return qlch.sanphams.Where(sp => sp.MaSP == maSP).FirstOrDefault();
-        }
+        //public sanpham FindByID(string maSP)
+        //{
+        //    return qlch.sanphams.Where(sp => sp.MaSP == maSP).FirstOrDefault();
+        //}
 
         public bool UpdateSLBan(string maSP, int sl)
         {
