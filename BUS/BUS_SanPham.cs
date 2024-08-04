@@ -98,6 +98,15 @@ namespace BUS
         {
             return sp.FindByMaNCC(maNCC);
         }
+        public sanpham FindByID(string maSP)
+        {
+            return sp.FindByID(maSP);
+        }
+
+        public bool UpdateSLBan(string masp,int soluong)
+        {
+            return sp.UpdateSLBan(masp, soluong);
+        }
 
     }
 }

@@ -314,7 +314,11 @@ namespace QL_CuaHang_MayTinh_App.GUI
 
         private void btn_DSBanOff_Click(object sender, EventArgs e)
         {
-            
+            UC_QuanLyBanHang uC_QuanLyBanHang = new UC_QuanLyBanHang();
+            uC_QuanLyBanHang.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_QuanLyBanHang);
+            uC_QuanLyBanHang.BringToFront();
         }
 
         private void btn_DonHangOnline_Click(object sender, EventArgs e)

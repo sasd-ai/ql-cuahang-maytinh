@@ -115,6 +115,7 @@
     <Compile Include="BUS_NguoiDung_ChucVu.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_PhieuNhapHang.cs" />
+    <Compile Include="BUS_QuanLyBanHang.cs" />
     <Compile Include="BUS_QuanLyDonHang.cs" />
     <Compile Include="BUS_Report.cs" />
     <Compile Include="BUS_SanPham.cs" />

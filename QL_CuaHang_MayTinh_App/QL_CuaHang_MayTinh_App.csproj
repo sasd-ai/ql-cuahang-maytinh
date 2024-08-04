@@ -237,6 +237,12 @@
     <Compile Include="My_UC\UC_QLKho.Designer.cs">
       <DependentUpon>UC_QLKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="My_UC\UC_QuanLyBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My_UC\UC_QuanLyBanHang.Designer.cs">
+      <DependentUpon>UC_QuanLyBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="My_UC\UC_QuanLyDonHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_QLKho.resx">
       <DependentUpon>UC_QLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_UC\UC_QuanLyBanHang.resx">
+      <DependentUpon>UC_QuanLyBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_QuanLyDonHang.resx">
       <DependentUpon>UC_QuanLyDonHang.cs</DependentUpon>

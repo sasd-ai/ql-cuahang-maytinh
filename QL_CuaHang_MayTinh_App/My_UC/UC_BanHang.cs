@@ -31,7 +31,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         private int currentPage = 1;
         private int itemsPerPage = 12; // Mỗi trang 12 sản phẩm
         private int totalPages = 1;
-
+      
         public UC_BanHang()
         {
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 guna2ComboBox_LoaiSP.SelectedIndex = 0;
             }
 
-        
+
         private void LoadButtons()
         {
             tableLayoutPanel_SanPham.Controls.Clear();
@@ -120,6 +120,14 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 // Tạo UC_SanPham mới và thiết lập các giá trị sản phẩm
                 var ucSanPham = new CustomControl.UC_SanPham(sp.MaSP, sp.TenSP, sp.GiaBan, sp.HinhAnh);
 
+                // Kiểm tra số lượng sản phẩm
+                if (sp.SoLuong == 0)
+                {
+                    // Làm mờ nút và đặt chữ "Đã hết hàng"
+                    ucSanPham.Enabled = false; // Làm mờ nút
+                    ucSanPham.Text = "Đã hết hàng"; // Hiển thị chữ "Đã hết hàng"
+                }
+
                 // Thêm sự kiện ProductClicked
                 ucSanPham.ProductClicked += UcSanPham_ProductClicked;
 
@@ -132,29 +140,58 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             AddPaginationButtons();
         }
 
+
         // Đảm bảo rằng panel2 là FlowLayoutPanel
         private void UcSanPham_ProductClicked(object sender, CustomControl.UC_SanPham.ProductEventArgs e)
         {
-            float giaSP = (float)e.GiaSP; // Ép kiểu từ double sang float
+            // Lấy thông tin sản phẩm từ cơ sở dữ liệu dựa trên mã sản phẩm
+            sanpham sl = bus_SanPham.FindByID(e.MaSP);
+            int slSanPham = sl.SoLuong; // Số lượng sản phẩm 
 
-            if (selectedProducts.ContainsKey(e.MaSP))
+            // Kiểm tra nếu số lượng sản phẩm còn lại lớn hơn 0
+            if (slSanPham > 0)
             {
-                var current = selectedProducts[e.MaSP];
-                selectedProducts[e.MaSP] = (current.SoLuong + 1, giaSP);
+                float giaSP = (float)e.GiaSP; // Ép kiểu giá sản phẩm từ double sang float
+
+                // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
+                if (selectedProducts.ContainsKey(e.MaSP))
+                {
+                    var current = selectedProducts[e.MaSP];
+                    // Kiểm tra nếu số lượng sản phẩm trong giỏ hàng nhỏ hơn số lượng  
+                    if (current.SoLuong < slSanPham)
+                    {
+                        selectedProducts[e.MaSP] = (current.SoLuong + 1, giaSP); // Tăng số lượng sản phẩm trong giỏ hàng
+                    }
+                    else
+                    {
+                        // Thông báo nếu số lượng sản phẩm trong giỏ hàng đã đạt mức tối đa
+                        MessageBox.Show("Số lượng sản phẩm của cửa hàng tạm thời đã hết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        (sender as CustomControl.UC_SanPham).DisableButton(); // Vô hiệu hóa nút sản phẩm
+                        return;
+                    }
+                }
+                else
+                {
+                    // Thêm sản phẩm vào giỏ hàng với số lượng 1
+                    selectedProducts[e.MaSP] = (1, giaSP);
+                    //if (slSanPham == 1)
+                    //{
+                    //    // Nếu số lượng còn lại là 1, vô hiệu hóa nút sản phẩm sau khi thêm vào giỏ hàng
+                    //    (sender as CustomControl.UC_SanPham).DisableButton();
+                    //}
+                }
+
+                totalPrice += giaSP; // Cập nhật tổng giá trị giỏ hàng
+                label_TongTien.Text = $"{totalPrice:N0} đ"; // Hiển thị tổng giá trị giỏ hàng
+                UpdateDataGridView(e.MaSP, e.TenSP, giaSP, selectedProducts[e.MaSP].SoLuong); // Cập nhật DataGridView
             }
             else
             {
-                selectedProducts[e.MaSP] = (1, giaSP);
+                // Thông báo nếu sản phẩm đã hết hàng
+                MessageBox.Show("Sản phẩm đã hết hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                (sender as CustomControl.UC_SanPham).DisableButton(); // Vô hiệu hóa nút sản phẩm
             }
-
-            totalPrice += giaSP; // Sử dụng giá trị float đã ép kiểu
-            label_TongTien.Text = $"{totalPrice:N0} đ";
-
-            // Truyền giá trị riêng lẻ thay vì tuple
-            UpdateDataGridView(e.MaSP, e.TenSP, giaSP, selectedProducts[e.MaSP].SoLuong);
         }
-
-
 
         private void UpdateDataGridView(string maSP, string tenSP, double giaSP, int soLuong)
         {
@@ -332,7 +369,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             try
             {
                 
-                string maBanHang = "MBH" + new Random().Next(100, 9999).ToString();
+                string maBanHang = "MBH" + new Random().Next(0, 10000000).ToString();
 
               
                 string maKhachHang = label_makh.Text;  
@@ -386,9 +423,16 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                             MessageBox.Show("Lỗi khi lưu chi tiết bán hàng. Vui lòng thử lại.");
                             return;
                         }
+                        sanpham sp = bus_SanPham.FindByID(ctb.MaSP);
+                        if(sp!=null)
+                        {
+                            bus_SanPham.UpdateSLBan(ctb.MaSP,   (int) ctb.SoLuong);
+                        }    
+                        
                     }
 
                     MessageBox.Show("Thanh toán thành công!");
+
                     List<HoaDon> hoaDon = busBanHang.LayHoaDon(maBanHang);
 
                     // Tạo report

@@ -8,8 +8,11 @@ namespace CustomControl
 {
     public partial class UC_SanPham : UserControl
     {
-       
-      
+
+        public void DisableButton()
+        {
+            this.Enabled = false;
+        }
         public string MaSP { get; set; }
         public string TenSP { get; set; }
         public double GiaSP { get; set; }

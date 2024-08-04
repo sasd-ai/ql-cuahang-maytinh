@@ -41,15 +41,19 @@
             this.panel = new System.Windows.Forms.Panel();
             this.panel_DaHuy = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label_SL_H = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel_YeuCauHuy = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label_SL_YCH = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel_DaXacNhan = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label_SL_DXN = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel_ChoXacNhan = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label_SL_CXN = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2DataGridView_CTDH = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -60,12 +64,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2DataGridView_DH = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang_DH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label_dsDon = new System.Windows.Forms.Label();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -73,25 +71,28 @@
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang_DH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel.SuspendLayout();
             this.panel_DaHuy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel_YeuCauHuy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel_DaXacNhan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel_ChoXacNhan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView_CTDH)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView_DH)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -215,6 +216,17 @@
             this.label_SL_H.TabIndex = 0;
             this.label_SL_H.Text = "$534";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(124)))), ((int)(((byte)(49)))));
+            this.pictureBox5.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.delete1;
+            this.pictureBox5.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -251,6 +263,17 @@
             this.label_SL_YCH.Size = new System.Drawing.Size(94, 44);
             this.label_SL_YCH.TabIndex = 0;
             this.label_SL_YCH.Text = "1.5K";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(193)))), ((int)(((byte)(85)))));
+            this.pictureBox4.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.delete11;
+            this.pictureBox4.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
             // 
             // label14
             // 
@@ -289,6 +312,17 @@
             this.label_SL_DXN.TabIndex = 0;
             this.label_SL_DXN.Text = "5.7K";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.pictureBox3.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.xacnhan;
+            this.pictureBox3.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -325,6 +359,17 @@
             this.label_SL_CXN.Size = new System.Drawing.Size(105, 44);
             this.label_SL_CXN.TabIndex = 0;
             this.label_SL_CXN.Text = "405K";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.pictureBox2.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.oder1;
+            this.pictureBox2.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -480,7 +525,8 @@
             this.SDT,
             this.TongTien,
             this.NgayDatHang,
-            this.TinhTrang_DH});
+            this.TinhTrang_DH,
+            this.DiaChi});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -519,48 +565,6 @@
             this.guna2DataGridView_DH.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView_DH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView_DH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // MaDH
-            // 
-            this.MaDH.DataPropertyName = "MaDH";
-            this.MaDH.HeaderText = "Mã Đơn Hàng";
-            this.MaDH.MinimumWidth = 6;
-            this.MaDH.Name = "MaDH";
-            // 
-            // TenKH
-            // 
-            this.TenKH.DataPropertyName = "TenKH";
-            this.TenKH.HeaderText = "Tên Khách Hàng";
-            this.TenKH.MinimumWidth = 6;
-            this.TenKH.Name = "TenKH";
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số Điện Thoại";
-            this.SDT.MinimumWidth = 6;
-            this.SDT.Name = "SDT";
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng Tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            // 
-            // NgayDatHang
-            // 
-            this.NgayDatHang.DataPropertyName = "NgayDatHang";
-            this.NgayDatHang.HeaderText = "Ngày Đặt Hàng";
-            this.NgayDatHang.MinimumWidth = 6;
-            this.NgayDatHang.Name = "NgayDatHang";
-            // 
-            // TinhTrang_DH
-            // 
-            this.TinhTrang_DH.DataPropertyName = "TinhTrang_DH";
-            this.TinhTrang_DH.HeaderText = "Tình Trạng Đặt Hàng";
-            this.TinhTrang_DH.MinimumWidth = 6;
-            this.TinhTrang_DH.Name = "TinhTrang_DH";
             // 
             // panel7
             // 
@@ -632,49 +636,54 @@
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.Width = 125;
             // 
-            // pictureBox5
+            // MaDH
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(124)))), ((int)(((byte)(49)))));
-            this.pictureBox5.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.delete1;
-            this.pictureBox5.Location = new System.Drawing.Point(187, 18);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 38);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
+            this.MaDH.DataPropertyName = "MaDH";
+            this.MaDH.HeaderText = "Mã Đơn Hàng";
+            this.MaDH.MinimumWidth = 6;
+            this.MaDH.Name = "MaDH";
             // 
-            // pictureBox4
+            // TenKH
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(193)))), ((int)(((byte)(85)))));
-            this.pictureBox4.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.delete11;
-            this.pictureBox4.Location = new System.Drawing.Point(187, 18);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 38);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.TenKH.DataPropertyName = "TenKH";
+            this.TenKH.HeaderText = "Tên Khách Hàng";
+            this.TenKH.MinimumWidth = 6;
+            this.TenKH.Name = "TenKH";
             // 
-            // pictureBox3
+            // SDT
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
-            this.pictureBox3.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.xacnhan;
-            this.pictureBox3.Location = new System.Drawing.Point(187, 18);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 38);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số Điện Thoại";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
             // 
-            // pictureBox2
+            // TongTien
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
-            this.pictureBox2.Image = global::QL_CuaHang_MayTinh_App.Properties.Resources.oder1;
-            this.pictureBox2.Location = new System.Drawing.Point(187, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            // 
+            // NgayDatHang
+            // 
+            this.NgayDatHang.DataPropertyName = "NgayDatHang";
+            this.NgayDatHang.HeaderText = "Ngày Đặt Hàng";
+            this.NgayDatHang.MinimumWidth = 6;
+            this.NgayDatHang.Name = "NgayDatHang";
+            // 
+            // TinhTrang_DH
+            // 
+            this.TinhTrang_DH.DataPropertyName = "TinhTrang_DH";
+            this.TinhTrang_DH.HeaderText = "Tình Trạng Đặt Hàng";
+            this.TinhTrang_DH.MinimumWidth = 6;
+            this.TinhTrang_DH.Name = "TinhTrang_DH";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ Giao";
+            this.DiaChi.MinimumWidth = 6;
+            this.DiaChi.Name = "DiaChi";
             // 
             // UC_QuanLyDonHang
             // 
@@ -691,12 +700,16 @@
             this.panel.ResumeLayout(false);
             this.panel_DaHuy.ResumeLayout(false);
             this.panel_DaHuy.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel_YeuCauHuy.ResumeLayout(false);
             this.panel_YeuCauHuy.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel_DaXacNhan.ResumeLayout(false);
             this.panel_DaXacNhan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel_ChoXacNhan.ResumeLayout(false);
             this.panel_ChoXacNhan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView_CTDH)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -704,10 +717,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView_DH)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -749,15 +758,16 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView_CTDH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDH10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang_DH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDH10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
     }
 }
