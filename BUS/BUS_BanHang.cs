@@ -52,5 +52,13 @@ namespace BUS
         {
             return bh.InsertChiTietBanHang(chiTietBanHang);
         }
+        public bool KiemTraKhachHangTonTai(string maKhachHang)
+        {
+            return bh.KiemTraKhachHangTonTai(maKhachHang);
+        }
+        public List<HoaDon> LayHoaDon(string maBanHang)
+        {
+            return bh.LayHoaDonTheoMaBanHang(maBanHang);
+        }
     }
 }

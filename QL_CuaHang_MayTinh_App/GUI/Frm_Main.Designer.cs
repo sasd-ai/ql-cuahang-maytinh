@@ -318,7 +318,7 @@
             this.btn_QTriChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_QTriChucVu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_QTriChucVu.UseVisualStyleBackColor = false;
-            this.btn_QTriChucVu.Click += new System.EventHandler(this.btn_QTriChucVu_Click);
+            //this.btn_QTriChucVu.Click += new System.EventHandler(this.btn_QTriChucVu_Click);
             // 
             // btn_QTriNhanVien
             // 
@@ -547,6 +547,12 @@
             this.btn_TrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TrangChu.UseVisualStyleBackColor = false;
+            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // timer
             // 

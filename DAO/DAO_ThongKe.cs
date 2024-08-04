@@ -108,5 +108,74 @@ namespace DAO
 
             return combinedSales;
         }
+
+        public List<dathang> LoadDatHang()
+        {
+            return qlch.dathangs.Select(dh => dh).ToList<dathang>();
+        }
+
+        public List<banhang> LoadBanHang()
+        {
+            return qlch.banhangs.Select(dh => dh).ToList<banhang>();
+        }
+
+        public (int TongHoaDon, double TongDoanhThu, int TongKhachHang, int TongNhanVien) ThongKe()
+        {
+            int TongHoaDon = qlch.banhangs.Count() + qlch.dathangs.Count();
+            double TongDoanhThu = qlch.banhangs.Sum(bh => bh.TongTien) + qlch.dathangs.Sum(dh => dh.ThanhTien);
+            int TongKhachHang = qlch.khachhangs.Count();
+            int TongNhanVien = qlch.nhanviens.Count();
+
+            return (TongHoaDon, TongDoanhThu, TongKhachHang, TongNhanVien);
+        }
+
+        public List<(string TenSP, int SoLuong)> GetTop5SanPhamBanChay()
+        {
+            var sanPhams = qlch.sanphams.ToList();
+
+            var banHangTop5 = qlch.chitietbanhangs
+                .GroupBy(ctbh => ctbh.MaSP)
+                .Select(g => new
+                {
+                    MaSP = g.Key,
+                    SoLuong = g.Sum(ctbh => ctbh.SoLuong ?? 0) // Xử lý giá trị nullable
+                })
+                .OrderByDescending(x => x.SoLuong)
+                .Take(5)
+                .ToList();
+
+            var datHangTop5 = qlch.chitietdathangs
+                .GroupBy(ctdh => ctdh.MaSP)
+                .Select(g => new
+                {
+                    MaSP = g.Key,
+                    SoLuong = g.Sum(ctdh => ctdh.SoLuong ) // Xử lý giá trị nullable
+                })
+                .OrderByDescending(x => x.SoLuong)
+                .Take(5)
+                .ToList();
+
+            var combined = banHangTop5
+                .Union(datHangTop5)
+                .GroupBy(x => x.MaSP)
+                .Select(g => new
+                {
+                    MaSP = g.Key,
+                    SoLuong = g.Sum(x => x.SoLuong)
+                })
+                .OrderByDescending(x => x.SoLuong)
+                .Take(5)
+                .ToList();
+
+            // Chuyển đổi từ anonymous type sang ValueTuple
+            var top5SanPham = combined
+                .Join(sanPhams, sp => sp.MaSP, s => s.MaSP, (sp, s) => (TenSP: s.TenSP, SoLuong: sp.SoLuong))
+                .ToList();
+
+            return top5SanPham;
+        }
+
+
+
     }
 }

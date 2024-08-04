@@ -156,5 +156,21 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             LoadCharts_Tong(firstDayOfMonth, true); // Hiển thị theo tháng
         }
 
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            int selectedMonth = cbb_Month.SelectedIndex + 1;
+            DateTime firstDayOfMonth = new DateTime(DateTime.Now.Year, selectedMonth, 1);
+
+            ExcelExport dt = new ExcelExport();
+            List<banhang> banhang = tk.LoadBanHang();
+            List<dathang> dathang = tk.LoadDatHang();
+            string FileName = string.Empty;
+
+            // Truyền giá trị tháng vào hàm ExportDoanhThu
+            dt.ExportDoanhThu(banhang, dathang, ref FileName, false, firstDayOfMonth);
+
+            // Mở file
+            dt.OpenFile(FileName);
+        }
     }
 }

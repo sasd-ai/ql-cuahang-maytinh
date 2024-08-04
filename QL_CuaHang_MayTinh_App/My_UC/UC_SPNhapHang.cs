@@ -425,20 +425,6 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 }
             }
 
-            string macv = "cv01";
-            chucvu cv = bUS_ChucVu.FindByID(macv);
-            if(cv!=null)
-            {
-                bool kq = bUS_ChucVu.Delete(cv);
-                if (kq == true)
-                {
-                    MessageBox.Show("Xoá thành công");
-                }
-                else
-                {
-                    MessageBox.Show("Xoá thất bại");
-                }    
-            }
           
         }
 
