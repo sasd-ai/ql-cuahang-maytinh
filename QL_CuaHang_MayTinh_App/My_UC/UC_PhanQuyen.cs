@@ -26,16 +26,25 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             this.dgv_User.SelectionChanged += Dgv_User_SelectionChanged;
             this.btn_Add.Click += Btn_Add_Click;
             this.btn_Delete.Click += Btn_Delete_Click;
+
+            //Sự kiện click nhóm người dùng
+            this.dgv_NhomNguoiDung.SelectionChanged += Dgv_NhomNguoiDung_SelectionChanged;
+            this.btn_Save.Click += Btn_Save_Click;
         }
 
-     
+       
+
+
+
+
 
         // Load thông tin vào DataGridView
         private void UC_PhanQuyen_Load(object sender, EventArgs e)
         {
             //Load người dùng
             loadNguoiDung();
-            
+            //Load dgv nhóm người dùng 
+            LoadData_NhomNguoiDung();
 
             //Load combobox 
             loadComBoBox_ChucVu();
@@ -216,7 +225,80 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             }
            
         }
+        //-------------------------------Phân quyền nhóm người dùng
+        //Load danh sách nhóm người dùng
+        void LoadData_NhomNguoiDung()
+        {
+            dgv_NhomNguoiDung.DataSource = null;
+            dgv_NhomNguoiDung.DataSource = bus_ChucVu.GetData();
+            formatDataGridView_NhomNguoiDung();
+        }
+        //Format datagridview nhóm người dùng
+       void formatDataGridView_NhomNguoiDung()
+        {
+            dgv_NhomNguoiDung.Columns["MaCV"].HeaderText = "Mã chức vụ";
+            dgv_NhomNguoiDung.Columns["TenCV"].HeaderText = "Tên chức vụ";
+            dgv_NhomNguoiDung.Columns["GhiChu"].HeaderText = "Ghi chú";
 
-       
+        }
+        //Load quyền khi click vào nhóm người dùng
+        private void Dgv_NhomNguoiDung_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgv_NhomNguoiDung.SelectedRows.Count>0)
+            {
+                DataGridViewRow row = dgv_NhomNguoiDung.SelectedRows[0];
+                string maNhom = row.Cells["MaCV"].Value.ToString();
+                if (!String.IsNullOrEmpty(maNhom))
+                {
+                    loadDataBanQuyen(maNhom);
+                }
+                //Load data bảng quyền
+            }    
+        }
+
+        //Load data bảng quyền theo mã nhóm
+        void loadDataBanQuyen(string maCV)
+        {
+            dgv_ManHinh.DataSource=bus_ChucVu.GetPhanQuyenByMaCV(maCV);
+        }
+        private void Btn_Save_Click(object sender, EventArgs e)
+        {
+            if (dgv_NhomNguoiDung.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgv_NhomNguoiDung.SelectedRows[0];
+                string maNhom = row.Cells["MaCV"].Value.ToString();
+                if (!String.IsNullOrEmpty(maNhom))
+                {
+                  //Duyệt bảng màn hình để update hoặc thêm quyền
+                    foreach(DataGridViewRow item in dgv_ManHinh.Rows)
+                    {
+                        string maManHinh = item.Cells["MaMH"].Value.ToString();
+                        bool coQuyen = false;
+                        if (item.Cells["CoQuyen"].Value != null)
+                        {
+                            coQuyen = Convert.ToBoolean(item.Cells["CoQuyen"].Value);
+                        }
+                        //Kiểm tra đã có quyền này trong bảng hay chưa
+                        PhanQuyen pq = bus_ChucVu.FindByID(maNhom, maManHinh);
+                        
+                        if (pq != null)
+                        {
+                            //Tồn tại thì update
+                            bus_ChucVu.UpdatePhanQuyen(maNhom,maNhom,coQuyen);
+                        }
+                        else
+                        {
+                            //Chưa tồn tại thì thêm mới nếu có quyền bằng true
+                            if(coQuyen==true)
+                            {
+                                bus_ChucVu.InsertQuyen(maNhom, maManHinh);
+                            }    
+                        }
+                    }
+                    MessageBox.Show("Lưu thành công");
+                }
+                //Load data bảng quyền
+            }
+        }
     }
 }

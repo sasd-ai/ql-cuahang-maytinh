@@ -102,6 +102,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangQuyenManHinh.cs" />
     <Compile Include="banhang.cs" />
     <Compile Include="dathang.cs" />
     <Compile Include="DoanhThu.cs" />

@@ -80,6 +80,11 @@ namespace BUS
             sp.XoaSanPham(masp);
         }
 
+        //Tìm kiếm
+        public sanpham FindByID(string maSP)
+        {
+            return sp.FindByID(maSP);
+        }
         public List<sanpham> FindByName(string TenSP)
         {
             return sp.FindByName(TenSP);
@@ -99,5 +104,12 @@ namespace BUS
             return sp.FindByMaNCC(maNCC);
         }
 
+
+
+        //Update số lượng khi nhập
+        public bool UpdateSLNhap(string maSP,int sl)
+        {
+            return sp.UpdateSLNhap(maSP, sl);
+        }
     }
 }

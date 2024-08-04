@@ -143,7 +143,7 @@ namespace DAO
                 var query = from pq in qlch.PhanQuyens
                             join cv in qlch.NhanVien_ChucVus on pq.MaCV equals cv.MaCV
                             join mh in qlch.ManHinhs on pq.MaManHinh equals mh.MaManHinh
-                            where cv.MaNV == maNV
+                            where cv.MaNV == maNV && pq.CoQuyen==true
                             select new
                             {
                                 mh.MaManHinh,
