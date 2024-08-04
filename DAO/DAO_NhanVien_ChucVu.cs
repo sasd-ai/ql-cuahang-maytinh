@@ -19,7 +19,6 @@ namespace DAO
                        .FirstOrDefault();
 
         }
-       
         public bool Delete(string maNV,string maCV)
         {
             try

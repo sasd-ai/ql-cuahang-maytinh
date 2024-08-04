@@ -23,6 +23,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         private BUS_PhieuNhapHang bUS_PhieuNhapHang = new BUS_PhieuNhapHang();
         private BUS_ChiTietPhieuNhap bUS_ChiTietPhieuNhap = new BUS_ChiTietPhieuNhap();
         private BUS_Report bUS_Report = new BUS_Report();
+        private BUS_ChucVu bUS_ChucVu=new BUS_ChucVu();
         double tongTien = 0;
         public BindingList<sanpham> listSanPham { get; set; }
         public string maNCC;
@@ -410,7 +411,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     if (inPhieuNhap != null && inPhieuNhap.Count > 0)
                     {
                         // Đảm bảo rằng có ít nhất một bản ghi trong inPhieuNhap
-                        RPT_PhieuNhap rpt = new RPT_PhieuNhap();
+                        rpt_InPhieuNhap rpt = new rpt_InPhieuNhap();
                         rpt.SetDataSource(inPhieuNhap);
 
                         Frm_InPhieuNhap frm_PhieuNhap = new Frm_InPhieuNhap();
@@ -423,6 +424,22 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     }
                 }
             }
+
+            string macv = "cv01";
+            chucvu cv = bUS_ChucVu.FindByID(macv);
+            if(cv!=null)
+            {
+                bool kq = bUS_ChucVu.Delete(cv);
+                if (kq == true)
+                {
+                    MessageBox.Show("Xoá thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Xoá thất bại");
+                }    
+            }
+          
         }
 
     }

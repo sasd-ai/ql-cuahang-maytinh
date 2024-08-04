@@ -18,5 +18,13 @@ namespace BUS
         {
             return dao_ChucVu.GetData();
         }
+        public chucvu FindByID(string maCV)
+        {
+            return dao_ChucVu.FindByID(maCV);
+        }
+        public bool Delete(chucvu cv)
+        {
+            return dao_ChucVu.Delete(cv);
+        }
     }
 }

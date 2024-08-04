@@ -16,5 +16,24 @@ namespace DAO
         {
             return qlch.chucvus.Select(cv => cv).ToList<chucvu>();
         }
+        public chucvu FindByID(string maCV)
+        {
+            return qlch.chucvus.Where(cv=>cv.MaCV == maCV).FirstOrDefault();
+        }
+
+        public bool Delete(chucvu cv)
+        {
+            try
+            {
+                qlch.chucvus.DeleteOnSubmit(cv);
+                qlch.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
     }
 }
