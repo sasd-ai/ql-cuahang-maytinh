@@ -26,20 +26,8 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D6K1SJRH\\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;User " +
-            "ID=sa;Password=1234567;Encrypt=False")]
-        public string ql_cuahang_maytinhConnectionString11 {
-            get {
-                return ((string)(this["ql_cuahang_maytinhConnectionString11"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D6K1SJRH\\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persi" +
-            "st Security Info=True;User ID=sa;Password=1234567;Encrypt=True;TrustServerCertif" +
-            "icate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
+            "e;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True")]
         public string ql_cuahang_maytinhConnectionString1 {
             get {
                 return ((string)(this["ql_cuahang_maytinhConnectionString1"]));
@@ -49,9 +37,8 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D6K1SJRH\\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persi" +
-            "st Security Info=True;User ID=sa;Password=1234567;Encrypt=False;TrustServerCerti" +
-            "ficate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
+            "e;User ID=sa;Password=123;Encrypt=False;TrustServerCertificate=True")]
         public string ql_cuahang_maytinhConnectionString {
             get {
                 return ((string)(this["ql_cuahang_maytinhConnectionString"]));
@@ -61,9 +48,8 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D6K1SJRH\\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persi" +
-            "st Security Info=True;User ID=sa;Password=1234567;Encrypt=True;TrustServerCertif" +
-            "icate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
+            "e;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True")]
         public string ql_cuahang_maytinhConnectionString2 {
             get {
                 return ((string)(this["ql_cuahang_maytinhConnectionString2"]));
@@ -73,12 +59,22 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D6K1SJRH\\MSSQLSERVER1;Initial Catalog=ql_cuahang_maytinh;Persi" +
-            "st Security Info=True;User ID=sa;Password=1234567;Encrypt=True;TrustServerCertif" +
-            "icate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;Persist Security Info=Tru" +
+            "e;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True")]
         public string ql_cuahang_maytinhConnectionString3 {
             get {
                 return ((string)(this["ql_cuahang_maytinhConnectionString3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC;Initial Catalog=ql_cuahang_maytinh;User ID=sa;Password=123;E" +
+            "ncrypt=False")]
+        public string ql_cuahang_maytinhConnectionString11 {
+            get {
+                return ((string)(this["ql_cuahang_maytinhConnectionString11"]));
             }
         }
     }

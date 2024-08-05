@@ -166,12 +166,6 @@
     <Compile Include="GUI\Frm_InPhieuNhap.Designer.cs">
       <DependentUpon>Frm_InPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Frm_Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Frm_Login.Designer.cs">
-      <DependentUpon>Frm_Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,12 +177,6 @@
     </Compile>
     <Compile Include="GUI\Frm_NhapSP.Designer.cs">
       <DependentUpon>Frm_NhapSP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Frm_Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Frm_Register.Designer.cs">
-      <DependentUpon>Frm_Register.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
@@ -230,12 +218,6 @@
     </Compile>
     <Compile Include="My_UC\UC_PhanQuyen.Designer.cs">
       <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="My_UC\UC_QLKho.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="My_UC\UC_QLKho.Designer.cs">
-      <DependentUpon>UC_QLKho.cs</DependentUpon>
     </Compile>
     <Compile Include="My_UC\UC_QuanLyBanHang.cs">
       <SubType>UserControl</SubType>
@@ -299,17 +281,11 @@
     <EmbeddedResource Include="GUI\Frm_InPhieuNhap.resx">
       <DependentUpon>Frm_InPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Frm_Login.resx">
-      <DependentUpon>Frm_Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_NhapSP.resx">
       <DependentUpon>Frm_NhapSP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Frm_Register.resx">
-      <DependentUpon>Frm_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -328,9 +304,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_PhanQuyen.resx">
       <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My_UC\UC_QLKho.resx">
-      <DependentUpon>UC_QLKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My_UC\UC_QuanLyBanHang.resx">
       <DependentUpon>UC_QuanLyBanHang.cs</DependentUpon>

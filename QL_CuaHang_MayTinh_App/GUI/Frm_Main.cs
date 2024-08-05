@@ -89,16 +89,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
         //Quản lý kho, nhập hàng,...
         private void Btn_QLKho_Click(object sender, EventArgs e)
         {
-            // Tạo một instance của UC_Home
-            UC_QLKho uc_QLKho = new UC_QLKho();
-            uc_QLKho.Dock = DockStyle.Fill;
-            pannel_Main.Controls.Clear();
-            pannel_Main.Controls.Add(uc_QLKho);
-            uc_QLKho.BringToFront();
-            uc_QLKho.btn_NhapHang.Click += Btn_NhapHang_Click;
-        }
-        private void Btn_NhapHang_Click(object sender, EventArgs e)
-        {
+           
             UC_NhapHang uc_Nhap = new UC_NhapHang();
             uc_Nhap.Dock = DockStyle.Fill;
             pannel_Main.Controls.Clear();
@@ -107,6 +98,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
             uc_Nhap.BringToFront();
             uc_Nhap.btnThemMoi.Click += BtnThemMoi_Click;
         }
+      
         //Mở form nhập hàng từ ds đơn nhập hàng
         private void BtnThemMoi_Click(object sender, EventArgs e)
         {
@@ -118,8 +110,6 @@ namespace QL_CuaHang_MayTinh_App.GUI
             uc_SPNhap.BringToFront();
             uc_SPNhap.btn_Huy.Click += Btn_Huy_Click;
             uc_SPNhap.btn_AddSP.Click += Btn_AddSP_Click;
-
-           
         }
 
         private void Btn_AddSP_Click(object sender, EventArgs e)
@@ -346,6 +336,16 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Clear();
             pannel_Main.Controls.Add(uC_TrangChu);
             uC_TrangChu.BringToFront();
+        }
+
+        private void btn_DangXuat_Click_1(object sender, EventArgs e)
+        {
+            if (Program.frm_Login == null || Program.frm_Login.IsDisposed)
+            {
+                Program.frm_Login = new Login();
+            }
+            this.Close();
+            Program.frm_Login.Visible = true;
         }
     }
 }

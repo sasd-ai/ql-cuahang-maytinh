@@ -15,10 +15,12 @@ namespace QL_CuaHang_MayTinh_App.My_UC
     public partial class UC_NhapHang : UserControl
     {
         BUS_PhieuNhapHang bUS_phieuNhapHang=new BUS_PhieuNhapHang();
+        List<DS_PhieuNhap> listPN = new List<DS_PhieuNhap>();
         public UC_NhapHang()
         {
             InitializeComponent();
             this.Load += UC_NhapHang_Load;
+            listPN = bUS_phieuNhapHang.GetPhieuNhap();
         }
 
         private void UC_NhapHang_Load(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void LoadDataPhieuNhap()
         {
-            List<DS_PhieuNhap> listPN = bUS_phieuNhapHang.GetPhieuNhap();
+           
             dgv_PhieuNhapHang.DataSource=listPN;
             formatDataGridView_PhieuNhap();
         }
@@ -41,8 +43,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             {
                //Lấy giá trị
                 DateTime selectedDate = dateTimePicker.Value;
-
-                string formattedDate = selectedDate.ToString("yyyy-MM-dd");
+                MessageBox.Show(selectedDate.ToString());
+                dgv_PhieuNhapHang.DataSource = listPN.Where(pn => pn.NgayNhap.Date==selectedDate.Date).ToList(); ;
             }
         }
         void formatDataGridView_PhieuNhap()
@@ -67,8 +69,28 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 dgv_PhieuNhapHang.Columns["MaNCC"].Visible = false;
             }
         }
+       
+        private void btn_Sreach_Click(object sender, EventArgs e)
+        {
+            string keySreach=txt_KeySreach.Text;
+            string trangThai=cbb_TrangThaiTimKiem.SelectedItem.ToString();
+            if (String.IsNullOrEmpty(trangThai))
+            {
+                switch (trangThai)
+                {
+                    case "Tất cả":
+                        //Lấy hết danh sách
+                        dgv_PhieuNhapHang.DataSource = listPN;
+                        break;
+                    case "Tên nhân viên":
+                        dgv_PhieuNhapHang.DataSource = bUS_phieuNhapHang.FindByNhanVien(keySreach);
+                        break;
+                    case "Tên nhà cung cấp":
+                        dgv_PhieuNhapHang.DataSource = bUS_phieuNhapHang.FindByNCC(keySreach);
+                        break;
 
-      
-
+                }
+            }
+        }
     }
 }

@@ -20,17 +20,23 @@ namespace QL_CuaHang_MayTinh_App.GUI
         public string maNCC;
         public List<sanpham> listSanPham;
         public BindingList<sanpham> sanPhamDaChon;
+        List<loaisp> loaisps =new List<loaisp>();
         public Frm_NhapSP()
         {
             InitializeComponent();
+
+            loaisps=bUS_SanPham.LoadLoaiSP();
             this.Load += Frm_NhapSP_Load;
             //Danh sách sản phảm
             this.dgv_List_SP.CellContentClick += Dgv_List_SP_CellContentClick;
             this.dgv_List_SP.CellValueChanged += Dgv_List_SP_CellValueChanged;
             //Danh sách sản phẩm đã chọn
             this.dgv_SP_DaChon.CellContentClick += Dgv_SP_DaChon_CellContentClick;
-            
+            this.cbo_LoaiSP.SelectedValueChanged += Cbo_LoaiSP_SelectedValueChanged;
         }
+
+     
+
         private void Frm_NhapSP_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -102,7 +108,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
         //Load combobox loại sản phẩm
         void loadCBBLoaiSP()
         {
-            List<loaisp> loaisps= bUS_SanPham.LoadLoaiSP();
+           
             loaisps.Insert(0,new loaisp()
             {
                 MaLoai="ALL",
@@ -112,7 +118,19 @@ namespace QL_CuaHang_MayTinh_App.GUI
             cbo_LoaiSP.DisplayMember = "TenLoai";
             cbo_LoaiSP.ValueMember = "MaLoai";
         }
-
+        //Load sản phẩm theo loại
+        private void Cbo_LoaiSP_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string maLoai=cbo_LoaiSP.SelectedValue.ToString();
+            if(maLoai =="'ALL")
+            {
+                dgv_List_SP.DataSource = listSanPham;
+            }    
+            else
+            {
+               dgv_List_SP.DataSource=listSanPham.Where(sp=>sp.MaLoai==maLoai).ToList();    
+            }    
+        }
         private void Cbo_LoaiSP_SelectedIndexChanged(object sender, EventArgs e)
         {
            if(cbo_LoaiSP.SelectedValue.ToString().Equals("ALL"))
@@ -262,9 +280,6 @@ namespace QL_CuaHang_MayTinh_App.GUI
         }
         void formatDataGridView_SanPham()
         {
-           
-
-        
             // Căn giữa tiêu đề các cột
             foreach (DataGridViewColumn column in dgv_List_SP.Columns)
             {
