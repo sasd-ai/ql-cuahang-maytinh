@@ -117,7 +117,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.panel4.Controls.Add(this.labelTime);
             this.panel4.Controls.Add(this.lblNameUser);
             this.panel4.Controls.Add(this.label1);
@@ -141,10 +141,12 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.lblNameStore);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(213, 140);
@@ -179,6 +181,7 @@
             // 
             // panel_Menu
             // 
+            this.panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.panel_Menu.Controls.Add(this.btn_DangXuat);
             this.panel_Menu.Controls.Add(this.btn_KhuyenMai);
             this.panel_Menu.Controls.Add(this.btn_NCC);
@@ -201,7 +204,7 @@
             // 
             // btn_DangXuat
             // 
-            this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_DangXuat.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,7 +222,7 @@
             // 
             // btn_KhuyenMai
             // 
-            this.btn_KhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_KhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_KhuyenMai.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_KhuyenMai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,7 +240,7 @@
             // 
             // btn_NCC
             // 
-            this.btn_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_NCC.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_NCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NCC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,7 +267,7 @@
             // 
             // btn_DoiMatKhau
             // 
-            this.btn_DoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_DoiMatKhau.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_DoiMatKhau.FlatAppearance.BorderSize = 0;
             this.btn_DoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -282,7 +285,7 @@
             // 
             // btn_Setting
             // 
-            this.btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_Setting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Setting.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,7 +313,7 @@
             // 
             // btn_QtriPhanQuyen
             // 
-            this.btn_QtriPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QtriPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_QtriPhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_QtriPhanQuyen.FlatAppearance.BorderSize = 0;
             this.btn_QtriPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -327,7 +330,7 @@
             // 
             // btn_QTriChucVu
             // 
-            this.btn_QTriChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QTriChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_QTriChucVu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_QTriChucVu.FlatAppearance.BorderSize = 0;
             this.btn_QTriChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -345,7 +348,7 @@
             // 
             // btn_QTriNhanVien
             // 
-            this.btn_QTriNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QTriNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_QTriNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_QTriNhanVien.FlatAppearance.BorderSize = 0;
             this.btn_QTriNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -363,7 +366,7 @@
             // 
             // btn_QuanTriMenu
             // 
-            this.btn_QuanTriMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QuanTriMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_QuanTriMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_QuanTriMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QuanTriMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -380,7 +383,7 @@
             // 
             // btn_BaoCao
             // 
-            this.btn_BaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_BaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_BaoCao.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_BaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -398,7 +401,7 @@
             // 
             // btn_QLKho
             // 
-            this.btn_QLKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_QLKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_QLKho.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_QLKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QLKho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -425,7 +428,7 @@
             // 
             // btn_SanPham
             // 
-            this.btn_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_SanPham.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_SanPham.FlatAppearance.BorderSize = 0;
             this.btn_SanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -442,7 +445,7 @@
             // 
             // btn_LoaiSP
             // 
-            this.btn_LoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_LoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_LoaiSP.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_LoaiSP.FlatAppearance.BorderSize = 0;
             this.btn_LoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -460,7 +463,7 @@
             // 
             // btn_SanPhamMenu
             // 
-            this.btn_SanPhamMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_SanPhamMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_SanPhamMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_SanPhamMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SanPhamMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -488,7 +491,7 @@
             // 
             // btn_DSBanOff
             // 
-            this.btn_DSBanOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DSBanOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_DSBanOff.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_DSBanOff.FlatAppearance.BorderSize = 0;
             this.btn_DSBanOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -506,7 +509,7 @@
             // 
             // btn_DonHangOnline
             // 
-            this.btn_DonHangOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_DonHangOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_DonHangOnline.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_DonHangOnline.FlatAppearance.BorderSize = 0;
             this.btn_DonHangOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -524,7 +527,7 @@
             // 
             // btn_BanHang
             // 
-            this.btn_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_BanHang.FlatAppearance.BorderSize = 0;
             this.btn_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -541,7 +544,7 @@
             // 
             // btn_BanHangMenu
             // 
-            this.btn_BanHangMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_BanHangMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_BanHangMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_BanHangMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BanHangMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -558,7 +561,7 @@
             // 
             // btn_TrangChu
             // 
-            this.btn_TrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(124)))), ((int)(((byte)(163)))));
+            this.btn_TrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
             this.btn_TrangChu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TrangChu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

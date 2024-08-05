@@ -37,7 +37,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             this.dgv_DSSanPham.CellEndEdit += Dgv_DSSanPham_CellEndEdit;
 
             //Nhập hàng 
-
+          
         }
 
         private void Dgv_DSSanPham_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -138,13 +138,47 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             loadComboBox_NCC();
             cbb_NhaCungCap.SelectedIndex = 0;
             maNCC = cbb_NhaCungCap.SelectedValue.ToString();
+            this.dgv_DSSanPham.RowTemplate.Height = 50;
         }
 
         public void UpdateDataSanPham(BindingList<sanpham> list)
         {
+            if(listSanPham==null)
+            {
+             
+                dgv_DSSanPham.DataSource = null;
+                dgv_DSSanPham.Columns.Clear();
+                dgv_DSSanPham.DataSource = list;
+                listSanPham = list;
+            
+                formatDataGridVieew_SPDaChon();
+                // Duyệt qua từng hàng để cập nhật giá trị cột
+                foreach (DataGridViewRow row in dgv_DSSanPham.Rows)
+                {
+                    if (row.IsNewRow) continue; // Bỏ qua hàng mới nếu có
+
+                    // Cập nhật giá trị mặc định cho cột Số lượng và Giá nhập
+                    row.Cells["sl"].Value = 0; // Giá trị mặc định cho Số lượng
+                    row.Cells["GiaNhap"].Value = 0; // Giá trị mặc định cho Giá nhập
+
+                    // Cập nhật tổng cộng dựa trên các giá trị mặc định
+                    row.Cells["TongTien"].Value = 0; // Tổng cộng = Số lượng * Giá nhập (ở đây là 0)
+                }
+                return;
+            }
+            foreach (var item in list)
+            {
+
+                sanpham sanPham = listSanPham.Where(sp => sp.MaSP == item.MaSP).FirstOrDefault();
+                if(sanPham == null)
+                {
+                    listSanPham.Add(item);
+                }    
+            }
             dgv_DSSanPham.DataSource = null;
-            dgv_DSSanPham.DataSource = list;
-            listSanPham = list;
+            dgv_DSSanPham.Columns.Clear();
+            dgv_DSSanPham.DataSource=listSanPham;
+        
             formatDataGridVieew_SPDaChon();
             // Duyệt qua từng hàng để cập nhật giá trị cột
             foreach (DataGridViewRow row in dgv_DSSanPham.Rows)

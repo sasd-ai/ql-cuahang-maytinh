@@ -42,6 +42,10 @@ namespace QL_CuaHang_MayTinh_App.GUI
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = true;
+            //Format giao diện
+            this.dgv_List_SP.RowTemplate.Height = 50;
+            this.dgv_SP_DaChon.RowTemplate.Height = 50;
+        
             sanPhamDaChon = new BindingList<sanpham>();
             //Load dữ liệu
 
@@ -128,7 +132,7 @@ namespace QL_CuaHang_MayTinh_App.GUI
             }    
             else
             {
-               dgv_List_SP.DataSource=listSanPham.Where(sp=>sp.MaLoai==maLoai).ToList();    
+               dgv_List_SP.DataSource=listSanPham.Where(sp=>sp.MaLoai==maLoai && sp.MaNCC==maNCC).ToList();    
             }    
         }
         private void Cbo_LoaiSP_SelectedIndexChanged(object sender, EventArgs e)

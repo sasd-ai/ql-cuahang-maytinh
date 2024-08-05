@@ -41,6 +41,10 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         // Load thông tin vào DataGridView
         private void UC_PhanQuyen_Load(object sender, EventArgs e)
         {
+            this.dgv_ManHinh.RowTemplate.Height = 50;
+            this.dgv_Nhom.RowTemplate.Height = 50;
+            this.dgv_User.RowTemplate.Height = 50;
+            this.dgv_NhomNguoiDung.RowTemplate.Height = 50;
             //Load người dùng
             loadNguoiDung();
             //Load dgv nhóm người dùng 

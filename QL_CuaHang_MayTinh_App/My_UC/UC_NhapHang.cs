@@ -25,7 +25,8 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void UC_NhapHang_Load(object sender, EventArgs e)
         {
-          LoadDataPhieuNhap();
+            this.dgv_PhieuNhapHang.RowTemplate.Height = 50;
+            LoadDataPhieuNhap();
         }
 
         private void LoadDataPhieuNhap()
