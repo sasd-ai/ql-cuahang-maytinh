@@ -334,5 +334,45 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Add(uC_ThongKeDoanhThu);
             uC_ThongKeDoanhThu.BringToFront();
         }
+
+        private void btn_QTriNhanVien_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của UC_Home
+            UC_NhanVien NVControl = new UC_NhanVien();
+            NVControl.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(NVControl);
+            NVControl.BringToFront();
+        }
+
+        private void btn_QTriChucVu_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của UC_Home
+            UC_ChucVu CVControl = new UC_ChucVu();
+            CVControl.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(CVControl);
+            CVControl.BringToFront();
+        }
+
+        private void btn_LoaiSP_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của UC_Home
+            UC_LoaiSanPham LoaiSPControl = new UC_LoaiSanPham();
+            LoaiSPControl.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(LoaiSPControl);
+            LoaiSPControl.BringToFront();
+        }
+
+        private void btn_ThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của UC_Home
+            UC_NhaCungCap KHControl = new UC_NhaCungCap();
+            KHControl.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(KHControl);
+            KHControl.BringToFront();
+        }
     }
 }

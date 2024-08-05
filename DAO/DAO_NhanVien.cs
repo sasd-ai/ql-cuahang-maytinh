@@ -98,6 +98,11 @@ namespace DAO
             return qlch.nhanviens.Where(nv => nv.Email == email).FirstOrDefault();
         }
 
+        public nhanvien FindByID(string manv)
+        {
+            return qlch.nhanviens.Where(nv => nv.MaNV == manv).FirstOrDefault();
+        }
+
         //Phương thức login
         public bool Login(string email, string matKhau)
         {

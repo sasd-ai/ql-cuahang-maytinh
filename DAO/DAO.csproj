@@ -109,6 +109,9 @@
     <Compile Include="DAO_BanHang.cs" />
     <Compile Include="DAO_ChiTietPhieuNhap.cs" />
     <Compile Include="DAO_ChucVu.cs" />
+    <Compile Include="DAO_KhachHang.cs" />
+    <Compile Include="DAO_KhuyenMai.cs" />
+    <Compile Include="DAO_LoaiSanPham.cs" />
     <Compile Include="DAO_ManHinh.cs" />
     <Compile Include="DAO_NguoiDung_ChucVu.cs" />
     <Compile Include="DAO_NhaCungCap.cs" />

@@ -18,11 +18,11 @@ namespace BUS
             return dao_NV.GetData();
         }
         //Thêm
-        public bool Insert(string tenNV, string diaChi, string sdt, string email)
+        public bool Insert(string manv, string tenNV, string diaChi, string sdt, string email)
         {
             nhanvien nv = new nhanvien
             {
-                MaNV = Guid.NewGuid().ToString(), // Tạo UUID và gán cho MaNV
+                MaNV = manv,
                 TenNV = tenNV,
                 DiaChi = diaChi,
                 SDT = sdt,
@@ -45,7 +45,7 @@ namespace BUS
             return dao_NV.Update(Id,tennv, diachi, sdt, hoatdong);
         }
         //Tìm kiếm theo tên
-        public List<nhanvien> FindVyName(string name)
+        public List<nhanvien> FindByName(string name)
         {
             return dao_NV.FindByName(name);
         }
@@ -53,6 +53,11 @@ namespace BUS
         public nhanvien FindByEmail(string email)
         {
             return dao_NV.FindByEmail(email);
+        }
+
+        public nhanvien FindByID(string manv)
+        {
+            return dao_NV.FindByID(manv);
         }
         //Login 
         public bool Login(string email,string password)
