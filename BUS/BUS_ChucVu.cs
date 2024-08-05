@@ -50,5 +50,38 @@ namespace BUS
         {
             return dao_ChucVu.InsertQuyen(maCV,maManHinh);
         }
+
+        public void ThemChucVu(string macv, string tencv, string ghichu)
+        {
+            dao_ChucVu.ThemChucVu(macv, tencv, ghichu);
+        }
+
+        public void SuaChucVu(string macv, string tencv, string ghichu)
+        {
+
+            dao_ChucVu.SuaChucVu(macv, tencv, ghichu);
+        }
+
+   
+
+
+        public bool XoaChucVu(string macv)
+        {
+            return dao_ChucVu.XoaChucVu(macv);
+        }
+
+        public List<chucvu> FindByName(string tencv)
+        {
+            return dao_ChucVu.FindByName(tencv);
+        }
+
+        public bool KTraKhoaNgoai(string macv)
+        {
+            if(dao_ChucVu.KtraKhoaNgoai(macv))
+            {
+                return false;
+            }    
+            return true;
+        }
     }
 }

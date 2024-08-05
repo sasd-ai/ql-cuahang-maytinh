@@ -26,7 +26,7 @@ namespace DAO
         //Tìm theo tên
         public List<nhacungcap> FindByName(string tenNCC)
         {
-            return qlch.nhacungcaps.Where(ncc => ncc.MaNCC.Contains(tenNCC)).ToList();
+            return qlch.nhacungcaps.Where(ncc => ncc.TenNCC.Contains(tenNCC)).ToList();
         }
 
         #endregion
@@ -44,13 +44,28 @@ namespace DAO
                 return false;
             }
         }
-        public bool Delete(nhacungcap ncc)
+        //public void Delete(string mancc)
+        //{
+        //    var ma_ncc = qlch.nhacungcaps.FirstOrDefault(ncc => ncc.MaNCC == mancc);
+        //    if (ma_ncc != null)
+        //    {
+        //        qlch.nhacungcaps.DeleteOnSubmit(ma_ncc);
+        //        qlch.SubmitChanges();
+        //    }
+        //}
+
+        public bool XoaNhaCungCap(string mancc)
         {
             try
             {
-                qlch.nhacungcaps.DeleteOnSubmit(ncc);
-                qlch.SubmitChanges();
-                return true;
+                nhacungcap nccDelete = FindByID(mancc);
+                if (nccDelete != null)
+                {
+                    qlch.nhacungcaps.DeleteOnSubmit(nccDelete);
+                    qlch.SubmitChanges();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {

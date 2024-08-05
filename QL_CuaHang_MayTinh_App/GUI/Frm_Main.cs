@@ -53,8 +53,42 @@ namespace QL_CuaHang_MayTinh_App.GUI
             this.btn_QtriPhanQuyen.Click += Btn_QtriPhanQuyen_Click;
         }
 
-       
+        private void Frm_Main_Load(object sender, EventArgs e)
+        {
+            //Thông tin cửa hàng
+            //Tên của hàng
+            lblNameStore.Text = "CỦA HÀNG MÁY \n TÍNH TQĐ";
 
+            //Tên User
+            LoadThongTinUser();
+
+            // Tạo một instance của UC_Home
+            UC_TrangChu homeControl = new UC_TrangChu();
+            homeControl.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(homeControl);
+            homeControl.BringToFront();
+        }
+        private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.frm_Login.Visible = true;
+        }
+
+        private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Frm_CLosing frm_CLosing = new Frm_CLosing();
+
+            frm_CLosing.MdiParent = this;
+            frm_CLosing.Show();
+            using (Frm_CLosing frm_Closing = new Frm_CLosing())
+            {
+                DialogResult result = frm_Closing.ShowDialog();
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true; // Hủy sự kiện đóng form nếu người dùng chọn No
+                }
+            }
+        }
 
         //Chuyển chức năng
         #region Chuyển chức năng
@@ -140,6 +174,107 @@ namespace QL_CuaHang_MayTinh_App.GUI
             pannel_Main.Controls.Add(uC_PhanQuyen);
             uC_PhanQuyen.BringToFront();
         }
+
+        private void btn_DSBanOff_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyBanHang uC_QuanLyBanHang = new UC_QuanLyBanHang();
+            uC_QuanLyBanHang.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_QuanLyBanHang);
+            uC_QuanLyBanHang.BringToFront();
+        }
+
+        private void btn_DonHangOnline_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyDonHang uC_QuanLyDonHang = new UC_QuanLyDonHang();
+            uC_QuanLyDonHang.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_QuanLyDonHang);
+            uC_QuanLyDonHang.BringToFront();
+        }
+
+        private void btn_BaoCao_Click(object sender, EventArgs e)
+        {
+            UC_ThongKeDoanhThu uC_ThongKeDoanhThu = new UC_ThongKeDoanhThu();
+            uC_ThongKeDoanhThu.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_ThongKeDoanhThu);
+            uC_ThongKeDoanhThu.BringToFront();
+        }
+
+        private void btn_TrangChu_Click(object sender, EventArgs e)
+        {
+            UC_TrangChu uC_TrangChu = new UC_TrangChu();
+            uC_TrangChu.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_TrangChu);
+            uC_TrangChu.BringToFront();
+        }
+
+        private void btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            if (Program.frm_Login == null || Program.frm_Login.IsDisposed)
+            {
+                Program.frm_Login = new Login();
+            }
+            this.Close();
+            Program.frm_Login.Visible = true;
+        }
+
+        private void btn_LoaiSP_Click(object sender, EventArgs e)
+        {
+            UC_LoaiSanPham uc_LoaiSP = new UC_LoaiSanPham();
+            uc_LoaiSP.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_LoaiSP);
+            uc_LoaiSP.BringToFront();
+        }
+        private void btn_QTriNhanVien_Click(object sender, EventArgs e)
+        {
+            UC_NhanVien uc_NhanVien = new UC_NhanVien();
+            uc_NhanVien.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_NhanVien);
+            uc_NhanVien.BringToFront();
+        }
+
+        private void btn_QTriChucVu_Click(object sender, EventArgs e)
+        {
+            UC_ChucVu uc_ChucVu = new UC_ChucVu();
+            uc_ChucVu.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_ChucVu);
+            uc_ChucVu.BringToFront();
+        }
+
+        private void btn_NCC_Click(object sender, EventArgs e)
+        {
+            UC_NhaCungCap uc_NCC = new UC_NhaCungCap();
+            uc_NCC.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_NCC);
+            uc_NCC.BringToFront();
+        }
+
+        private void btn_KhuyenMai_Click(object sender, EventArgs e)
+        {
+            UC_KhuyenMai uc_KhuyenMai = new UC_KhuyenMai();
+            uc_KhuyenMai.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uc_KhuyenMai);
+            uc_KhuyenMai.BringToFront();
+        }
+        //Đổi mật khẩu
+        private void btn_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+            UC_DoiMatKhau uC_DoiMatKhau = new UC_DoiMatKhau();
+            uC_DoiMatKhau.Dock = DockStyle.Fill;
+            pannel_Main.Controls.Clear();
+            pannel_Main.Controls.Add(uC_DoiMatKhau);
+            uC_DoiMatKhau.email =email;
+            uC_DoiMatKhau.BringToFront();
+        }
         #endregion
 
 
@@ -154,45 +289,11 @@ namespace QL_CuaHang_MayTinh_App.GUI
             Program.frm_Login.Visible = true;
         }
 
-        private void Frm_Main_Load(object sender, EventArgs e)
-        {
-            //Thông tin cửa hàng
-            //Tên của hàng
-            lblNameStore.Text = "CỦA HÀNG MÁY \n TÍNH TQĐ";
-
-            //Tên User
-            LoadThongTinUser();
-
-            // Tạo một instance của UC_Home
-            UC_TrangChu homeControl = new UC_TrangChu();
-            homeControl.Dock = DockStyle.Fill;
-            pannel_Main.Controls.Clear();
-            pannel_Main.Controls.Add(homeControl);
-            homeControl.BringToFront();
-        }
+    
 
 
 
-        private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Program.frm_Login.Visible = true;
-        }
-
-        private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Frm_CLosing frm_CLosing = new Frm_CLosing();
-
-            frm_CLosing.MdiParent = this;
-            frm_CLosing.Show();
-            using (Frm_CLosing frm_Closing = new Frm_CLosing())
-            {
-                DialogResult result = frm_Closing.ShowDialog();
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true; // Hủy sự kiện đóng form nếu người dùng chọn No
-                }
-            }
-        }
+        
 
         #region Menu con
         //Mở menu quản lý bán hàng
@@ -302,50 +403,6 @@ namespace QL_CuaHang_MayTinh_App.GUI
              labelTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void btn_DSBanOff_Click(object sender, EventArgs e)
-        {
-            UC_QuanLyBanHang uC_QuanLyBanHang = new UC_QuanLyBanHang();
-            uC_QuanLyBanHang.Dock = DockStyle.Fill;
-            pannel_Main.Controls.Clear();
-            pannel_Main.Controls.Add(uC_QuanLyBanHang);
-            uC_QuanLyBanHang.BringToFront();
-        }
-
-        private void btn_DonHangOnline_Click(object sender, EventArgs e)
-        {
-            UC_QuanLyDonHang uC_QuanLyDonHang = new UC_QuanLyDonHang();
-            uC_QuanLyDonHang.Dock = DockStyle.Fill;
-            pannel_Main.Controls.Clear();
-            pannel_Main.Controls.Add(uC_QuanLyDonHang);
-            uC_QuanLyDonHang.BringToFront();
-        }
-
-        private void btn_BaoCao_Click(object sender, EventArgs e)
-        {
-            UC_ThongKeDoanhThu uC_ThongKeDoanhThu = new UC_ThongKeDoanhThu();
-            uC_ThongKeDoanhThu.Dock = DockStyle.Fill;
-            pannel_Main.Controls.Clear();
-            pannel_Main.Controls.Add(uC_ThongKeDoanhThu);
-            uC_ThongKeDoanhThu.BringToFront();
-        }
-
-        private void btn_TrangChu_Click(object sender, EventArgs e)
-        {
-            UC_TrangChu uC_TrangChu = new UC_TrangChu();
-            uC_TrangChu.Dock = DockStyle.Fill;
-            pannel_Main.Controls.Clear();
-            pannel_Main.Controls.Add(uC_TrangChu);
-            uC_TrangChu.BringToFront();
-        }
-
-        private void btn_DangXuat_Click_1(object sender, EventArgs e)
-        {
-            if (Program.frm_Login == null || Program.frm_Login.IsDisposed)
-            {
-                Program.frm_Login = new Login();
-            }
-            this.Close();
-            Program.frm_Login.Visible = true;
-        }
+      
     }
 }

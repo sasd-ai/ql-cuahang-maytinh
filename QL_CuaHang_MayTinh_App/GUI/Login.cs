@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+
 namespace QL_CuaHang_MayTinh_App.GUI
 {
     public partial class Login : Form
@@ -75,6 +77,8 @@ namespace QL_CuaHang_MayTinh_App.GUI
                 }
             }
 
+           
+
             this.txt_Username.Text = "";
             this.txt_Password.Text = "";
             Program.frmMain.Show();
@@ -86,6 +90,21 @@ namespace QL_CuaHang_MayTinh_App.GUI
             this.Close();
         }
 
+        private string GetMd5Hash(string input)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
 
+                // Convert byte array to a hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
     }
 }

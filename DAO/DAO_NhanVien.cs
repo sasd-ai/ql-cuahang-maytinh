@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
@@ -85,7 +86,25 @@ namespace DAO
                 return false;
             }
         }
-
+        public bool UpdateMK(string manv,string matKhau)
+        {
+            try
+            {
+                nhanvien nv = FindByID(manv);
+                if(nv!= null)
+                {
+                    nv.MatKhau=matKhau;
+                    qlch.SubmitChanges();
+                    return true;
+                }  
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine (ex.ToString());
+                return false;
+            }
+        }
         // Tìm kiếm theo tên gần đúng
         public List<nhanvien> FindByName(string Name)
         {
@@ -96,6 +115,11 @@ namespace DAO
         public nhanvien FindByEmail(string email)
         {
             return qlch.nhanviens.Where(nv => nv.Email == email).FirstOrDefault();
+        }
+
+        public nhanvien FindByID(string manv)
+        {
+            return qlch.nhanviens.Where(nv => nv.MaNV == manv).FirstOrDefault();
         }
 
         //Phương thức login
@@ -163,6 +187,22 @@ namespace DAO
                 // Xử lý lỗi (như ghi log hoặc thông báo cho người dùng)
                 Console.WriteLine(ex.Message);
                 return new List<ManHinh>(); // Trả về danh sách rỗng nếu xảy ra lỗi
+            }
+        }
+        private string GetMd5Hash(string input)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert byte array to a hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
             }
         }
     }
