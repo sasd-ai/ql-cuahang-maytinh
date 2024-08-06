@@ -35,17 +35,54 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             //bus_cv.FindByName(text_chucvu);
             dataGridView_km.DataSource = bus_km.FindByName(text_km);
         }
-
-        public void XoaText()
+        public bool KT_ThongTin_KM()
         {
-            txt_maKM.Text = "";
-            txt_tenKM.Text = "";
-            txt_TriGia.Text = "";
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_KM.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox và không phải là txt_maKH
+                if (control is TextBox textBox && textBox != txt_maKM)
+                {
+                    // Kiểm tra nếu TextBox trống
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Hiển thị thông báo và trả về false nếu có TextBox trống
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin nha!!");
+                        return false;
+                    }
+                }
+            }
+            // Trả về true nếu tất cả các TextBox (trừ txt_maKH) đều không trống
+            return true;
         }
+
+        public void XoaText_ThongTin_KM()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_KM.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox
+                if (control is TextBox textBox)
+                {
+                    // Kiểm tra nếu TextBox không trống
+                    if (!string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Xóa nội dung của TextBox
+                        textBox.Text = string.Empty;
+                    }
+                }
+            }
+        }
+        //public void XoaText()
+        //{
+        //    txt_maKM.Text = "";
+        //    txt_tenKM.Text = "";
+        //    txt_TriGia.Text = "";
+        //}
 
         private void Btn_Huy_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_KM();
             btn_save.Enabled = false;
             btn_Huy.Enabled = false;
             btnThem.Enabled = true;
@@ -64,12 +101,21 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             switch (HanhDong)
             {
                 case "Them":
+                    if(!KT_ThongTin_KM())
+                    {
+                        return;
+                    }    
                     bus_km.ThemKhuyenMai(MaKM_random, tenKM, trigia);
                     MessageBox.Show("Bạn đã thêm khuyến mãi thành công rồi nha!!!");
                     LoadData();
                     break; 
 
                 case "Sua":
+                    if(string.IsNullOrEmpty(maKM))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã khuyến mãi để sửa.");
+                        break;
+                    }    
                     bus_km.SuaKhuyenMai(maKM, tenKM, trigia);
                     MessageBox.Show("Sửa khuyến mãi thành công.");
                     LoadData();
@@ -77,6 +123,11 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     break;
 
                 case "Xoa":
+                    if (string.IsNullOrEmpty(maKM))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã khuyến mãi để xóa.");
+                        break;
+                    }
                     if (MessageBox.Show("Bạn có chắc muốn xóa khuyến mãi này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
 
@@ -134,7 +185,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_KM();
             HanhDong = "Them";
             btn_save.Enabled = true;
             btn_Huy.Enabled = true;

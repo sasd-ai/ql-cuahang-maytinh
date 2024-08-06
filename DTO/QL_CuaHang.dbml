@@ -132,15 +132,6 @@
       <Association Name="ManHinh_PhanQuyen" Member="PhanQuyens" ThisKey="MaManHinh" OtherKey="MaManHinh" Type="PhanQuyen" />
     </Type>
   </Table>
-  <Table Name="dbo.nhacungcap" Member="nhacungcaps">
-    <Type Name="nhacungcap">
-      <Column Name="MaNCC" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenNCC" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="SDT" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Association Name="nhacungcap_phieunhaphang" Member="phieunhaphangs" ThisKey="MaNCC" OtherKey="MaNCC" Type="phieunhaphang" />
-    </Type>
-  </Table>
   <Table Name="dbo.nhanvien" Member="nhanviens">
     <Type Name="nhanvien">
       <Column Name="MaNV" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -191,6 +182,7 @@
       <Association Name="sanpham_danhgia" Member="danhgias" ThisKey="MaSP" OtherKey="masp" Type="danhgia" />
       <Association Name="sanpham_chitietbanhang" Member="chitietbanhangs" ThisKey="MaSP" OtherKey="MaSP" Type="chitietbanhang" />
       <Association Name="loaisp_sanpham" Member="loaisp" ThisKey="MaLoai" OtherKey="MaLoai" Type="loaisp" IsForeignKey="true" />
+      <Association Name="nhacungcap_sanpham" Member="nhacungcap" ThisKey="MaNCC" OtherKey="MaNCC" Type="nhacungcap" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.SanPhamFull" Member="SanPhamFulls">
@@ -237,8 +229,8 @@
       <Column Name="GhiChu" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="NgayNhap" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Association Name="phieunhaphang_chitietphieunhap" Member="chitietphieunhaps" ThisKey="MaPN" OtherKey="MaPN" Type="chitietphieunhap" />
-      <Association Name="nhacungcap_phieunhaphang" Member="nhacungcap" ThisKey="MaNCC" OtherKey="MaNCC" Type="nhacungcap" IsForeignKey="true" />
       <Association Name="nhanvien_phieunhaphang" Member="nhanvien" ThisKey="MaNV" OtherKey="MaNV" Type="nhanvien" IsForeignKey="true" />
+      <Association Name="nhacungcap_phieunhaphang" Member="nhacungcap" ThisKey="MaNCC" OtherKey="MaNCC" Type="nhacungcap" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.chitietbanhang" Member="chitietbanhangs">
@@ -281,6 +273,16 @@
       <Column Name="NgayDatHang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TinhTrang_DH" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhacungcap" Member="nhacungcaps">
+    <Type Name="nhacungcap">
+      <Column Name="MaNCC" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNCC" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="nhacungcap_sanpham" Member="sanphams" ThisKey="MaNCC" OtherKey="MaNCC" Type="sanpham" />
+      <Association Name="nhacungcap_phieunhaphang" Member="phieunhaphangs" ThisKey="MaNCC" OtherKey="MaNCC" Type="phieunhaphang" />
     </Type>
   </Table>
   <Function Name="dbo.InHoaDon" Method="InHoaDon">

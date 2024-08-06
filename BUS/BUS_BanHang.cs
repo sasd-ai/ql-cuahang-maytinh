@@ -60,5 +60,7 @@ namespace BUS
         {
             return bh.LayHoaDonTheoMaBanHang(maBanHang);
         }
+
+        
     }
 }

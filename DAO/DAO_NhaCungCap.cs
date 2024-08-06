@@ -96,5 +96,10 @@ namespace DAO
                 return false;
             }
         }
+        
+        public nhacungcap TimSDTNCC(string sdt)
+        {
+            return qlch.nhacungcaps.FirstOrDefault(ncc=>ncc.SDT==sdt);
+        }
     }
 }

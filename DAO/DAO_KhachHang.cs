@@ -88,5 +88,15 @@ namespace DAO
         {
             return qlch.khachhangs.Where(kh => kh.MaKH == makh).FirstOrDefault();
         }
+
+        public khachhang TimSDTKhachHang(string sdt)
+        {
+            return qlch.khachhangs.FirstOrDefault(kh => kh.SDT == sdt);
+        }
+
+        public khachhang TimEmailKhachHang(string email)
+        {
+            return qlch.khachhangs.FirstOrDefault(kh => kh.Email == email);
+        }
     }
 }

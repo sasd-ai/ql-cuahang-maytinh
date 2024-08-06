@@ -39,10 +39,47 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             //bus_cv.FindByName(text_chucvu);
             datagridview_cv.DataSource = bus_cv.FindByName(text_chucvu);
         }
+        public bool KT_ThongTin_CV()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_CV.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox và không phải là txt_maKH
+                if (control is TextBox textBox && textBox != txt_maCV)
+                {
+                    // Kiểm tra nếu TextBox trống
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Hiển thị thông báo và trả về false nếu có TextBox trống
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin nha!!");
+                        return false;
+                    }
+                }
+            }
+            // Trả về true nếu tất cả các TextBox (trừ txt_maKH) đều không trống
+            return true;
+        }
 
+        public void XoaText_ThongTin_CV()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_CV.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox
+                if (control is TextBox textBox)
+                {
+                    // Kiểm tra nếu TextBox không trống
+                    if (!string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Xóa nội dung của TextBox
+                        textBox.Text = string.Empty;
+                    }
+                }
+            }
+        }
         private void Btn_Huy_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_CV();
             btn_save.Enabled = false;
             btn_Huy.Enabled = false;
             btnThem.Enabled = true;
@@ -61,20 +98,33 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             switch (HanhDong)
             {
                 case "Them":
+                    if(!KT_ThongTin_CV())
+                    {
+                        return;
+                    }    
                     bus_cv.ThemChucVu(MaCV_random, tenCV, ghichu);
                     MessageBox.Show("Bạn đã thêm chức vụ thành công rồi nha!!!");
                     LoadData();
                     break;
 
                 case "Sua":
-                    bus_cv.SuaChucVu(maCV, tenCV, ghichu);
+                    if (string.IsNullOrEmpty(maCV))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã chức vụ để sửa.");
+                        break;
+                    }
+                        bus_cv.SuaChucVu(maCV, tenCV, ghichu);
                     MessageBox.Show("Sửa chức vụ thành công.");
                     LoadData();
 
                     break;
 
                 case "Xoa":
-
+                    if (string.IsNullOrEmpty(maCV))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã chức vụ để xóa.");
+                        break;
+                    }
 
                     if (MessageBox.Show("Bạn có chắc muốn xóa chức vụ này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
@@ -84,12 +134,12 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                             bool kq = bus_cv.XoaChucVu(maCV);
                             if (kq == true)
                             {
-                                MessageBox.Show("Xóa nhân viên thành công!");
+                                MessageBox.Show("Xóa chức vụ thành công!");
                                 LoadData();
                             }
                             else
                             {
-                                MessageBox.Show("Không thể xoá nhân viên này!");
+                                MessageBox.Show("Không thể xoá chức vụ này!");
                             }
                         }
                     }
@@ -132,16 +182,16 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             }
         }
 
-        public void XoaText()
-        {
-            txt_maCV.Text = "";
-            txt_tenCV.Text = "";
-            txt_GhiChuCV.Text = "";
-        }
+        //public void XoaText()
+        //{
+        //    txt_maCV.Text = "";
+        //    txt_tenCV.Text = "";
+        //    txt_GhiChuCV.Text = "";
+        //}
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_CV();
             HanhDong = "Them";
             btn_save.Enabled = true;
             btn_Huy.Enabled = true;

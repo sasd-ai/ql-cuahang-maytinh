@@ -16,7 +16,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
     {
         BUS_KhachHang bus_kh = new BUS_KhachHang();
         private string HanhDong = "";
-
+        
 
         public UC_KhachHang()
         {
@@ -37,6 +37,46 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 //bus_cv.FindByName(text_chucvu);
                 dataGridView_KhachHang.DataSource = bus_kh.FindByName(text_khachhang);
         }
+
+        public bool KT_ThongTin_KhachHang()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TTKhachHang.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox và không phải là txt_maKH
+                if (control is TextBox textBox && textBox != txt_maKH)
+                {
+                    // Kiểm tra nếu TextBox trống
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Hiển thị thông báo và trả về false nếu có TextBox trống
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin nha!!");
+                        return false;
+                    }
+                }
+            }
+            // Trả về true nếu tất cả các TextBox (trừ txt_maKH) đều không trống
+            return true;
+        }
+
+        public void XoaText_ThongTin_KhachHang()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TTKhachHang.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox
+                if (control is TextBox textBox)
+                {
+                    // Kiểm tra nếu TextBox không trống
+                    if (!string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Xóa nội dung của TextBox
+                        textBox.Text = string.Empty;
+                    }
+                }
+            }          
+        }
+
 
         private void DataGridView_KhachHang_SelectionChanged(object sender, EventArgs e)
         {
@@ -61,18 +101,18 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             throw new NotImplementedException();
         }
 
-        public void XoaText()
-        {
-            txt_maKH.Text = "";
-            txt_tenKH.Text = "";
-            txt_SDT.Text = "";
-            txt_EMAIL.Text = "";
+        //public void XoaText()
+        //{
+        //    txt_maKH.Text = "";
+        //    txt_tenKH.Text = "";
+        //    txt_SDT.Text = "";
+        //    txt_EMAIL.Text = "";
 
-        }
+        //}
         private void btnThem_Click(object sender, EventArgs e)
         {
-            XoaText();
-            HanhDong = "Them";
+            XoaText_ThongTin_KhachHang();
+             HanhDong = "Them";
             btn_save.Enabled = true;
             btn_Huy.Enabled = true;
             btn_update.Enabled = false;
@@ -83,7 +123,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_KhachHang();
             btn_save.Enabled = false;
             btn_Huy.Enabled = false;
             btnThem.Enabled = true;
@@ -132,29 +172,73 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             switch (HanhDong)
             {
                 case "Them":
+                    if (!KT_ThongTin_KhachHang())
+                    {
+                        // Nếu thông tin không đầy đủ, dừng việc thực hiện
+                        return;
+                    }
+
+                    // Kiểm tra định dạng email
+                    if (!bus_kh.KT_DinhDangEmail(email))
+                    {
+                        MessageBox.Show("Email không hợp lệ. Vui lòng nhập email đúng định dạng.");
+                        return;
+                    }
+
+                    // Tìm khách hàng dựa trên số điện thoại
+                    khachhang khangSDT = bus_kh.TimSDTKHachHang(SDT);
+                    if (khangSDT != null)
+                    {
+                        // Nếu tìm thấy khách hàng với số điện thoại này, thông báo lỗi
+                        MessageBox.Show("Số điện thoại này đã đăng ký rồi, chọn số điện thoại khác nhé!!!");
+                        return;
+                    }
+
+                    // Tìm khách hàng dựa trên email
+                    khachhang khangEmail = bus_kh.TimEmailKHachHang(email);
+                    if (khangEmail != null)
+                    {
+                        // Nếu tìm thấy khách hàng với email này, thông báo lỗi
+                        MessageBox.Show("Email này đã đăng ký rồi, chọn email khác nhé!!!");
+                        return;
+                    }
+
+                    // Thêm khách hàng mới
                     bus_kh.ThemKhachHang(MaKH_random, tenKH, SDT, email);
                     MessageBox.Show("Bạn đã thêm khách hàng thành công rồi nha!!!");
                     LoadData();
+                    XoaText_ThongTin_KhachHang();
                     break;
-
                 case "Sua":
+                    if(String.IsNullOrEmpty(maKH))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã khách hàng để sửa!!!");
+                        break;
+                    }                     
                     bus_kh.SuaKhachHang(maKH, tenKH, SDT, email);
-                    MessageBox.Show("Sửa khách hàng thành công.");
+                    MessageBox.Show("Sửa khách hàng thành công.");                 
                     LoadData();
-
+                    XoaText_ThongTin_KhachHang();
                     break;
 
                 case "Xoa":
+                    if (String.IsNullOrEmpty(maKH))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã khách hàng để xóa!!!");
+                        break;
+                    }
                     if (MessageBox.Show("Bạn có chắc muốn xóa khách hàng này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        
                         khachhang kh = bus_kh.FindByID(maKH);
                         if (kh != null)
                         {
                             bool kq = bus_kh.XoaKhachHang(maKH);
                             if (kq == true)
                             {
-                                MessageBox.Show("Xóa khách hàng thành công!");
+                                MessageBox.Show("Xóa khách hàng thành công!");                            
                                 LoadData();
+                                XoaText_ThongTin_KhachHang();
                             }
                             else
                             {

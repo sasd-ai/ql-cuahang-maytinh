@@ -39,12 +39,50 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             btnThem.Enabled = false;
             btn_delete.Enabled = false;
         }
-
-        private void XoaText()
+        public bool KT_ThongTin_LSP()
         {
-            txt_maLSP.Text = "";
-            txt_tenLSP.Text = "";
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_LSP.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox và không phải là txt_maKH
+                if (control is TextBox textBox && textBox != txt_maLSP)
+                {
+                    // Kiểm tra nếu TextBox trống
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Hiển thị thông báo và trả về false nếu có TextBox trống
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin nha!!");
+                        return false;
+                    }
+                }
+            }
+            // Trả về true nếu tất cả các TextBox (trừ txt_maKH) đều không trống
+            return true;
         }
+
+        public void XoaText_ThongTin_LSP()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_LSP.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox
+                if (control is TextBox textBox)
+                {
+                    // Kiểm tra nếu TextBox không trống
+                    if (!string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Xóa nội dung của TextBox
+                        textBox.Text = string.Empty;
+                    }
+                }
+            }
+        }
+
+        //private void XoaText()
+        //{
+        //    txt_maLSP.Text = "";
+        //    txt_tenLSP.Text = "";
+        //}
         private void DataGridView_LoaiSP_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView_LoaiSP.SelectedRows.Count > 0)
@@ -72,12 +110,21 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             switch (HanhDong)
             {
                 case "Them":
+                    if(!KT_ThongTin_LSP())
+                    {
+                        return;
+                    }    
                     bus_lsp.ThemLoaiSanPham(MaLSP_random, tenLSP);
                     MessageBox.Show("Bạn đã thêm loại sản phẩm thành công rồi nha!!!");
                     LoadData();
                     break;
 
                 case "Sua":
+                    if (String.IsNullOrEmpty(maLSP))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã loại sản phẩm để sửa!!!");
+                        break;
+                    }
                     bus_lsp.SuaLoaiSanPham(maLSP, tenLSP);
                     MessageBox.Show("Sửa loại sản phẩm thành công.");
                     LoadData();
@@ -85,6 +132,11 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                     break;
 
                 case "Xoa":
+                    if (String.IsNullOrEmpty(maLSP))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã loại sản phẩm để xóa!!!");
+                        break;
+                    }
                     if (MessageBox.Show("Bạn có chắc muốn xóa loại sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
 
@@ -113,7 +165,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void Btn_Huy_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_LSP();
             btn_save.Enabled = false;
             btn_Huy.Enabled = false;
             btnThem.Enabled = true;
@@ -142,7 +194,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_LSP();
             HanhDong = "Them";
             btn_save.Enabled = true;
             btn_Huy.Enabled = true;

@@ -42,5 +42,10 @@ namespace BUS
         {
             return dao_ncc.FindByName(tenlsp);
         }
+
+      public nhacungcap TimSDTNCC(string sdt)
+        {
+            return dao_ncc.TimSDTNCC(sdt);
+        }
     }
 }

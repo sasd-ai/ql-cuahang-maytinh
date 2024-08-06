@@ -43,22 +43,22 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView_LoaiSP = new System.Windows.Forms.DataGridView();
+            this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.txt_Search_tenLOAISP = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btn_Huy = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.btn_Search_TenLoaiSP = new System.Windows.Forms.Button();
+            this.txt_Search_tenLOAISP = new System.Windows.Forms.TextBox();
             this.btn_update = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.panel_TT_LSP = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,7 +68,7 @@
             this.panel5.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_TT_LSP.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList2
@@ -86,7 +86,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -151,7 +151,7 @@
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel_TT_LSP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -211,9 +211,25 @@
             this.dataGridView_LoaiSP.Size = new System.Drawing.Size(1015, 732);
             this.dataGridView_LoaiSP.TabIndex = 1;
             // 
+            // MaLoai
+            // 
+            this.MaLoai.DataPropertyName = "MaLoai";
+            this.MaLoai.HeaderText = "Mã Loại Sản Phẩm";
+            this.MaLoai.MinimumWidth = 6;
+            this.MaLoai.Name = "MaLoai";
+            this.MaLoai.Width = 350;
+            // 
+            // TenLoaiSP
+            // 
+            this.TenLoaiSP.DataPropertyName = "TenLoai";
+            this.TenLoaiSP.HeaderText = "Tên Loại Sản Phẩm";
+            this.TenLoaiSP.MinimumWidth = 6;
+            this.TenLoaiSP.Name = "TenLoaiSP";
+            this.TenLoaiSP.Width = 600;
+            // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
+            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -247,81 +263,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(738, 262);
             this.panel5.TabIndex = 44;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox9.Controls.Add(this.btn_Search_TenLoaiSP);
-            this.groupBox9.Controls.Add(this.txt_Search_tenLOAISP);
-            this.groupBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(46, 63);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(321, 81);
-            this.groupBox9.TabIndex = 36;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Theo Tên Loại ";
-            // 
-            // txt_Search_tenLOAISP
-            // 
-            this.txt_Search_tenLOAISP.Location = new System.Drawing.Point(5, 30);
-            this.txt_Search_tenLOAISP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Search_tenLOAISP.Name = "txt_Search_tenLOAISP";
-            this.txt_Search_tenLOAISP.Size = new System.Drawing.Size(208, 30);
-            this.txt_Search_tenLOAISP.TabIndex = 21;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Red;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(736, 58);
-            this.panel6.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(293, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 32);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Chức Năng";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.txt_maLSP);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.txt_tenLSP);
-            this.panel3.Location = new System.Drawing.Point(15, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 251);
-            this.panel3.TabIndex = 43;
-            // 
-            // MaLoai
-            // 
-            this.MaLoai.DataPropertyName = "MaLoai";
-            this.MaLoai.HeaderText = "Mã Loại Sản Phẩm";
-            this.MaLoai.MinimumWidth = 6;
-            this.MaLoai.Name = "MaLoai";
-            this.MaLoai.Width = 350;
-            // 
-            // TenLoaiSP
-            // 
-            this.TenLoaiSP.DataPropertyName = "TenLoai";
-            this.TenLoaiSP.HeaderText = "Tên Loại Sản Phẩm";
-            this.TenLoaiSP.MinimumWidth = 6;
-            this.TenLoaiSP.Name = "TenLoaiSP";
-            this.TenLoaiSP.Width = 600;
             // 
             // btnThem
             // 
@@ -359,6 +300,22 @@
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox9.Controls.Add(this.btn_Search_TenLoaiSP);
+            this.groupBox9.Controls.Add(this.txt_Search_tenLOAISP);
+            this.groupBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(46, 63);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Size = new System.Drawing.Size(321, 81);
+            this.groupBox9.TabIndex = 36;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Theo Tên Loại ";
+            // 
             // btn_Search_TenLoaiSP
             // 
             this.btn_Search_TenLoaiSP.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -375,6 +332,14 @@
             this.btn_Search_TenLoaiSP.Size = new System.Drawing.Size(77, 48);
             this.btn_Search_TenLoaiSP.TabIndex = 24;
             this.btn_Search_TenLoaiSP.UseVisualStyleBackColor = true;
+            // 
+            // txt_Search_tenLOAISP
+            // 
+            this.txt_Search_tenLOAISP.Location = new System.Drawing.Point(5, 30);
+            this.txt_Search_tenLOAISP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Search_tenLOAISP.Name = "txt_Search_tenLOAISP";
+            this.txt_Search_tenLOAISP.Size = new System.Drawing.Size(208, 30);
+            this.txt_Search_tenLOAISP.TabIndex = 21;
             // 
             // btn_update
             // 
@@ -393,6 +358,28 @@
             this.btn_update.TabIndex = 1;
             this.btn_update.Text = "Sửa";
             this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(736, 58);
+            this.panel6.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(293, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 32);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Chức Năng";
             // 
             // btn_delete
             // 
@@ -430,6 +417,19 @@
             this.btn_save.Text = "Lưu";
             this.btn_save.UseVisualStyleBackColor = true;
             // 
+            // panel_TT_LSP
+            // 
+            this.panel_TT_LSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_TT_LSP.Controls.Add(this.panel4);
+            this.panel_TT_LSP.Controls.Add(this.label22);
+            this.panel_TT_LSP.Controls.Add(this.txt_maLSP);
+            this.panel_TT_LSP.Controls.Add(this.label21);
+            this.panel_TT_LSP.Controls.Add(this.txt_tenLSP);
+            this.panel_TT_LSP.Location = new System.Drawing.Point(15, 12);
+            this.panel_TT_LSP.Name = "panel_TT_LSP";
+            this.panel_TT_LSP.Size = new System.Drawing.Size(739, 251);
+            this.panel_TT_LSP.TabIndex = 43;
+            // 
             // UC_LoaiSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,8 +450,8 @@
             this.groupBox9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_TT_LSP.ResumeLayout(false);
+            this.panel_TT_LSP.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -482,7 +482,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_TT_LSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiSP;
     }

@@ -468,5 +468,10 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Frm_KhachHang kh=new Frm_KhachHang();
+            kh.Show();
+        }
     }
 }

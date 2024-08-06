@@ -60,7 +60,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_TT_KM = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
@@ -73,7 +73,7 @@
             this.panel5.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_TT_KM.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,7 +142,7 @@
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel_TT_KM);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -251,7 +251,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
+            this.panel7.BackColor = System.Drawing.Color.Salmon;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -396,7 +396,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Red;
+            this.panel6.BackColor = System.Drawing.Color.Salmon;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -452,24 +452,24 @@
             this.btn_save.Text = "Lưu";
             this.btn_save.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // panel_TT_KM
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.txt_maKM);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.txt_tenKM);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.txt_TriGia);
-            this.panel3.Location = new System.Drawing.Point(15, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 302);
-            this.panel3.TabIndex = 43;
+            this.panel_TT_KM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_TT_KM.Controls.Add(this.panel4);
+            this.panel_TT_KM.Controls.Add(this.label22);
+            this.panel_TT_KM.Controls.Add(this.txt_maKM);
+            this.panel_TT_KM.Controls.Add(this.label21);
+            this.panel_TT_KM.Controls.Add(this.txt_tenKM);
+            this.panel_TT_KM.Controls.Add(this.label19);
+            this.panel_TT_KM.Controls.Add(this.txt_TriGia);
+            this.panel_TT_KM.Location = new System.Drawing.Point(15, 12);
+            this.panel_TT_KM.Name = "panel_TT_KM";
+            this.panel_TT_KM.Size = new System.Drawing.Size(739, 302);
+            this.panel_TT_KM.TabIndex = 43;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.BackColor = System.Drawing.Color.Salmon;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -519,8 +519,8 @@
             this.groupBox9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_TT_KM.ResumeLayout(false);
+            this.panel_TT_KM.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -551,7 +551,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_TT_KM;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;

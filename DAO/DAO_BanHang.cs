@@ -84,5 +84,7 @@ namespace DAO
             string query = $"EXEC InHoaDon @MaBanHang = '{maBanHang}'";
             return qlch.ExecuteQuery<HoaDon>(query).ToList();
         }
+
+       
     }
 }

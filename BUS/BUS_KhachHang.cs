@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BUS
@@ -42,6 +43,30 @@ namespace BUS
         public List<khachhang> FindByName(string tenkh)
         {
             return dao_kh.FindByName(tenkh);
+        }
+
+        public khachhang TimSDTKHachHang(string sdt)
+        {
+            return dao_kh.TimSDTKhachHang(sdt);
+        }
+
+        public khachhang TimEmailKHachHang(string email)
+        {
+            return dao_kh.TimEmailKhachHang(email);
+        }
+        public bool KT_DinhDangEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            try
+            {
+                return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase);
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
         }
     }
 }

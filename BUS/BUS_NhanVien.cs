@@ -92,5 +92,15 @@ namespace BUS
                 return sb.ToString();
             }
         }
+
+        public nhanvien TimSDTKNhanVien(string sdt)
+        {
+            return dao_NV.TimSDTNhanVien(sdt);
+        }
+
+        public nhanvien TimEmailNhanVien(string email)
+        {
+            return dao_NV.TimSDTNhanVien(email);
+        }
     }
 }

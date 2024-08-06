@@ -357,6 +357,25 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             HanhDong = "";
         }
 
-       
+        private void btn_Search_TenSP_Click(object sender, EventArgs e)
+        {
+            string tensp = txt_Search_tenSP.Text;
+            var sanPhamList = bus_SanPham.TimKiemTenSP(tensp);
+
+
+            dataGridView_SanPham.Rows.Clear();
+
+
+            foreach (var sp in sanPhamList)
+            {
+                string imageUrl = sp.hinhanh;
+                System.Drawing.Image image = bus_SanPham.LoadImageFromUrl(imageUrl);
+
+                dataGridView_SanPham.Rows.Add(sp.Masp, sp.tensp, image, sp.giadexuat, sp.soluong, sp.giaban, sp.mota, sp.tg_baohanh, sp.TenLoai, sp.Tenncc);
+            }
+
+            dataGridView_SanPham.RowTemplate.Height = 50;
+            dataGridView_SanPham.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        }
     }
 }

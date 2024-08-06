@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_NhanVien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_update = new System.Windows.Forms.Button();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.btn_delete = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.txt_Search_tenSP = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_TT_NhanVien = new System.Windows.Forms.Panel();
             this.checkbox_nv = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.panel5.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_TT_NhanVien.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_update
@@ -211,7 +211,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(212, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 25);
+            this.label4.Size = new System.Drawing.Size(273, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Thông Tin Nhân Viên";
             // 
@@ -221,12 +221,12 @@
             this.txt_sdtNV.Location = new System.Drawing.Point(276, 303);
             this.txt_sdtNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_sdtNV.Name = "txt_sdtNV";
-            this.txt_sdtNV.Size = new System.Drawing.Size(324, 26);
+            this.txt_sdtNV.Size = new System.Drawing.Size(324, 30);
             this.txt_sdtNV.TabIndex = 34;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -238,14 +238,14 @@
             // dataGridView_NV
             // 
             this.dataGridView_NV.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_NV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_NV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_NV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_NV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -255,14 +255,14 @@
             this.Email,
             this.MatKhau,
             this.HoatDong});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_NV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_NV.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_NV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_NV.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -334,7 +334,7 @@
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel_TT_NhanVien);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -363,7 +363,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
+            this.panel7.BackColor = System.Drawing.Color.DarkGray;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -379,7 +379,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(370, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 25);
+            this.label2.Size = new System.Drawing.Size(279, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh Sách Nhân Viên";
             // 
@@ -420,12 +420,12 @@
             this.txt_Search_tenSP.Location = new System.Drawing.Point(5, 30);
             this.txt_Search_tenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Search_tenSP.Name = "txt_Search_tenSP";
-            this.txt_Search_tenSP.Size = new System.Drawing.Size(208, 26);
+            this.txt_Search_tenSP.Size = new System.Drawing.Size(208, 30);
             this.txt_Search_tenSP.TabIndex = 21;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Red;
+            this.panel6.BackColor = System.Drawing.Color.DarkGray;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -441,37 +441,37 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(293, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 25);
+            this.label7.Size = new System.Drawing.Size(150, 32);
             this.label7.TabIndex = 0;
             this.label7.Text = "Chức Năng";
             // 
-            // panel3
+            // panel_TT_NhanVien
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.checkbox_nv);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txt_sdtNV);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.txt_maNV);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.txt_tenNV);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.txt_emailNV);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.txt_diachiNV);
-            this.panel3.Location = new System.Drawing.Point(15, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 535);
-            this.panel3.TabIndex = 43;
+            this.panel_TT_NhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_TT_NhanVien.Controls.Add(this.checkbox_nv);
+            this.panel_TT_NhanVien.Controls.Add(this.label1);
+            this.panel_TT_NhanVien.Controls.Add(this.txt_sdtNV);
+            this.panel_TT_NhanVien.Controls.Add(this.panel4);
+            this.panel_TT_NhanVien.Controls.Add(this.label22);
+            this.panel_TT_NhanVien.Controls.Add(this.txt_maNV);
+            this.panel_TT_NhanVien.Controls.Add(this.label21);
+            this.panel_TT_NhanVien.Controls.Add(this.txt_tenNV);
+            this.panel_TT_NhanVien.Controls.Add(this.label20);
+            this.panel_TT_NhanVien.Controls.Add(this.txt_emailNV);
+            this.panel_TT_NhanVien.Controls.Add(this.label19);
+            this.panel_TT_NhanVien.Controls.Add(this.label18);
+            this.panel_TT_NhanVien.Controls.Add(this.txt_diachiNV);
+            this.panel_TT_NhanVien.Location = new System.Drawing.Point(15, 12);
+            this.panel_TT_NhanVien.Name = "panel_TT_NhanVien";
+            this.panel_TT_NhanVien.Size = new System.Drawing.Size(739, 535);
+            this.panel_TT_NhanVien.TabIndex = 43;
             // 
             // checkbox_nv
             // 
             this.checkbox_nv.AutoSize = true;
             this.checkbox_nv.Location = new System.Drawing.Point(276, 427);
             this.checkbox_nv.Name = "checkbox_nv";
-            this.checkbox_nv.Size = new System.Drawing.Size(15, 14);
+            this.checkbox_nv.Size = new System.Drawing.Size(18, 17);
             this.checkbox_nv.TabIndex = 36;
             this.checkbox_nv.UseVisualStyleBackColor = true;
             // 
@@ -482,7 +482,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(140, 422);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 19);
+            this.label1.Size = new System.Drawing.Size(95, 22);
             this.label1.TabIndex = 35;
             this.label1.Text = "Hoạt Động";
             // 
@@ -493,7 +493,7 @@
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(140, 136);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 19);
+            this.label22.Size = new System.Drawing.Size(123, 22);
             this.label22.TabIndex = 2;
             this.label22.Text = "Mã Nhân Viên";
             // 
@@ -503,7 +503,7 @@
             this.txt_maNV.Location = new System.Drawing.Point(276, 128);
             this.txt_maNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_maNV.Name = "txt_maNV";
-            this.txt_maNV.Size = new System.Drawing.Size(324, 26);
+            this.txt_maNV.Size = new System.Drawing.Size(324, 30);
             this.txt_maNV.TabIndex = 3;
             // 
             // label21
@@ -513,7 +513,7 @@
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(140, 190);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(100, 19);
+            this.label21.Size = new System.Drawing.Size(127, 22);
             this.label21.TabIndex = 2;
             this.label21.Text = "Tên Nhân Viên";
             // 
@@ -523,7 +523,7 @@
             this.txt_tenNV.Location = new System.Drawing.Point(276, 182);
             this.txt_tenNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_tenNV.Name = "txt_tenNV";
-            this.txt_tenNV.Size = new System.Drawing.Size(324, 26);
+            this.txt_tenNV.Size = new System.Drawing.Size(324, 30);
             this.txt_tenNV.TabIndex = 3;
             // 
             // label20
@@ -533,7 +533,7 @@
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(140, 311);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 19);
+            this.label20.Size = new System.Drawing.Size(125, 22);
             this.label20.TabIndex = 2;
             this.label20.Text = "Số Điện Thoại";
             // 
@@ -543,7 +543,7 @@
             this.txt_emailNV.Location = new System.Drawing.Point(276, 358);
             this.txt_emailNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_emailNV.Name = "txt_emailNV";
-            this.txt_emailNV.Size = new System.Drawing.Size(324, 26);
+            this.txt_emailNV.Size = new System.Drawing.Size(324, 30);
             this.txt_emailNV.TabIndex = 12;
             // 
             // label19
@@ -553,7 +553,7 @@
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(140, 249);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(55, 19);
+            this.label19.Size = new System.Drawing.Size(72, 22);
             this.label19.TabIndex = 2;
             this.label19.Text = "Địa Chỉ";
             // 
@@ -564,7 +564,7 @@
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(140, 366);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 19);
+            this.label18.Size = new System.Drawing.Size(57, 22);
             this.label18.TabIndex = 10;
             this.label18.Text = "Email";
             // 
@@ -574,7 +574,7 @@
             this.txt_diachiNV.Location = new System.Drawing.Point(276, 241);
             this.txt_diachiNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_diachiNV.Name = "txt_diachiNV";
-            this.txt_diachiNV.Size = new System.Drawing.Size(324, 26);
+            this.txt_diachiNV.Size = new System.Drawing.Size(324, 30);
             this.txt_diachiNV.TabIndex = 7;
             // 
             // UC_NhanVien
@@ -597,8 +597,8 @@
             this.groupBox9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_TT_NhanVien.ResumeLayout(false);
+            this.panel_TT_NhanVien.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -625,7 +625,7 @@
         private System.Windows.Forms.TextBox txt_Search_tenSP;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_TT_NhanVien;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txt_maNV;
         private System.Windows.Forms.Label label21;

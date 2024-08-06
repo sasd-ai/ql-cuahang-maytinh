@@ -205,5 +205,15 @@ namespace DAO
                 return sb.ToString();
             }
         }
+
+        public nhanvien TimSDTNhanVien(string sdt)
+        {
+            return qlch.nhanviens.FirstOrDefault(nv => nv.SDT == sdt);
+        }
+
+        public nhanvien TimEmailNhanVien(string email)
+        {
+            return qlch.nhanviens.FirstOrDefault(nv => nv.Email == email);
+        }
     }
 }

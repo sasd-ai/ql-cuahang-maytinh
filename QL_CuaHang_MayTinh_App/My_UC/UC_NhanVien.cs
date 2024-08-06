@@ -15,6 +15,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
     public partial class UC_NhanVien : UserControl
     {
         BUS_NhanVien bus_nv = new BUS_NhanVien();
+        BUS_KhachHang bus=new BUS_KhachHang();
         private string HanhDong = "";
         public UC_NhanVien()
         {
@@ -46,16 +47,56 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 txt_emailNV.Text = email;
             }
         }
-
-        public void XoaText()
+        public bool KT_ThongTin_NhanVien()
         {
-            txt_maNV.Text = "";
-            txt_tenNV.Text = "";
-            txt_diachiNV.Text = "";
-            txt_sdtNV.Text = "";
-            txt_emailNV.Text = "";
-            checkbox_nv.Checked = false;
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_NhanVien.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox và không phải là txt_maKH
+                if (control is TextBox textBox && textBox != txt_maNV)
+                {
+                    // Kiểm tra nếu TextBox trống
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Hiển thị thông báo và trả về false nếu có TextBox trống
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin nha!!");
+                        return false;
+                    }
+                }
+            }
+            // Trả về true nếu tất cả các TextBox (trừ txt_maKH) đều không trống
+            return true;
         }
+
+        public void XoaText_ThongTin_KhachHang()
+        {
+            // Duyệt qua tất cả các điều khiển trong panel_TTKhachHang
+            foreach (Control control in panel_TT_NhanVien.Controls)
+            {
+                // Kiểm tra nếu điều khiển là TextBox
+                if (control is TextBox textBox)
+                {
+                    // Kiểm tra nếu TextBox không trống
+                    if (!string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        // Xóa nội dung của TextBox
+                        textBox.Text = string.Empty;
+                    }
+                }
+            }
+
+
+        }
+
+        //public void XoaText()
+        //{
+        //    txt_maNV.Text = "";
+        //    txt_tenNV.Text = "";
+        //    txt_diachiNV.Text = "";
+        //    txt_sdtNV.Text = "";
+        //    txt_emailNV.Text = "";
+        //    checkbox_nv.Checked = false;
+        //}
 
         private void Btn_Search_tenNV_Click(object sender, EventArgs e)
         {
@@ -88,19 +129,62 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             switch (HanhDong)
             {
                 case "Them":
+                    if (!KT_ThongTin_NhanVien())
+                    {
+                        // Nếu thông tin không đầy đủ, dừng việc thực hiện
+                        return;
+                    }
+
+                    // Kiểm tra định dạng email
+                    if (!bus.KT_DinhDangEmail(email))
+                    {
+                        MessageBox.Show("Email không hợp lệ. Vui lòng nhập email đúng định dạng.");
+                        return;
+                    }
+
+                    // Tìm khách hàng dựa trên số điện thoại
+                    nhanvien khangSDT = bus_nv.TimSDTKNhanVien(sdt);
+                    if (khangSDT != null)
+                    {
+                        // Nếu tìm thấy khách hàng với số điện thoại này, thông báo lỗi
+                        MessageBox.Show("Số điện thoại này đã đăng ký rồi, chọn số điện thoại khác nhé!!!");
+                        return;
+                    }
+
+                    // Tìm khách hàng dựa trên email
+                    nhanvien khangEmail = bus_nv.TimEmailNhanVien(email);
+                    if (khangEmail != null)
+                    {
+                        // Nếu tìm thấy khách hàng với email này, thông báo lỗi
+                        MessageBox.Show("Email này đã đăng ký rồi, chọn email khác nhé!!!");
+                        return;
+                    }
+
                     bus_nv.Insert(MaNV_random, tennv, diachi, sdt, email);
                     MessageBox.Show("Bạn đã thêm nhân viên thành công rồi nha!!!");
                     LoadData();
+                    XoaText_ThongTin_KhachHang();
                     break;
 
                 case "Sua":
+                    if (String.IsNullOrEmpty(maNV))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã nhân viên để sửa!!!");
+                        break;
+                    }
                     bus_nv.Update(MaNV_random, tennv, diachi, sdt, checkbox);
                     MessageBox.Show("Sửa nhân viên thành công.");
                     LoadData();
+                    XoaText_ThongTin_KhachHang();
 
                     break;
 
                 case "Xoa":
+                    if (String.IsNullOrEmpty(maNV))
+                    {
+                        MessageBox.Show("Vui lòng chọn mã nhân viên để xóa!!!");
+                        break;
+                    }
                     if (MessageBox.Show("Bạn có chắc muốn xóa nhân viên này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         nhanvien nv = bus_nv.FindByID(maNV);
@@ -111,6 +195,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                             {
                                 MessageBox.Show("Xóa nhân viên thành công!");
                                 LoadData();
+                                XoaText_ThongTin_KhachHang();
                             }
                             else
                             {
@@ -127,7 +212,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void Btn_Huy_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_KhachHang();
             btn_save.Enabled = false;
             btn_Huy.Enabled = false;
             btnThem.Enabled = true;
@@ -156,7 +241,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            XoaText();
+            XoaText_ThongTin_KhachHang();
             HanhDong = "Them";
             btn_save.Enabled = true;
             btn_Huy.Enabled = true;

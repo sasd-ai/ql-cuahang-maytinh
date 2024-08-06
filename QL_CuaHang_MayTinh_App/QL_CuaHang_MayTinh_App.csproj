@@ -76,16 +76,16 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base">
-      <HintPath>..\..\..\..\..\ThuVienExportWord\Syncfusion.Compression.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.Compression.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DocIO.Base">
-      <HintPath>..\..\..\..\..\ThuVienExportWord\Syncfusion.DocIO.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.DocIO.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.OfficeChart.Base">
-      <HintPath>..\..\..\..\..\ThuVienExportWord\Syncfusion.OfficeChart.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.OfficeChart.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.XlsIO.Base">
-      <HintPath>..\..\..\..\..\ThuVienExportWord\Syncfusion.XlsIO.Base.dll</HintPath>
+      <HintPath>..\packages\Syncfusion.XlsIO.Base.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -165,6 +165,12 @@
     </Compile>
     <Compile Include="GUI\Frm_InPhieuNhap.Designer.cs">
       <DependentUpon>Frm_InPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Frm_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_KhachHang.Designer.cs">
+      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Frm_Main.cs">
       <SubType>Form</SubType>
@@ -322,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_InPhieuNhap.resx">
       <DependentUpon>Frm_InPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_KhachHang.resx">
+      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>

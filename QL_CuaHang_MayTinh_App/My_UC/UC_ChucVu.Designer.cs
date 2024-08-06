@@ -43,7 +43,7 @@
             this.gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_TT_CV = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_maCV = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -55,6 +55,9 @@
             this.txt_Search_tenCV = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.datagridview_cv = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -62,11 +65,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
-            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_TT_CV.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_cv)).BeginInit();
@@ -204,7 +204,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -213,20 +213,20 @@
             this.panel4.Size = new System.Drawing.Size(737, 69);
             this.panel4.TabIndex = 0;
             // 
-            // panel3
+            // panel_TT_CV
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.txt_maCV);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.txt_tenCV);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.txt_GhiChuCV);
-            this.panel3.Location = new System.Drawing.Point(15, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 302);
-            this.panel3.TabIndex = 43;
+            this.panel_TT_CV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_TT_CV.Controls.Add(this.panel4);
+            this.panel_TT_CV.Controls.Add(this.label22);
+            this.panel_TT_CV.Controls.Add(this.txt_maCV);
+            this.panel_TT_CV.Controls.Add(this.label21);
+            this.panel_TT_CV.Controls.Add(this.txt_tenCV);
+            this.panel_TT_CV.Controls.Add(this.label19);
+            this.panel_TT_CV.Controls.Add(this.txt_GhiChuCV);
+            this.panel_TT_CV.Location = new System.Drawing.Point(15, 12);
+            this.panel_TT_CV.Name = "panel_TT_CV";
+            this.panel_TT_CV.Size = new System.Drawing.Size(739, 302);
+            this.panel_TT_CV.TabIndex = 43;
             // 
             // label22
             // 
@@ -301,7 +301,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Red;
+            this.panel6.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -391,6 +391,27 @@
             this.datagridview_cv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridview_cv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // MaCV
+            // 
+            this.MaCV.DataPropertyName = "MaCV";
+            this.MaCV.HeaderText = "Mã Chức Vụ";
+            this.MaCV.MinimumWidth = 6;
+            this.MaCV.Name = "MaCV";
+            // 
+            // TenCV
+            // 
+            this.TenCV.DataPropertyName = "TenCV";
+            this.TenCV.HeaderText = "Tên Chức Vụ";
+            this.TenCV.MinimumWidth = 6;
+            this.TenCV.Name = "TenCV";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.MinimumWidth = 6;
+            this.GhiChu.Name = "GhiChu";
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -413,7 +434,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
+            this.panel7.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -437,7 +458,7 @@
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel_TT_CV);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -478,27 +499,6 @@
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
-            // MaCV
-            // 
-            this.MaCV.DataPropertyName = "MaCV";
-            this.MaCV.HeaderText = "Mã Chức Vụ";
-            this.MaCV.MinimumWidth = 6;
-            this.MaCV.Name = "MaCV";
-            // 
-            // TenCV
-            // 
-            this.TenCV.DataPropertyName = "TenCV";
-            this.TenCV.HeaderText = "Tên Chức Vụ";
-            this.TenCV.MinimumWidth = 6;
-            this.TenCV.Name = "TenCV";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.MinimumWidth = 6;
-            this.GhiChu.Name = "GhiChu";
-            // 
             // UC_ChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -508,8 +508,8 @@
             this.Size = new System.Drawing.Size(1800, 850);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_TT_CV.ResumeLayout(false);
+            this.panel_TT_CV.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -537,7 +537,7 @@
         private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_TT_CV;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txt_maCV;
         private System.Windows.Forms.Label label21;

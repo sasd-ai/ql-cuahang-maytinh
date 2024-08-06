@@ -89,6 +89,10 @@ namespace BUS
         {
             return sp.FindByName(TenSP);
         }
+        public List<SanPhamFull> TimKiemTenSP(string TenSP)
+        {
+            return sp.TimKiemTenSP(TenSP);
+        }
         //Lấy danh sách sản phẩm
         public List<sanpham> GetData()
         {

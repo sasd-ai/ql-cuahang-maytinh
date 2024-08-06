@@ -121,6 +121,12 @@ namespace DAO
                        .Where(sp => sp.TenSP.Contains(TenSP)) 
                        .ToList();
         }
+        public List<SanPhamFull> TimKiemTenSP(string TenSP)
+        {
+            return qlch.SanPhamFulls
+                       .Where(sp => sp.tensp.Contains(TenSP))
+                       .ToList();
+        }
         //Lấy dánh sách sản phẩm
         public List<sanpham> GetData()
         {
@@ -155,7 +161,7 @@ namespace DAO
             }
         }
 
-        
 
+     
     }
 }
