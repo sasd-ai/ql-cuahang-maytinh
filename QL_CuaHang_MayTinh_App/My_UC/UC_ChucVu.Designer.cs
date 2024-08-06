@@ -204,7 +204,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -301,7 +301,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -434,7 +434,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
