@@ -93,7 +93,7 @@ namespace DTO
     #endregion
 		
 		public QL_CuaHangDataContext() : 
-				base(global::DTO.Properties.Settings.Default.ql_cuahang_maytinhConnectionString1, mappingSource)
+				base(global::DTO.Properties.Settings.Default.ql_cuahang_maytinhConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
