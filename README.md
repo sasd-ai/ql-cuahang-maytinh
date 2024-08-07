@@ -70,17 +70,14 @@ Hệ thống quản lý cửa hàng máy tính này không chỉ cung cấp gi�
 
 | STT | Nghiệp vụ | Phân công  |
 |----------------|--------------------|--------------------|
-|  1  |  Tìm kiếm sản phẩm |   ...  |
+|  1  |  Đăng nhập/Phân quyền |   Nguyễn Phương Điền  |
+|  2  |  Thêm xoá sửa danh mục |  Đặng Thị Diễm Quỳnh  |
+|  3  |  Bán hàng |   Trần Ngọc Thanh  |
+|  4  |  Nhập hàng|   Nguyễn Phương Điền  |
+|  5  |  Báo cáo thống kê |   Trần Ngọc Thanh  |
 
 
 
-<p>App: Winform </p>
-<p>Ngôn ngữ: C# </p>
-
-| STT | Nghiệp vụ | Phân công  |
-|----------------|--------------------|--------------------|
-|  1  |  Đăng nhập/đăng xuất |   ...  |
-|  2  | Phân quyền  |  ... |
 
 
 
