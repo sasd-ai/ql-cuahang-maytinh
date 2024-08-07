@@ -27,6 +27,7 @@ namespace QL_CuaHang_MayTinh_App.My_UC
         {
             this.dgv_PhieuNhapHang.RowTemplate.Height = 50;
             LoadDataPhieuNhap();
+            loadCBB_TimKiem();
         }
 
         private void LoadDataPhieuNhap()
@@ -44,10 +45,10 @@ namespace QL_CuaHang_MayTinh_App.My_UC
             {
                //Lấy giá trị
                 DateTime selectedDate = dateTimePicker.Value;
-                MessageBox.Show(selectedDate.ToString());
                 dgv_PhieuNhapHang.DataSource = listPN.Where(pn => pn.NgayNhap.Date==selectedDate.Date).ToList(); ;
             }
         }
+       
         void formatDataGridView_PhieuNhap()
         {
             // Thiết lập tiêu đề cột
@@ -70,17 +71,27 @@ namespace QL_CuaHang_MayTinh_App.My_UC
                 dgv_PhieuNhapHang.Columns["MaNCC"].Visible = false;
             }
         }
-       
+        void loadCBB_TimKiem()
+        {
+            //Tất cả
+            //Tên nhân viên
+            //Mã nhà cung cấp
+            cbb_TrangThaiTimKiem.Items.Add("Tất cả");
+            cbb_TrangThaiTimKiem.Items.Add("Tên nhân viên");
+            cbb_TrangThaiTimKiem.Items.Add("Tất cả");
+
+        }
         private void btn_Sreach_Click(object sender, EventArgs e)
         {
             string keySreach=txt_KeySreach.Text;
-            string trangThai=cbb_TrangThaiTimKiem.SelectedItem.ToString();
-            if (String.IsNullOrEmpty(trangThai))
+            string trangThai=cbb_TrangThaiTimKiem.SelectedItem.ToString().Trim();
+            if (!String.IsNullOrEmpty(trangThai))
             {
                 switch (trangThai)
                 {
                     case "Tất cả":
                         //Lấy hết danh sách
+                        
                         dgv_PhieuNhapHang.DataSource = listPN;
                         break;
                     case "Tên nhân viên":
